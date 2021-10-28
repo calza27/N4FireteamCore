@@ -34,7 +34,7 @@ clearUnitSelector = function(selector) {
 };
 
 getUnitListJSON = function() {
-	var factionJSON = $("#buildArea")[0].factionJSON;
+	var factionJSON = $("#contents")[0].armyJSON;
 	if(factionJSON) {
 		return factionJSON.units;
 	}
@@ -65,7 +65,7 @@ canAddMore = function(unitName) {
 			return false;
 		} else if(
 			unit.wildcard
-			&& $("#buildArea")[0].seedUnit !== unit.name
+			&& $("#contents")[0].seedUnit !== unit.name
 			&& unit.wildcardLimit != null
 			&& unit.wildcardLimit <= counter
 		) {
@@ -78,14 +78,14 @@ canAddMore = function(unitName) {
 			$.each(unit.canJoin, function(i2, unitCanJoin) {
 				if(unitCanJoin.ava != null && unitCanJoin.ava > 0) {
 					if(
-						$("#buildArea")[0].seedUnit != null
-						&& $("#buildArea")[0].seedUnit.length > 0
-						&& $("#buildArea")[0].seedUnit.indexOf(unitCanJoin.name) > -1
+						$("#contents")[0].seedUnit != null
+						&& $("#contents")[0].seedUnit.length > 0
+						&& $("#contents")[0].seedUnit.indexOf(unitCanJoin.name) > -1
 					) {
 						if(
 							unitCanJoin.fireteam == null
 							|| unitCanJoin.fireteam.length == 0
-							|| unitCanJoin.fireteam.indexOf($("#buildArea")[0].fireteam) > -1
+							|| unitCanJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
 						) {
 							if(unitCanJoin.ava <= counter) {
 								canAddMore = false;

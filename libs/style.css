@@ -27,7 +27,21 @@
 .flexContainer {
 	clear: both;
 	display: flex;
-	margin: 00px 0px 20px 0px;
+	margin: 0px 0px 20px 0px;
+}
+
+.flex-one {
+	flex: 1 1 25%;
+	clear: both;
+}
+
+.flex-two {
+	flex: 2 2 50%;
+	clear: both;
+}
+
+.pull-right {
+	float: right;
 }
 
 #factionContainer, #armyContainer:not(.empty) {
@@ -121,6 +135,16 @@
 	border: 3px solid black;
 	border-radius: 50%;
 	box-shadow: 5px 5px #CCC;
+}
+
+.img.small {
+	background-size: 48px;
+	width: 48px;
+    height: 48px;
+}
+
+.highlighted > .img.small {
+	background-size: 42px;
 }
 
 .unitImg.img, .fireteamImg.img {

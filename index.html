@@ -10,7 +10,7 @@
 		<script src="libs/dynamicLoading.js"></script>
 		<script> 
 			$(function(){
-				loadPage("views/homepage.html", "#pageContainer");
+				loadPage("views/homepage.html", "#contents");
 			});
 			$(document).ready(function() {
 				$.ajaxSetup({
@@ -21,6 +21,26 @@
 		<title>Fireteam Core</title>
 	</head>
 	<body>
-		<div id="pageContainer"></div>
+		<div id="pageContainer">
+			<div class="row">
+				<div class="col-sm-12">
+					<span class="title">
+						Infinity N4 Fireteam Builder
+					</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<span class="subTitle">
+						<a href="https://forum.corvusbelli.com/threads/sectorial-army-fireteam-overviews.39841/" target="_blank">
+							Reference charts for relationships
+						</a>
+					</span>
+				</div>
+			</div>
+			<div id="contents">
+			
+			</div>
+		</div>
 	</body>
 </html>

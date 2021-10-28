@@ -1,55 +1,102 @@
 <div id="container">
-	<div class="buildAreaContainer">
-		<div class="label bottomMargin"><b>Built Fireteam</b></div>
-		<div class="flexContainer" id="builtFireTeam">
-			<div class="builderContainer" id="fireteamBuilt">
+	<div id="buildArea">
+		<div class="buildAreaContainer">
+			<div class="flexContainer">
+				<div class="flex-one">
+					<div class="flexContainer" id="factionArmy">
+					</div>
+				</div>
+				<div class="flex-two">
+					<div class="label bottomMargin"><b>Built Fireteam</b></div>
+				</div>
+				<div class="flex-one">
+					<div class="button pull-right" onclick="startOver();" title="back">
+						<div class="img small" style="background-image: url(data/img/back.png);"></div>
+					</div>
+				</div>
 			</div>
-			<div class="builderContainer memberBuilt" id="member1Built">
+			<div class="flexContainer" id="builtFireTeam">
+				<div class="builderContainer" id="fireteamBuilt">
+				</div>
+				<div class="builderContainer memberBuilt" id="member1Built">
+				</div>
+				<div class="builderContainer memberBuilt" id="member2Built">
+				</div>
+				<div class="builderContainer memberBuilt" id="member3Built">
+				</div>
+				<div class="builderContainer memberBuilt" id="member4Built">
+				</div>
+				<div class="builderContainer memberBuilt" id="member5Built">
+				</div>
 			</div>
-			<div class="builderContainer memberBuilt" id="member2Built">
-			</div>
-			<div class="builderContainer memberBuilt" id="member3Built">
-			</div>
-			<div class="builderContainer memberBuilt" id="member4Built">
-			</div>
-			<div class="builderContainer memberBuilt" id="member5Built">
+		</div>
+		<div class="buildAreaContainer">
+			<div class="flexContainer">
+				<div class="builderContainer" id="fireteamContainer">
+				</div>
+				<div class="builderContainer" id="member1Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="1">
+				</div>
+				<div class="builderContainer" id="member2Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="2">
+				</div>
+				<div class="builderContainer" id="member3Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="3">
+				</div>
+				<div class="builderContainer" id="member4Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="4">
+				</div>
+				<div class="builderContainer" id="member5Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="5">
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="buildAreaContainer">
-		<div class="flexContainer">
-			<div class="builderContainer" id="fireteamContainer">
-			</div>
-			<div class="builderContainer" id="member1Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="1">
-			</div>
-			<div class="builderContainer" id="member2Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="2">
-			</div>
-			<div class="builderContainer" id="member3Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="3">
-			</div>
-			<div class="builderContainer" id="member4Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="4">
-			</div>
-			<div class="builderContainer" id="member5Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="5">
-			</div>
+	<div class="row">
+		<div class="col-sm-6" id="noteBox">
 		</div>
 	</div>
 	<script>
 		$(document).ready(function() {
 			var newTitle = "FIRETEAM CORE";
-			var factionJSON = $("#buildArea")[0].factionJSON;
-			if(factionJSON) {
-				var selectedFactionLabel = factionJSON.factionName;
+			var armyJSON = $("#contents")[0].armyJSON;
+			if(armyJSON) {
+				var selectedFactionLabel = armyJSON.factionName;
 				if(selectedFactionLabel) {
 					newTitle += ": " + selectedFactionLabel;
 				}
 				changeTitle(newTitle);
 			
-				var army = $("#buildArea")[0].army;
+				var factionListFile = "data/factions.json";
+				$.getJSON(factionListFile, function(data) {
+					$.each(data.factions, function(i1, faction) {
+						if(faction.name === $('#contents')[0].faction) {
+							var elems = "";
+							var factionImg = "<div class=\"factionImg img small\" style=\"background-image: url(" + faction.imgSrc + ");\"></div>";
+							var factionButton = "<div class=\"factionButton button\">";
+							factionButton += factionImg;
+							factionButton += "</div>";
+							elems += factionButton;
+							$.each(faction.armies, function(i2, army) {
+								if(army.name === $("#contents")[0].army) {
+									var armyImg = "<div class=\"armyImg img small\" style=\"background-image: url(" + army.imgSrc + ");\"></div>";
+								
+									var armyButton = "<div class=\"armyButton button\">";
+									armyButton += armyImg;
+									armyButton += "</div>";
+							
+									elems += armyButton;
+									return false;
+								}
+							});
+							$('#factionArmy').html(elems);
+							return false;
+						}
+					});
+				});
+			
+				var army = $("#contents")[0].army;
 				$('#fireteamContainer').html('');
 				if(army) {
 					var factionListFile = "data/fireteams.json";
 					$.getJSON(factionListFile, function(data) {
 						var fullFtData = [];
-						$.each(factionJSON.fireteams, function(i2, fireteam) {
+						$.each(armyJSON.fireteams, function(i2, fireteam) {
 							$.each(data.fireteams, function(i1, ftData) {
 								if(ftData.name == fireteam) {
 									fullFtData.push(ftData);

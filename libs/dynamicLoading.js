@@ -1,13 +1,21 @@
+startOver = function() {
+	$('#contents')[0].faction = null;
+	$("#contents")[0].army = null;
+	$('#contents')[0].armyJSON = null;
+	$("#contents")[0].fireteam = null;
+	$("#contents")[0].seedUnit = null;
+	loadPage("views/homepage.html", "#contents");
+}
+
 loadFaction = function(factionStr, elem) {
 	$('.factionButton.highlighted').removeClass('highlighted');
 	$(elem).addClass('highlighted');
-	$('#fireteamContainer').html('');
-	$('#buildArea').html('');
-	$('#buildArea').addClass('empty');
-	$("#buildArea")[0].army = null;
-	$("#buildArea")[0].fireteam = null;
-	$("#buildArea")[0].seedUnit = null;
-	$("#noteBox").html('');
+	
+	$('#contents')[0].faction = factionStr;
+	$("#contents")[0].army = null;
+	$("#contents")[0].armyJSON = null;
+	$("#contents")[0].fireteam = null;
+	$("#contents")[0].seedUnit = null;
 	
 	if(factionStr) {
 		$('#armyContainer').removeClass('empty');
@@ -48,37 +56,31 @@ loadFaction = function(factionStr, elem) {
 loadArmy = function(army, elem) {
 	$('.armyButton.highlighted').removeClass('highlighted');
 	$(elem).addClass('highlighted');
-	$('#buildArea').html('');
-	loadPage("views/builder.html", "#buildArea");
-	$('#buildArea').removeClass('empty');
-	$("#buildArea")[0].army = army;
-	$("#buildArea")[0].fireteam = null;
-	$("#buildArea")[0].seedUnit = null;
-	$("#noteBox").html('');
+	$("#contents")[0].army = army;
+	$("#contents")[0].fireteam = null;
+	$("#contents")[0].seedUnit = null;
 	
 	if(army) {
-		var factionJSONFile = "data/factions/" + army + ".json";
-		$.getJSON(factionJSONFile, function(factionJSON){
-			$("#buildArea")[0].factionJSON = factionJSON;
-		}).fail(function(){
+		var armyJSONFile = "data/factions/" + army + ".json";
+		$.getJSON(armyJSONFile, function(armyJSON){
+			$("#contents")[0].armyJSON = armyJSON;
+			loadPage("views/builder.html", "#contents");
+		}).fail(function() {
 			alert("An error has occurred reading " + army + " data.");
 		});
-	} else {
-		$('#buildArea').html('');
-		$('#buildArea').addClass('empty');
 	}
 };
 
 getFireteamTypes = function() {
-	var factionJSON = $("#buildArea")[0].factionJSON;
-	return factionJSON.fireteams;
+	var armyJSON = $("#contents")[0].armyJSON;
+	return armyJSON.fireteams;
 };
 
 changeFireteam = function(fireteamType, elem) {
 	$('.fireteamButton.highlighted').removeClass('highlighted');
 	$(elem).addClass('highlighted');
-	$("#buildArea")[0].fireteam = fireteamType;
-	$("#buildArea")[0].seedUnit = null;
+	$("#contents")[0].fireteam = fireteamType;
+	$("#contents")[0].seedUnit = null;
 	$("#noteBox").html('');
 	
 	var factionListFile = "data/fireteams.json";
@@ -131,14 +133,14 @@ changeFireteamMember = function(selectedMember, elem) {
 	populateBuiltUnit(unit, memberNumber);
 	
 	if(memberNumber === 1) {
-		$("#buildArea")[0].seedUnit = calculateInitialSeedUnits(selectedMember);
+		$("#contents")[0].seedUnit = calculateInitialSeedUnits(selectedMember);
 		if(unit != null && unit.notes != null && unit.notes.length > 0) {
 			var noteElements = "";
 			$.each(unit.notes, function(i, unitNote) {
 				if(
 					unitNote.fireteam == null
 					|| unitNote.fireteam.length == 0
-					|| unitNote.fireteam.indexOf($("#buildArea")[0].fireteam) > -1
+					|| unitNote.fireteam.indexOf($("#contents")[0].fireteam) > -1
 				) {
 					var note = unitNote.note;
 					var newElem = "<div class=\"note\">";
@@ -153,22 +155,22 @@ changeFireteamMember = function(selectedMember, elem) {
 		}
 		
 	} else {
-		$("#buildArea")[0].seedUnit = clarifySeedUnits(selectedMember);
-		if($("#buildArea")[0].seedUnit == null || $("#buildArea")[0].seedUnit.length == 0) {
+		$("#contents")[0].seedUnit = clarifySeedUnits(selectedMember);
+		if($("#contents")[0].seedUnit == null || $("#contents")[0].seedUnit.length == 0) {
 			if($("#member1Container")[0].selectedUnit) {
-				$("#buildArea")[0].seedUnit = calculateInitialSeedUnits($("#member1Container")[0].selectedUnit);
+				$("#contents")[0].seedUnit = calculateInitialSeedUnits($("#member1Container")[0].selectedUnit);
 			}
 			if($("#member2Container")[0].selectedUnit) {
-				$("#buildArea")[0].seedUnit = clarifySeedUnits($("#member2Container")[0].selectedUnit);
+				$("#contents")[0].seedUnit = clarifySeedUnits($("#member2Container")[0].selectedUnit);
 			}
 			if($("#member3Container")[0].selectedUnit) {
-				$("#buildArea")[0].seedUnit = clarifySeedUnits($("#member3Container")[0].selectedUnit);
+				$("#contents")[0].seedUnit = clarifySeedUnits($("#member3Container")[0].selectedUnit);
 			}
 			if($("#member4Container")[0].selectedUnit) {
-				$("#buildArea")[0].seedUnit = clarifySeedUnits($("#member4Container")[0].selectedUnit);
+				$("#contents")[0].seedUnit = clarifySeedUnits($("#member4Container")[0].selectedUnit);
 			}
 			if($("#member5Container")[0].selectedUnit) {
-				$("#buildArea")[0].seedUnit = clarifySeedUnits($("#member5Container")[0].selectedUnit);
+				$("#contents")[0].seedUnit = clarifySeedUnits($("#member5Container")[0].selectedUnit);
 			}
 		}
 	}
@@ -178,17 +180,17 @@ changeFireteamMember = function(selectedMember, elem) {
 			memberNumber >= 5
 			|| (
 				memberNumber >= 4
-				&& $("#buildArea")[0].fireteam === "enomotarchos"
+				&& $("#contents")[0].fireteam === "enomotarchos"
 			) || (
 				memberNumber >= 3
 				&& (
-					$("#buildArea")[0].fireteam === "haris"
-					|| $("#buildArea")[0].fireteam === "triad"
-					|| $("#buildArea")[0].fireteam === "special triad"
+					$("#contents")[0].fireteam === "haris"
+					|| $("#contents")[0].fireteam === "triad"
+					|| $("#contents")[0].fireteam === "special triad"
 				)
 			) || (
 				memberNumber >= 2
-				&& $("#buildArea")[0].fireteam === "duo"
+				&& $("#contents")[0].fireteam === "duo"
 			)
 		)
 	) {
@@ -201,7 +203,7 @@ changeFireteamMember = function(selectedMember, elem) {
 populateAvailableUnits = function(selector) {
 	var memberNumber = parseInt(selector.replace(/\D/g,''));
 	var unitList = getUnitListJSON();
-	if($("#buildArea")[0].seedUnit != null && $("#buildArea")[0].seedUnit.length > 0) {
+	if($("#contents")[0].seedUnit != null && $("#contents")[0].seedUnit.length > 0) {
 		var validUnits = [];
 		//find the units that can form or join the given fireteam
 		$.each(unitList, function(i1, unit) {
@@ -242,7 +244,7 @@ populateAvailableUnits = function(selector) {
 		//find the units that can form the given fireteam
 		$.each(unitList, function(i1, unit) {
 			$.each(unit.fireteam, function(i2, unitFireteam) {
-				if(unitFireteam === $("#buildArea")[0].fireteam) {
+				if(unitFireteam === $("#contents")[0].fireteam) {
 					validUnitNames.push(unit.name);
 					return false;
 				}
@@ -251,9 +253,9 @@ populateAvailableUnits = function(selector) {
 		//now find the units that count as something that can form the current fireteam
 			//ONLY IF THE FIRETEAM IS CORE, ENOMOTARCHOS, OR DUO
 		if(
-			$("#buildArea")[0].fireteam === "core"
-			|| $("#buildArea")[0].fireteam === "enomotarchos"
-			|| $("#buildArea")[0].fireteam === "duo"
+			$("#contents")[0].fireteam === "core"
+			|| $("#contents")[0].fireteam === "enomotarchos"
+			|| $("#contents")[0].fireteam === "duo"
 		) {
 			$.each(unitList, function(i1, unit) {
 				$.each(unit.countsAs, function(i2, unitCountsAs) {
@@ -291,9 +293,9 @@ populateAvailableUnits = function(selector) {
 calculateInitialSeedUnits = function(unitName) {
 	var seedUnitList = [];
 	if(
-		$("#buildArea")[0].fireteam === "core"
-		|| $("#buildArea")[0].fireteam === "enomotarchos"
-		|| $("#buildArea")[0].fireteam === "duo"
+		$("#contents")[0].fireteam === "core"
+		|| $("#contents")[0].fireteam === "enomotarchos"
+		|| $("#contents")[0].fireteam === "duo"
 	) {	
 		//only need to worry about "counts as" if we're forming a core, enomotarchos, or duo fireteam
 		var unit = getUnitJSON(unitName);
@@ -316,12 +318,12 @@ calculateInitialSeedUnits = function(unitName) {
 
 clarifySeedUnits = function(unitName) {
 	if(
-		$("#buildArea")[0].fireteam === "core"
-		|| $("#buildArea")[0].fireteam === "enomotarchos"
-		|| $("#buildArea")[0].fireteam === "duo"
+		$("#contents")[0].fireteam === "core"
+		|| $("#contents")[0].fireteam === "enomotarchos"
+		|| $("#contents")[0].fireteam === "duo"
 	) {
 		var newSeedUnitList = [];
-		var seedUnitList = $("#buildArea")[0].seedUnit;
+		var seedUnitList = $("#contents")[0].seedUnit;
 		var unit = getUnitJSON(unitName);
 		if(unit) {
 			//found the data for the selected unit
@@ -336,7 +338,7 @@ clarifySeedUnits = function(unitName) {
 							var index = newSeedUnitList.indexOf(unitCantJoin.name);
 							if(index > -1) {
 								$.each(unitCantJoin.fireteam, function(i3, unitCantJoinFireteam) {
-									if(unitCantJoinFireteam === $("#buildArea")[0].fireteam) {
+									if(unitCantJoinFireteam === $("#contents")[0].fireteam) {
 										//only remove if they can't join the current version of the fireteam
 										newSeedUnitList.splice(index, 1);
 										return false;
@@ -357,7 +359,7 @@ clarifySeedUnits = function(unitName) {
 			} else {
 				if(unit.fireteam != null && unit.fireteam.length > 0) {
 					if(
-						unit.fireteam.indexOf($("#buildArea")[0].fireteam) > -1
+						unit.fireteam.indexOf($("#contents")[0].fireteam) > -1
 						&& seedUnitList.indexOf(unit.name) > -1
 					) {
 						//this unit can form the current fireteam, and is the current list of seeds, so add it to the new list of seeds
@@ -372,7 +374,7 @@ clarifySeedUnits = function(unitName) {
 							//this unit can join the current fireteam of one or more of the units that is in the current list of seeds, so add thois units to the new list of seeds
 							if(unitCanJoin.fireteam != null && unitCanJoin.fireteam.length > 0) {
 								if(
-									unitCanJoin.fireteam.indexOf($("#buildArea")[0].fireteam) > -1
+									unitCanJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
 								) {
 									if(newSeedUnitList.indexOf(unitCanJoin.name) == -1) {
 										newSeedUnitList.push(unitCanJoin.name);
@@ -404,17 +406,17 @@ clarifySeedUnits = function(unitName) {
 		}
 		return newSeedUnitList;
 	} else {
-		return $("#buildArea")[0].seedUnit;
+		return $("#contents")[0].seedUnit;
 	}
 };
 
 canJoinSeed = function(unitName) {
 	var canJoin = false;
-	var seedUnitList = $("#buildArea")[0].seedUnit;
+	var seedUnitList = $("#contents")[0].seedUnit;
 	var unit = getUnitJSON(unitName);
 	if(unit) {
 		if(
-			$("#buildArea")[0].fireteam === "triad"
+			$("#contents")[0].fireteam === "triad"
 			&& unit.fireteam != null
 			&& unit.fireteam.length > 0
 			&& unit.fireteam.indexOf("triad") > -1
@@ -434,7 +436,7 @@ canJoinSeed = function(unitName) {
 						&& (
 							unitCanJoin.fireteam == null
 							|| unitCanJoin.fireteam.length == 0
-							|| unitCanJoin.fireteam.indexOf($("#buildArea")[0].fireteam) > -1
+							|| unitCanJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
 						)
 					) {
 						//this unit can join a unit directly referenced in the list of seed units, so we can add it
@@ -465,7 +467,7 @@ canJoinSeed = function(unitName) {
 				if(
 					unitCantJoin.fireteam == null
 					|| unitCantJoin.fireteam.length == 0
-					|| unitCantJoin.fireteam.indexOf($("#buildArea")[0].fireteam) > -1
+					|| unitCantJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
 				) {
 					canJoin = false;
 				}
