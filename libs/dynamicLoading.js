@@ -156,22 +156,18 @@ changeFireteamMember = function(selectedMember, elem) {
 		
 	} else {
 		$("#contents")[0].seedUnit = clarifySeedUnits(selectedMember);
-		if($("#contents")[0].seedUnit == null || $("#contents")[0].seedUnit.length == 0) {
-			if($("#member1Container")[0].selectedUnit) {
-				$("#contents")[0].seedUnit = calculateInitialSeedUnits($("#member1Container")[0].selectedUnit);
-			}
-			if($("#member2Container")[0].selectedUnit) {
-				$("#contents")[0].seedUnit = clarifySeedUnits($("#member2Container")[0].selectedUnit);
-			}
-			if($("#member3Container")[0].selectedUnit) {
-				$("#contents")[0].seedUnit = clarifySeedUnits($("#member3Container")[0].selectedUnit);
-			}
-			if($("#member4Container")[0].selectedUnit) {
-				$("#contents")[0].seedUnit = clarifySeedUnits($("#member4Container")[0].selectedUnit);
-			}
-			if($("#member5Container")[0].selectedUnit) {
-				$("#contents")[0].seedUnit = clarifySeedUnits($("#member5Container")[0].selectedUnit);
-			}
+		$("#contents")[0].seedUnit = calculateInitialSeedUnits($("#member1Container")[0].selectedUnit);
+		if(memberNumber > 1) {
+			$("#contents")[0].seedUnit = clarifySeedUnits($("#member2Container")[0].selectedUnit);
+		}
+		if(memberNumber > 2) {
+			$("#contents")[0].seedUnit = clarifySeedUnits($("#member3Container")[0].selectedUnit);
+		}
+		if(memberNumber > 3) {
+			$("#contents")[0].seedUnit = clarifySeedUnits($("#member4Container")[0].selectedUnit);
+		}
+		if(memberNumber > 4) {
+			$("#contents")[0].seedUnit = clarifySeedUnits($("#member5Container")[0].selectedUnit);
 		}
 	}
 	
@@ -289,7 +285,6 @@ populateAvailableUnits = function(selector) {
 };
 
 calculateInitialSeedUnits = function(unitName) {
-	debugger;
 	var seedUnitList = [];
 	var unit = getUnitJSON(unitName);
 	if(unit) {
@@ -307,6 +302,7 @@ calculateInitialSeedUnits = function(unitName) {
 };
 
 clarifySeedUnits = function(unitName) {
+	var finalList = [];
 	var newSeedUnitList = [];
 	var seedUnitList = $("#contents")[0].seedUnit;
 	var unit = getUnitJSON(unitName);
@@ -387,9 +383,28 @@ clarifySeedUnits = function(unitName) {
 					}
 				});
 			}
+			
+			
+			$.each(newSeedUnitList, function(i2, seedUnit) {
+				var addToList = true;
+				var seedUnitData = getUnitJSON(seedUnit);
+				if(seedUnitData) {
+					if(seedUnitData.cantJoin != null && seedUnitData.cantJoin.length > 0) {
+						$.each(seedUnitData.cantJoin, function(i2, seedCantJoin) {
+							if(seedCantJoin.name === unitName) {
+								addToList = false;
+								return false;
+							}
+						});
+					} 
+				}
+				if(addToList) {
+					finalList.push(seedUnit);
+				}
+			});
 		}
 	}
-	return newSeedUnitList;
+	return finalList;
 };
 
 canJoinSeed = function(unitName) {

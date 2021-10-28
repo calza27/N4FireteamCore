@@ -21,7 +21,13 @@
 			"name": "Celestial Guard Monitor",
 			"ava": 1,
 			"fireteam": ["core"],
-			"display": false
+			"display": false,
+			"cantJoin": [
+				{
+					"name": "Celestial Guard",
+					"fireteam": ["core"]
+				}
+			]
 		}, {
 			"name": "CSU",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/csu-corporate-security-unit-1-1.svg",
