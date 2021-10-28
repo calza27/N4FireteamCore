@@ -1,0 +1,117 @@
+{
+	"factionName": "Morat Aggression Force",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Krakot Renegades",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/krakot-renegades-1-1.svg",
+			"ava": 3,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Kurgat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kurgat-reg-of-assault-engineers-1-1.svg",
+			"ava": 3,
+			"fireteam": ["haris", "duo"]
+		}, {
+			"name": "Vanguard Infantry",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/morat-vanguard-infantry-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Treitak Anyat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/treitak-anyat-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Vanguard Infantry",
+					"fireteam": ["core"]
+				}, {
+					"name": "Suryat",
+					"fireteam": ["core", "haris", "duo"]
+				}, {
+					"name": "Sogorat",
+					"fireteam": ["duo"]
+				}, {
+					"name": "Kurgat",
+					"fireteam": ["haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Kornak Gazarot",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kornak-gazarot-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Raktorak",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/raktorak-morat-sergeant-major-1-1.svg",
+			"ava": 2,
+			"wildcard": true
+		}, {
+			"name": "Rodok",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rodok-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Yaogat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yaogat-strike-infantry-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Sogorat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/sogarat-tempest-regiment-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 3
+		}, {
+			"name": "Suryats",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/suryats-1-1.svg",
+			"fireteam": ["core", "haris", "duo"],
+			"ava": 5,
+			"canJoin": [
+				{
+					"name": "Vanguard Infantry",
+					"fireteam": ["core"],
+					"ava": 1
+				}
+			]
+		}, {
+			"name": "Daturazi",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/daturazi-witch-soldiers-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Kendrat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kendrat-renegades-krakot-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Krakot Renegades",
+					"fireteam": ["duo"]
+				}
+			]
+		}, {
+			"name": "Oznat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/oznat-morat-hunting-regiment-1-1.svg",
+			"ava": 2,
+			"fireteam": ["core"]
+		}, {
+			"name": "Gakis",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-hungries-gakis-1-1.svg",
+			"ava": 4,
+			"canJoin": [
+				{
+					"name": "Oznat",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Pretas",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-hungries-pretas-1-1.svg",
+			"ava": 4,
+			"canJoin": [
+				{
+					"name": "Oznat",
+					"fireteam": ["core"]
+				}
+			]
+		}
+	]
+}

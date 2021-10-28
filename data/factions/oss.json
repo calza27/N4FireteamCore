@@ -1,0 +1,87 @@
+{
+	"factionName": "Operational Subsection of the SSS",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Authorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Trisha N33",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/trishala-n33.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "CSU",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/csu-corporate-security-unit-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"],
+			"canJoin": [
+				{
+					"name": "Dakini Tacbots",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Deva Functionaries",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/deva-functionaries-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"],
+			"wildcard": true
+		}, {
+			"name": "Father Lucian Sforza",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/father-lucien-sforza-1-1.svg",
+			"ava": 1,
+			"fireteam": ["duo"],
+			"countsAs": ["Authorized Bounty Hunters"]
+		}, {
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Parvati",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/parvati-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Shakti",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yadu-officer-shakti-1-1.svg",
+			"ava": 1,
+			"fireteam": ["haris", "duo"],
+			"countsAs": ["Yadu"]
+		}, {
+			"name": "Yadu",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yadu-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris", "duo"]
+		}, {
+			"name": "Asuras",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/asuras-1-1.svg",
+			"ava": 4,
+			"fireteam": ["haris", "duo"],
+			"canJoin": [
+				{
+					"name": "Yadu",
+					"fireteam": ["haris"],
+					"ava": 1
+				}
+			]
+		}, {
+			"name": "Dakini Tacbots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/dakini-tacbots-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Rudras Gunbots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rudras-gunbots-1-1.svg",
+			"ava": 2,
+			"wildcard": true
+		}, {
+			"name": "Samekh Rebots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/samekh-rebots-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}
+	]
+}

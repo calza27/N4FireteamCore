@@ -1,0 +1,120 @@
+{
+	"factionName": "Qapu Khalqi",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Alguaciles",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/corregidor-alguaciles-1-1.svg",
+			"ava": 4,
+			"countsAs": ["Ghulam"]
+		}, {
+			"name": "Ghulam",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ghulam-infantry-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Hafza",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hafza-unit-1-1.svg",
+			"ava": 4,
+			"wildcard": true,
+			"wildcardLimit": 2,
+			"cantJoin": [
+				{
+					"name": "Kaplan Tactical Services"
+				}, {
+					"name": "Druze Shock Team"
+				}
+			]
+		}, {
+			"name": "Leila Sharif",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/husam-operative-leila-sharif-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Rahman Rouhani",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rahman-rouhani-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Odalisques",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/odalisques-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"],
+			"wildcard": true,
+			"wildcardLimit": 2,
+			"cantJoin": [
+				{
+					"name": "Kaplan Tactical Services"
+				}, {
+					"name": "Druze Shock Team"
+				}
+			]
+		}, {
+			"name": "Wild Bill",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wild-bill-legendary-gunslinger-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Kaplan Tactical Services",
+					"fireteam": ["core", "haris"]
+				}
+			],
+			"countsAs": ["Janissaries"]
+		}, {
+			"name": "Djanbazan",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/djanbazan-tactical-group-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Druze Shock Team",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/druze-shock-teams-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "duo"]
+		}, {
+			"name": "Kaplan Tactical Services",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kts-kaplan-tactical-services-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Sekban",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/sekban-naval-special-unit-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris", "duo"],
+			"wildcard": true,
+			"wildcardLimit": 2,
+			"cantJoin": [
+				{
+					"name": "Kaplan Tactical Services"
+				}, {
+					"name": "Druze Shock Team"
+				}
+			]
+		}, {
+			"name": "Azra'il",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/azra-il-1-1.svg",
+			"ava": 3,
+			"fireteam": ["duo"],
+			"canJoin": [
+				{
+					"name": "Rafiq",
+					"fireteam": ["duo"]
+				}
+			]
+		}, {
+			"name": "Janissaries",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/janissaries-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Rafiq",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rafiq-remotes-1-1.svg",
+			"ava": 1,
+			"fireteam": ["duo"],
+			"canJoin": [
+				{
+					"name": "Azra'il",
+					"fireteam": ["duo"]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,80 @@
+{
+	"factionName": "Onyx Contact Force",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Kerr-nau",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/nexus-7-operative-kerr-nau-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Nexus Operative",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/nexus-operatives-1-1.svg",
+			"ava": 3,
+			"canJoin": [
+				{
+					"name": "Unidron Batroid",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Umbra Legates",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/umbra-legates-1-1.svg",
+			"ava": 3,
+			"canJoin": [
+				{
+					"name": "Unidron Batroid",
+					"fireteam": ["core"]
+				}, {
+					"name": "Rodok",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Nourkias",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/nourkias-null-1.svg",
+			"ava": 1,
+			"countsAs": ["Umbra Samaritans"]
+		}, {
+			"name": "Umbra Samaritans",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/umbra-samaritans-1-1.svg",
+			"ava": 3,
+			"fireteam": ["haris"],
+			"canJoin": [
+				{
+					"name": "Rodok",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Rodok",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rodok-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris", "duo"]
+		}, {
+			"name": "Ko Dali",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/special-operative-ko-dali-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Suryats",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/suryats-1-1.svg",
+			"fireteam": ["haris", "duo"],
+			"ava": 3
+		}, {
+			"name": "Xeodron Batroids",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/xeodron-batroids-1-1.svg",
+			"ava": 4,
+			"canJoin": [
+				{
+					"name": "Umbra Samaritans",
+					"fireteam": ["haris"]
+				}
+			]
+		}, {
+			"name": "Unidron Batroid",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/unidron-batroids-1-1.svg",
+			"fireteam": ["core"]
+		}
+	]
+}

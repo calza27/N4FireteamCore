@@ -1,0 +1,108 @@
+{
+	"factionName": "White Company",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "CSU",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/csu-corporate-security-unit-1-1.svg",
+			"ava": 2,
+			"canJoin": [
+				{
+					"name": "Fusiliers",
+					"fireteam": ["core"]
+				}, {
+					"name": "Kaplan Tactical Services",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Fusiliers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusiliers-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Karhu",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/karhu-special-team-1-1.svg",
+			"fireteam": [ "duo"],
+			"ava": 5
+		}, {
+			"name": "Shona Carano",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shona-carano-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Kaplan Tactical Services",
+					"fireteam": ["core", "haris", "duo"]
+				}, {
+					"name": "Varangian Guard",
+					"fireteam": ["duo"]
+				}
+			]
+		}, {
+			"name": "Velerya Gromoz",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/valerya-gromoz-mercenary-hacker-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Chaksa Longarm",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chaksa-longarms-1-1.svg",
+			"ava": 3,
+			"fireteam": ["haris", "duo"]
+		}, {
+			"name": "John Hawkwood",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/john-hawkwood-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Kaplan Tactical Services",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kts-kaplan-tactical-services-1-1.svg",
+			"fireteam": ["core", "haris", "duo"],
+			"ava": 5
+		}, {
+			"name": "Haidao",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/h-idao-special-support-group-1-1.svg",
+			"ava": 3,
+			"wildcard": true
+		}, {
+			"name": "Jujak",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jujak-regiment-null-1.svg",
+			"ava": 4,
+			"fireteam": ["duo"],
+			"canJoin": [
+				{
+					"name": "Orc Troopers",
+					"fireteam": ["core", "haris"]
+				}, {
+					"name": "Kaplan Tactical Services",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Orc Troopers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/orc-troops-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 5,
+			"canJoin": [
+				{
+					"name": "Fusiliers",
+					"fireteam": ["core"],
+					"ava": 2
+				}
+			]
+		}, {
+			"name": "Liang Kai",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/liang-kai-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Kaplan Tactical Services",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Varangian Guard",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/varangian-guard-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2
+		}
+	]
+}

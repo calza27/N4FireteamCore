@@ -1,0 +1,86 @@
+{
+	"factionName": "Dashat Company",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Authorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 4,
+			"fireteam": ["duo"],
+			"wildcard": true
+		}, {
+			"name": "Father Lucian Sforza",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/father-lucien-sforza-1-1.svg",
+			"ava": 1,
+			"fireteam": ["duo"],
+			"wildcard": true
+		}, {
+			"name": "Ghulam",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ghulam-infantry-1-1.svg",
+			"fireteam": ["core"],
+			"ava": 6
+		}, {
+			"name": "Miranda Ashcroft",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miranda-ashcroft-authorized-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Odalisques",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/odalisques-1-1.svg",
+			"ava": 4,
+			"fireteam": ["haris", "duo"]
+		}, {
+			"name": "Velerya Gromoz",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/valerya-gromoz-mercenary-hacker-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Brawlers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/brawlers-mercenary-enforcers-1-1.svg",
+			"fireteam": ["core", "haris", "duo"],
+			"ava": 4
+		}, {
+			"name": "Zuyong Invincibles",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zuy-ng-invincibles-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 4
+		}, {
+			"name": "Maghariba Guard",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/maghariba-guard-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Rafiq",
+					"fireteam": ["duo"]
+				}
+			]
+		}, {
+			"name": "Rafiq",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rafiq-remotes-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Maghariba Guard",
+					"fireteam": ["duo"]
+				}
+			]
+		}, {
+			"name": "Yaoxie Rui Shi",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yaoxie-rui-shi-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Zuyong Invincibles",
+					"fireteam": ["core", "haris"]
+				}
+			]
+		}
+	]
+}

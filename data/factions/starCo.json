@@ -1,0 +1,113 @@
+{
+	"factionName": "StarCo. Free Company of the Star",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Avicenna",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/avicenna-mercenary-doctor-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Riot Grrls",
+					"fireteam": ["core", "haris"]
+				}
+			]
+		}, {
+			"name": "Alguaciles",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/corregidor-alguaciles-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "CSU",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/csu-corporate-security-unit-1-1.svg",
+			"ava": 3,
+			"fireteam": ["duo"],
+			"canJoin": [
+				{
+					"name": "Brawlers",
+					"fireteam": ["haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Daktaris",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/daktaris-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Alguaciles",
+					"fireteam": ["core"]
+				}, {
+					"name": "Mobile Brigada",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Emily Handelman",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/emily-handelman-intel-agent-1-1.svg",
+			"ava": 1,
+			"fireteam": ["duo"],
+			"wildcard": true
+		}, {
+			"name": "Raoul Spector",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/raoul-spector-mercenary-operative-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Uhahu",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/uhahu-hacker-for-hire-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Brawlers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/brawlers-mercenary-enforcers-1-1.svg",
+			"ava": 4,
+			"fireteam": ["haris", "duo"]
+		}, {
+			"name": "Mobile Brigada",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mobile-brigada-1-1.svg",
+			"ava": 4,
+			"fireteam": ["core"],
+			"canJoin": [
+				{
+					"name": "Alguaciles",
+					"fireteam": ["core"]
+				}, {
+					"name": "Anaconda",
+					"fireteam": ["duo"]
+				}
+			]
+		}, {
+			"name": "Riot Grrls",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/riot-grrls-1-1.svg",
+			"ava": 4,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Anaconda",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/anaconda-merc-tag-squad-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2
+		}, {
+			"name": "Irmandinhos",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/irmandinhos-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Anaconda",
+					"fireteam": ["duo"]
+				}
+			]
+		}, {
+			"name": "Señor Massacre",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/senor-massacre-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Alguaciles",
+					"fireteam": ["core"]
+				}, {
+					"name": "Mobile Brigada",
+					"fireteam": ["core"]
+				}
+			]
+		}
+	]
+}

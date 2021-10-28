@@ -1,0 +1,86 @@
+{
+	"factionName": "Steel Phalanx",
+	"fireteams": ["enomotarchos", "duo"],
+	"units": [
+		{
+			"name": "Acmon",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/acmon-sergeant-of-dactyls-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Dactyls",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/dactyls-1-1.svg",
+			"ava": 4,
+			"fireteam": ["enomotarchos", "duo"]
+		}, {
+			"name": "Thrasymedes",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chandra-sergeant-thrasymedes-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Nesaie Alkê",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/nesaie-alke-1-1.svg",
+			"ava": 1,
+			"countsAs": ["Thoraktitai"]
+		}, {
+			"name": "Thoraktitai",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/thorakitai-1-1.svg",
+			"ava": 6,
+			"fireteam": ["enomotarchos"]
+		}, {
+			"name": "Achilles V2 (Hoplite Armour)",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/achilles-v2-hoplite-armor-1-1.svg",
+			"ava": 1,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Ajax",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ajax-the-great-myrmidon-officer-1-1.svg",
+			"ava": 1,
+			"countsAs": ["Myrmidon"]
+		}, {
+			"name": "Hector",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hector-homerid-champion-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Patroclus",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/patroclus-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Achilles V2 (Hoplite Armour)",
+					"fireteam": ["duo"]
+				}
+			]
+		}, {
+			"name": "Hippolyta",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hippolyta-amazon-officer-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Eudoros",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/eudoros-myrmidon-officer-1-1.svg",
+			"ava": 1,
+			"countsAs": ["Myrmidon"]
+		}, {
+			"name": "Machaon",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machaon-1-1.svg",
+			"ava": 1,
+			"countsAs": ["Myrmidon"]
+		}, {
+			"name": "Myrmidon Officer",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/myrmidon-officer-1-1.svg",
+			"ava": 3,
+			"countsAs": ["Myrmidon"]
+		}, {
+			"name": "Myrmidon",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/myrmidons-1-1.svg",
+			"fireteam": ["enomotarchos"]
+		}, {
+			"name": "Phoenix",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/phoenix-veteran-myrmidon-officer-1-1.svg",
+			"ava": 1,
+			"countsAs": ["Myrmidon"]
+		}
+	]
+}

@@ -1,0 +1,201 @@
+{
+	"factions": [
+		{
+			"name": "PanOceania",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/panoceania.svg",
+			"armies": [
+				{
+					"name": "shockArmy",
+					"label": "Shock Army of Acontecimento",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/shock-army-of-acontecimento.svg"
+				}, {
+					"name": "militaryOrders",
+					"label": "Military Orders",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/military-orders.svg"
+				}, {
+					"name": "neoterra",
+					"label": "Neoterran Capitaline Army",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/neoterran-capitaline-army.svg"
+				}, {
+					"name": "varuna",
+					"label": "Varuna Immediate Reaction Division",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/varuna.svg"
+				}, {
+					"name": "svalarheima",
+					"label": "Svalarheima's Winter Force",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/winterfor.svg"
+				}
+			]
+		}, {
+			"name": "Yu Jing",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/yu-jing.svg",
+			"armies": [
+				{
+					"name": "imperialService",
+					"label": "Imperial Service",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/imperial-service.svg"
+				}, {
+					"name": "invincibleArmy",
+					"label": "Invincible Army",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/invincible-army.svg"
+				}, {
+					"name": "whiteBanner",
+					"label": "White Banner Army",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/white-banner.svg"
+				}
+			]
+		}, {
+			"name": "Ariadna",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/ariadna.svg",
+			"armies": [
+				{
+					"name": "caledonia",
+					"label": "Caledonia Highlander Army",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/caledonian-highlander-army.svg"
+				}, {
+					"name": "frrm",
+					"label": "Force de Response Rapide Merovingienne",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/force-de-reponse-rapide-merovingienne.svg"
+				}, {
+					"name": "usa",
+					"label": "USAriadna Ranger Force",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/usariadna.svg"
+				}, {
+					"name": "tak",
+					"label": "Tartary Army Corps",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/tartary.svg"
+				}, {
+					"name": "kosmoflot",
+					"label": "Kosmoflot",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/kosmoflot.svg"
+				}
+			]
+		}, {
+			"name": "Haqqislam",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/haqqislam.svg",
+			"armies": [
+				{
+					"name": "hassassins",
+					"label": "Hassassin Bahram",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/hassassin-bahram.svg"
+				}, {
+					"name": "qapuKhalqi",
+					"label": "Qapu Khalqi",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/qapu-khalqi.svg"
+				}, {
+					"name": "ramah",
+					"label": "Ramah Taskforce",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/ramah-taskforce.svg"
+				}
+			]
+		}, {
+			"name": "Nomads",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/nomads.svg",
+			"armies": [
+				{
+					"name": "bakunin",
+					"label": "Jurisdictional Command of Bakunin",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/corregidor.svg"
+				}, {
+					"name": "corregidor",
+					"label": "Jurisdictional Command of Corregidor",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/bakunin.svg"
+				}, {
+					"name": "tunguska",
+					"label": "Jurisdictional Command of Tunguska",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/tunguska.svg"
+				}
+			]
+		}, {
+			"name": "Combined Army",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/combined-army.svg",
+			"armies": [
+				{
+					"name": "morats",
+					"label": "Morat Aggression Force",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/morat.svg"
+				}, {
+					"name": "onyx",
+					"label": "Onyx Contact Force",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/onyx.svg"
+				}, {
+					"name": "shas",
+					"label": "Shasvastii Expeditionary Force",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/shasvastii.svg"
+				}
+			]
+		}, {
+			"name": "Aleph",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/aleph.svg",
+			"armies": [
+				{
+					"name": "oss",
+					"label": "Operational Subsection of the SSS",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/operations.svg"
+				}, {
+					"name": "steelPhalanx",
+					"label": "Steel Phalanx",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/steel-phalanx.svg"
+				}
+			]
+		}, {
+			"name": "Tohaa",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/tohaa.svg",
+			"armies": [
+				{
+					"name": "tohaa",
+					"label": "Tohaa",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/tohaa.svg"
+				}
+			]
+		}, {
+			"name": "NA2",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/non-aligned-armies.svg",
+			"armies": [
+				{
+					"name": "druze",
+					"label": "Druze Bayram Security",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/druze.svg"
+				}, {
+					"name": "jsa",
+					"label": "Japanese Secessionist Army",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/japanese-secessionist-army.svg"
+				}, {
+					"name": "ikari",
+					"label": "Ikari Company",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/ikari.svg"
+				}, {
+					"name": "starCo",
+					"label": "StarCo. Free Company of the Star",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/starco.svg"
+				}, {
+					"name": "spiralCorps",
+					"label": "Spiral Corps",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/spiral-corps.svg"
+				}, {
+					"name": "foreignCompany",
+					"label": "Foreign Company",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/foreign-company.svg"
+				}, {
+					"name": "dashat",
+					"label": "Dashat Company",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/dahshat.svg"
+				}, {
+					"name": "whiteCo",
+					"label": "White Company",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/white-company.svg"
+				}
+			]
+		}, {
+			"name": "O12",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/o-12.svg",
+			"armies": [
+				{
+					"name": "starmada",
+					"label": "Starmada",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/starmada.svg"
+				}
+			]
+		}
+	]
+}

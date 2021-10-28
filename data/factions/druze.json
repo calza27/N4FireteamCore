@@ -1,0 +1,78 @@
+{
+	"factionName": "Druze Bayram Security",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Authorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"wildcard": true,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Velerya Gromoz",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/valerya-gromoz-mercenary-hacker-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Brawlers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/brawlers-mercenary-enforcers-1-1.svg",
+			"ava": 4,
+			"fireteam": ["haris", "duo"],
+			"canJoin": [
+				{
+					"name": "Druze Shock Team",
+					"fireteam": ["core", "haris", "duo"]
+				}, {
+					"name": "Scarface",
+					"fireteam": ["duo"],
+					"ava": 1
+				}
+			]
+		}, {
+			"name": "Druze Shock Team",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/druze-shock-teams-1-1.svg",
+			"fireteam": ["core", "haris", "duo"]
+		}, {
+			"name": "Security Chief Arslan",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/security-chief-arslan-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Scarface",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/scarface-and-cordelia-1-1.svg",
+			"ava": 1,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Cordelia Turner",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/scarface-and-cordelia-3-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Scarface",
+					"fireteam": ["duo"],
+					"ava": 1
+				}
+			]
+		}, {
+			"name": "Bulleteer Armbots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/armbots-bulleteer-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Clipper Dronbots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/clipper-dronbot-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Wolfgang Amadeus Wolff",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wolfgang-amadeus-wolff-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}
+	]
+}

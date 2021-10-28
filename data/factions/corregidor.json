@@ -1,0 +1,78 @@
+{
+	"factionName": "Jurisdictional Command of Corregidor",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Alguaciles",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/corregidor-alguaciles-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Alguacil Vortex Lupe Balboa",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/alguacil-vortex-lupe-balboa-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Daktaris",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/daktaris-1-1.svg",
+			"ava": 2,
+			"wildcard": true
+		}, {
+			"name": "Jazmin Jazz Caticovas",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jazz-billie-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Valerya Gromoz",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/valerya-gromoz-mercenary-hacker-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Wildcats",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wildcats-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Evaders",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/evaders-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"],
+			"wildcard": true
+		}, {
+			"name": "Mobile Brigada",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mobile-brigada-1-1.svg",
+			"ava": 6,
+			"fireteam": ["core"],
+			"wildcard": true
+		}, {
+			"name": "Gecko Squad",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/gecko-squad-1-1.svg",
+			"ava": 4,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Tsyklon Sputnik",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tsyklon-sputniks-1-1.svg",
+			"ava": 2,
+			"wildcard": true
+		}, {
+			"name": "Vostok Sputnik",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/vostok-1-1.svg",
+			"ava": 2,
+			"wildcard": true
+		}, {
+			"name": "Jaguars",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/corregidor-jaguars-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Señor Massacre",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/senor-massacre-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Wolfgang Amadeus Wolff",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wolfgang-amadeus-wolff-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}
+	]
+}

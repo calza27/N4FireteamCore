@@ -1,0 +1,122 @@
+{
+	"factionName": "Jurisdictional Command of Bakunin",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Avicenna",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/avicenna-mercenary-doctor-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Moderators",
+					"fireteam": ["core"]
+				}, {
+					"name": "Riot Grrls",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Clockmakers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/clockmakers-1-1.svg",
+			"ava": 2,
+			"canJoin": [
+				{
+					"name": "Moderators",
+					"fireteam": ["core"]
+				}, {
+					"name": "Riot Grrls",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Moderators",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/moderators-from-bakunin-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Chaksa Longarm",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chaksa-longarms-1-1.svg",
+			"ava": 3,
+			"fireteam": ["haris", "duo"]
+		}, {
+			"name": "Reverend Custodiers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/reverend-custodiers-1-1.svg",
+			"ava": 3,
+			"fireteam": ["haris"],
+			"canJoin": [
+				{
+					"name": "Reverend Moiras",
+					"fireteam": ["core", "haris"]
+				}
+			]
+		}, {
+			"name": "Reverend Healers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/reverend-healers-1-1.svg",
+			"ava": 3,
+			"fireteam": ["haris"],
+			"canJoin": [
+				{
+					"name": "Reverend Moiras",
+					"fireteam": ["core", "haris"]
+				}
+			]
+		}, {
+			"name": "Reverend Moiras",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/reverend-moiras-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Cassandra Kusanagi",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/cassandra-kusanagi-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Reverend Moiras",
+					"fireteam": ["core", "haris"]
+				}, {
+					"name": "Reverend Custodiers",
+					"fireteam": ["haris"]
+				}, {
+					"name": "Reverend Healers",
+					"fireteam": ["haris"]
+				}
+			]
+		}, {
+			"name": "Riot Grrls",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/riot-grrls-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris", "duo"],
+			"canJoin": [
+				{
+					"name": "Moderators",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Taskmaster",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/taskmasters-1-1.svg",
+			"ava": 4,
+			"fireteam": ["duo"],
+			"canJoin": [
+				{
+					"name": "Riot Grrls",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Tsyklon Sputnik",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tsyklon-sputniks-1-1.svg",
+			"ava": 2,
+			"wildcard": true
+		}, {
+			"name": "Vostok Sputnik",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/vostok-1-1.svg",
+			"ava": 2,
+			"wildcard": true
+		}, {
+			"name": "Wolfgang Amadeus Wolff",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wolfgang-amadeus-wolff-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}	
+	]
+}

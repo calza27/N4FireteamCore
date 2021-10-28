@@ -1,0 +1,64 @@
+{
+	"factionName": "Tartary Army Corps",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "112, Emergency Service",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/112-emergency-service-1-1.svg",
+			"ava": 2,
+			"canJoin": [
+				{
+					"name": "Frontoviks",
+					"fireteam": ["core", "haris"]
+				}
+			]
+		}, {
+			"name": "Dynamo",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/dynamo-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 5
+		}, {
+			"name": "Frontoviks",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/frontoviks-separate-assault-bat-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 5,
+			"canJoin": [
+				{
+					"name": "Line Kazaks",
+					"fireteam": ["core"],
+					"ava": 1
+				}
+			]
+		}, {
+			"name": "Kazak Doktor",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kazak-doktor-1-1.svg",
+			"ava": 3,
+			"canJoin": [
+				{
+					"name": "Line Kazaks",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Line Kazaks",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/line-kazaks-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Tankhunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tankhunters-1-1.svg",
+			"ava": 4,
+			"wildcard": true
+		}, {
+			"name": "Ratnik",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ratnik-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2
+		}, {
+			"name": "Veteran Kazaks",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/veteran-kazaks-1-1.svg",
+			"ava": 5, 
+			"fireteam": ["core", "haris", "duo"], 
+			"wildcard": true
+		}
+	]
+}

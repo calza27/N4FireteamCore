@@ -1,0 +1,43 @@
+{
+	"factionName": "USAriadna Ranger Force",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "The Unknown Ranger",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-unknown-ranger-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Wild Bill",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wild-bill-legendary-gunslinger-1-1.svg",
+			"ava": 1,
+			"countsAs": ["Grunts"]
+		}, {
+			"name": "Rosalind Rosie Munroe",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/grunt-intel-rosalind-rosie-munroe-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Marauders",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/marauders-5307th-ranger-unit-1-1.svg",
+			"fireteam": ["core", "haris", "duo"],
+			"ava": 5
+		}, {
+			"name": "Grunts",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/usariadna-grunts-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Minutemen",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/minutemen-1-1.svg",
+			"fireteam": ["core", "haris", "duo"],
+			"ava": 5,
+			"canJoin": [
+				{
+					"name": "Grunts",
+					"fireteam": ["core"],
+					"ava": 1
+				}
+			]
+		}
+	]
+}

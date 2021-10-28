@@ -1,0 +1,85 @@
+{
+	"factionName": "Shasvastii Expeditionary Force",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Agent Dukash",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/agent-dukash-vashar-special-corps-null-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Jayth Cutthroats",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jayth-cutthroats-1-1.svg",
+			"fireteam": ["haris", "duo"],
+			"ava": 4
+		}, {
+			"name": "Sargosh",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/sargosh-null-1.svg",
+			"ava": 1,
+			"fireteam": ["haris", "duo"],
+			"countsAs": ["Jayth Cutthroats"]
+		}, {
+			"name": "Nox",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shasvastii-nox-troops-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Sheskiin",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/cadmus-naish-agent-sheskiin-1-1.svg",
+			"ava": 1,
+			"shareAVA": ["Boarding Action Sheskiin"],
+			"wildcard": true
+		}, {
+			"name": "Tensho Expert",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shasvastii-tensho-experts-1-1.svg",
+			"ava": 1,
+			"countsAs": ["Nox"]
+		}, {
+			"name": "Victor Messer",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/victor-messer-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Corax Hasht",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shasvastii-corax-hasht-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Boarding Action Sheskiin",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/boarding-action-cadmus-naish-agent-sheskiin-null-1.svg",
+			"ava": 1,
+			"shareAVA": ["Sheskiin"],
+			"wildcard": true
+		}, {
+			"name": "Gwailos",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shasvastii-gwailos-1-1.svg",
+			"fireteam": ["haris", "duo"],
+			"ava": 1
+		}, {
+			"name": "M-Drone",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/m-drones-1-1.svg",
+			"ava": 2,
+			"canJoin": [
+				{
+					"name": "Gwailos Infantry",
+					"fireteam": ["haris"],
+					"ava": 2
+				}, {
+					"name": "Gwailos Infantry",
+					"fireteam": ["duo"],
+					"ava": 1
+				}
+			]
+		}, {
+			"name": "T-Drone",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/t-drones-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Nox",
+					"fireteam": ["core"],
+					"ava": 1
+				}
+			]
+		}
+	]
+}

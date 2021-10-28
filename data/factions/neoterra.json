@@ -1,0 +1,80 @@
+{
+	"factionName": "Neoterran Capitaline Army",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "CSU",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/csu-corporate-security-unit-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2,
+			"countsAs": ["Fusiliers"]
+		}, {
+			"name": "Bipandra",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusilier-indigo-bipandra-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Richard Quinn",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusilier-indigo-richard-quinn-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Fusiliers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusiliers-1-1.svg",
+			"fireteam": ["core"],
+			"ava": 5
+		}, {
+			"name": "Machinist",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machinists-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Neoterra Bolts",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Shona Carano",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shona-carano-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Neoterra Bolts",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/neoterra-bolts-1-1.svg",
+			"fireteam": ["core", "haris", "duo"]
+		}, {
+			"name": "Black Friar",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/panoceanian-black-friars-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Aquila Guard",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/aquila-guard-1-1.svg",
+			"ava": 3,
+			"wildcard": true
+		}, {
+			"name": "Orc Trooper",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/orc-troops-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 5,
+			"canJoin": [
+				{
+					"name": "Fusiliers",
+					"fireteam": ["core"],
+					"ava": 2
+				}
+			]
+		}, {
+			"name": "Squalos",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/squalos-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2
+		}, {
+			"name": "Bulleteer Armbots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/armbots-bulleteer-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2,
+			"wildcard": true
+		}
+	]
+}

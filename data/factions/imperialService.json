@@ -1,0 +1,140 @@
+{
+	"factionName": "Imperial Service",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Authorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Bao Trooper",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/bao-troops-1-1.svg",
+			"ava": 5,
+			"fireteam": ["haris", "duo"]
+		}, {
+			"name": "Celestial Guard",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/celestial-guard-1-1.svg",
+			"fireteam": ["core"],
+			"countAs": "Celestial Guard Monitor"
+		}, {
+			"name": "Celestial Guard Monitor",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/celestial-guard-1-1.svg",
+			"ava": 1,
+			"fireteam": ["core"],
+			"display": false
+		}, {
+			"name": "CSU",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/csu-corporate-security-unit-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Deva Functionaries",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/deva-functionaries-1-1.svg",
+			"ava": 3,
+			"fireteam": ["haris"]
+		}, {
+			"name": "Father Lucian Sforza",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/father-lucien-sforza-1-1.svg",
+			"ava": 1,
+			"fireteam": ["duo"],
+			"countsAs": ["Authorized Bounty Hunters"]
+		}, {
+			"name": "Gui Feng Xi Zhuang",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/gu-feng-xi-zhuang-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Imperial Agent, Pheasant Rank",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/imperial-agents-pheasant-rank-1-1.svg",
+			"ava": 3,
+			"fireteam": ["duo"],
+			"canJoin": [
+				{
+					"name": "Bao Trooper",
+					"fireteam": ["haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Kuang Shi",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kuang-shi-1-1.svg",
+			"ava": 8,
+			"canJoin": [
+				{
+					"name": "Celestial Guard Monitor",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Miranda Ashcroft",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miranda-ashcroft-authorized-1-1.svg",
+			"ava": 1,
+			"fireteam": ["duo"],
+			"countsAs": ["Authorized Bounty Hunters"]
+		}, {
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Zhanying",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zhanying-imperial-agents-1-1.svg",
+			"ava": 4,
+			"fireteam": ["haris"],
+			"canJoin": [
+				{
+					"name": "Wu Ming",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Adil Mehmut",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/imperial-agent-adil-mehmut-special-division-1-1.svg",
+			"ava": 1,
+			"shareAVA": ["Adil Mehmut, Crane Rank Armour"],
+			"wildcard": true
+		}, {
+			"name": "Hsien Warrior",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hsien-warriors-1-1.svg",
+			"ava": 4,
+			"canJoin": [
+				{
+					"name": "Zhanying",
+					"fireteam": ["haris"]
+				}
+			]
+		}, {
+			"name": "Adil Mehmut, Crane Rank Armour",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/adil-mehmut-1-1.svg",
+			"ava": 1,
+			"shareAVA": ["Adil Mehmut"],
+			"wildcard": true
+		}, {
+			"name": "Imperial Agent, Crane Rank",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/imperial-agents-crane-rank-1-1.svg",
+			"ava": 3,
+			"fireteam": ["haris"],
+			"wildcard": true
+		}, {
+			"name": "Su Jian",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/su-jian-immediate-action-unit-1-1.svg",
+			"ava": 3,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Wu Ming",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wu-ming-assault-corps-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris", "duo"]
+		}, {
+			"name": "Dakini Tacbots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/dakini-tacbots-1-1.svg",
+			"ava": 3,
+			"canJoin": [
+				{
+					"name": "Deva Functionaries",
+					"fireteam": ["haris"]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,103 @@
+{
+	"factionName": "Starmada",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Bluecoat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/bluecoats-1-1.svg",
+			"ava": 4,
+			"fireteam": ["core", "haris"],
+			"canJoin": [
+				{
+					"name": "Kappa",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Kappa",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kappa-unit-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core"]
+		}, {
+			"name": "Nyoka",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/nyoka-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Parvati",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/parvati-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Psi-Cops",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/psi-cops-1-1.svg",
+			"ava": 2,
+			"wildcard": true
+		}, {
+			"name": "Shona Carano",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shona-carano-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Tian Gou",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tian-g-u-orbital-activity-squad-null-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Chaksa Longarm",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chaksa-longarms-1-1.svg",
+			"ava": 3,
+			"fireteam": ["haris", "duo"]
+		}, {
+			"name": "Betatrooper",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/betatroopers-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Bronzes",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/bronzes-1-1.svg",
+			"ava": 3,
+			"fireteam": ["duo"],
+			"canJoin": [
+				{
+					"name": "Bluecoat",
+					"fireteam": ["core", "haris"]
+				}, {
+					"name": "Nyoka",
+					"fireteam": ["core", "haris"]
+				}, {
+					"name": "Betatrooper",
+					"fireteam": ["core", "haris"]
+				}
+			]
+		}, {
+			"name": "Hector",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hector-homerid-champion-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Nyoka",
+					"fireteam": ["core", "haris"]
+				}, {
+					"name": "Betatrooper",
+					"fireteam": ["core", "haris"]
+				}
+			]
+		}, {
+			"name": "Knight Santiago",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knights-of-santiago-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Bronzes",
+					"fireteam": ["duo"]
+				}
+			]
+		}, {
+			"name": "Varangian Guard",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/varangian-guard-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}
+	]
+}

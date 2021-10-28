@@ -1,0 +1,80 @@
+{
+	"factionName": "Japanese Secessionist Army",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Kaizoku Yuriko Oda",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/keisotsu-kaizoku-yuriko-oda-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Keisotsu Butai",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/keisotsu-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Kempeitai",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kempeitai-1-1.svg",
+			"ava": 3,
+			"wildcard": true
+		}, {
+			"name": "Daiyokai Dengekitai",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/daiy-kai-dengekitai-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Domaru Butai",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Domaru Butai",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/domaru-butai-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris", "duo"],
+			"canJoin": [
+				{
+					"name": "Keisotsu Butai",
+					"fireteam": ["core"],
+					"ava": 1
+				}, {
+					"name": "Karakuri",
+					"fireteam": ["haris"]
+				}
+			]
+		}, {
+			"name": "Tekshi Neko Oyama",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/domaru-takeshi-neko-oyama-1-1.svg",
+			"ava": 1,
+			"fireteam": ["haris", "duo"],
+			"countsAs": ["Domaru Butai"]
+		}, {
+			"name": "Karakuri",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/karakuri-special-project-1-1.svg",
+			"ava": 3,
+			"fireteam": ["haris"]
+		}, {
+			"name": "Shikami",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shikami-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Tanko Zensenbutai",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tank-zensenbutai-1-1.svg",
+			"ava": 3,
+			"canJoin": [
+				{
+					"name": "Domaru Butai",
+					"fireteam": ["core", "haris", "duo"]
+				}, {
+					"name": "Miyamoto Mushashi",
+					"fireteam": ["haris"]
+				}
+			]
+		}, {
+			"name": "Miyamoto Mushashi",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miyamoto-mushashi-1-1.svg",
+			"ava": 1,
+			"fireteam": ["haris"]
+		}
+	]
+}

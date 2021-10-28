@@ -1,0 +1,26 @@
+{
+	"fireteams": [
+		{
+			"name": "core",
+			"imgSrc": "fireteamCore.png"
+		}, {
+			"name": "haris",
+			"imgSrc": "fireteamHaris.png"
+		}, {
+			"name": "duo",
+			"imgSrc": "fireteamDuo.png"
+		}, {
+			"name": "triad",
+			"imgSrc": "fireteamTriad.png"
+		}, {
+			"name": "special triad",
+			"imgSrc": "fireteamTriadS.png"
+		}, {
+			"name": "crusade",
+			"imgSrc": "fireteamCrusade.png"
+		}, {
+			"name": "enomotarchos",
+			"imgSrc": "fireteamEnomotarchos.png"
+		}
+	]
+}

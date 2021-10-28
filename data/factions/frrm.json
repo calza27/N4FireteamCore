@@ -1,0 +1,47 @@
+{
+	"factionName": "Force de Response Rapide Merovingienne",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Brigadier Jacques Bruant",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/brigadier-jacques-bruant-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Alguaciles",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/corregidor-alguaciles-1-1.svg",
+			"ava": 1,
+			"countsAs": ["Metros"]
+		}, {
+			"name": "Loup-Garou",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/loup-garous-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 5
+		}, {
+			"name": "Metros",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/metros-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Briscards",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/briscards-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 5
+		}, {
+			"name": "Moblots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/moblots-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 4,
+			"wildcard": true
+		}, {
+			"name": "Anaconda",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/anaconda-merc-tag-squad-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2
+		}, {
+			"name": "Wolfgang Amadeus Wolff",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wolfgang-amadeus-wolff-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}
+	]
+}

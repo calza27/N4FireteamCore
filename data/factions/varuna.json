@@ -1,0 +1,81 @@
+{
+	"factionName": "Varuna Immediate Reaction Division",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Bipandra",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusilier-indigo-bipandra-1-1.svg",
+			"ava": 1,
+			"countsAs": ["Fusiliers"]
+		}, {
+			"name": "Richard Quinn",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusilier-indigo-richard-quinn-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Fusiliers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusiliers-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Kamau",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kamau-amphibian-intervention-teams-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 5,
+			"wildcard": true
+		}, {
+			"name": "Machinist",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machinists-1-1.svg",
+			"ava": 2,
+			"canJoin": [
+				{
+					"name": "Kamau",
+					"fireteam": ["core", "haris"]
+				}
+			]
+		}, {
+			"name": "Orc Trooper",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/orc-troops-1-1.svg",
+			"fireteam": ["core", "haris", "duo"],
+			"ava": 5,
+			"shareAVA": ["Orc Trooper (Varuna Div)"],
+			"canJoin": [
+				{
+					"name": "Orc Trooper (Varuna Div)",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Orc Trooper (Varuna Div)",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/orc-troops-1-1.svg",
+			"fireteam": ["core", "haris", "duo"],
+			"ava": 5,
+			"shareAVA": ["Orc Trooper"],
+			"canJoin": [
+				{
+					"name": "Orc Trooper",
+					"fireteam": ["core", "haris", "duo"]
+				}, {
+					"name": "Fusiliers",
+					"fireteam": ["core"],
+					"ava" : 2
+				}
+			]
+		}, {
+			"name": "Patsy Garnett",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/patsy-garnett-1-1.svg",
+			"fireteam": ["haris", "duo"],
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Squalos",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/squalos-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2
+		}, {
+			"name": "Clipper Dronbot",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/clipper-dronbot-1-1.svg",
+			"ava": 2,
+			"wildcard": true
+		}
+	]
+}

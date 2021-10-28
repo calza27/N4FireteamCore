@@ -1,0 +1,62 @@
+{
+	"factionName": "Shock Army of Acontecimento",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Regulars",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/acontecimento-regulars-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Agnes Ferreira",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/agnes-ferreira-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Machinist",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machinists-1-1.svg",
+			"ava": 2,
+			"canJoin": [
+				{
+					"name": "Bagh-Mari",
+					"fireteam": ["core", "haris"],
+					"ava": 2
+				}
+			]
+		}, {
+			"name": "Bagh-Mari",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/bagh-mari-unit-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 5,
+			"canJoin": [
+				{
+					"name": "Regulars",
+					"fireteam": ["core"],
+					"ava": 2
+				}
+			]
+		}, {
+			"name": "Lt. Stephen Rao",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/lt-stephen-rao-bagh-mari-unit-1-1.svg",
+			"fireteam": ["haris"],
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Orc Troops",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/orc-troops-1-1.svg",
+			"fireteam": ["core", "haris", "duo"],
+			"ava": 5,
+			"canJoin": [
+				{
+					"name": "Regulars",
+					"fireteam": ["core"],
+					"ava": 1
+				}
+			]
+		}, {
+			"name": "Tikbalang",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tikbalangs-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2
+		}
+	]
+}

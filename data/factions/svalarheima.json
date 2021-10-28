@@ -1,0 +1,133 @@
+{
+	"factionName": "Svalarheima's Winter Force",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Agnes Ferreira",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/agnes-ferreira-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Richard Quinn",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusilier-indigo-richard-quinn-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Fusiliers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusiliers-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Karhu",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/karhu-special-team-1-1.svg",
+			"fireteam": ["haris", "duo"],
+			"ava": 5,
+			"wildcard": true
+		}, {
+			"name": "Machinist",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machinists-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Nisses",
+					"fireteam": ["core", "haris"]
+				}
+			]
+		}, {
+			"name": "Shona Carano",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shona-carano-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Chaksa Longarm",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chaksa-longarms-1-1.svg",
+			"ava": 3,
+			"fireteam": ["haris", "duo"]
+		}, {
+			"name": "Uma Sørensen",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/captain-uma-sorensen-null-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Infirmarers of Saint Lazarus",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/infirmarers-of-saint-lazarus-1-1.svg",
+			"ava": 2,
+			"canJoin": [
+				{
+					"name": "Fusiliers",
+					"fireteam": ["core"],
+					"ava": 1
+				}, {
+					"name": "Knight Hospitaller",
+					"fireteam": ["haris"],
+					"ava": 1
+				}, {
+					"name": "Knight of Justice",
+					"fireteam": ["duo"],
+					"ava": 1
+				}
+			]
+		}, {
+			"name": "Nisses",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/nisses-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 4
+		}, {
+			"name": "Gunnar Lundmark",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/gunnar-lundmark-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Vargar",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/vargar-maximum-security-team-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 5,
+			"canJoin": [
+				{
+					"name": "Orc Troopers",
+					"fireteam": ["core", "haris"],
+					"ava": 2
+				}
+			]
+		}, {
+			"name": "Bøyg Soldiers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/boyg-soldiers-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2
+		}, {
+			"name": "Knight Hospitaller",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knights-hospitaller-1-1.svg",
+			"fireteam": ["haris"],
+			"ava": 3,
+			"canJoin": [
+				{
+					"name": "Knight of Justice",
+					"fireteam": ["duo"],
+					"ava": 1
+				}
+			]
+		}, {
+			"name": "Knight of Justice",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knight-of-justice-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2,
+			"wildcard": true
+		}, {
+			"name": "Orc Troopers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/orc-troops-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 5,
+			"canJoin": [
+				{
+					"name": "Fusiliers",
+					"fireteam": ["core"],
+					"ava": 2
+				}
+			]
+		}, {
+			"name": "Bulleteer Armbots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/armbots-bulleteer-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2
+		}
+	]
+}

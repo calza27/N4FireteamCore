@@ -1,0 +1,107 @@
+{
+	"factionName": "Jurisdictional Command of Tunguska",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Authorized Bounty Hunter",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Cheerkillers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tunguska-cheerkillers-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris", "duo"]
+		}, {
+			"name": "Jelena Kovac",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jelena-kovac.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Miranda Ashcroft",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miranda-ashcroft-authorized-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Raoul Spector",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/raoul-spector-mercenary-operative-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Securitate",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/securitate-1-1.svg",
+			"fireteam": ["core"]
+		}, {
+			"name": "Interventors",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tunguska-interventors-1-1.svg",
+			"ava": 4,
+			"canJoin": [
+				{
+					"name": "Securitate",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Grenzers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/grenzers-grenz-security-team-1-1.svg",
+			"ava": 5,
+			"wildcard": true
+		}, {
+			"name": "Kriza Boracs",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kriza-boracs-special-crisis-unit-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"],
+			"canJoin": [
+				{
+					"name": "The Hollow Men",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "The Hollow Men",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-hollow-men-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris", "duo"]
+		}, {
+			"name": "Stempler Zond",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/stempler-zonds-1-1.svg",
+			"ava": 2,
+			"canJoin": [
+				{
+					"name": "The Hollow Men",
+					"fireteam": ["core", "haris", "duo"]
+				}, {
+					"name": "Perseus",
+					"fireteam": ["haris"],
+					"ava" : 1
+				}
+			]
+		}, {
+			"name": "Tsyklon Sputnik",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tsyklon-sputniks-1-1.svg",
+			"ava": 2,
+			"wildcard": true
+		}, {
+			"name": "Vostok Sputnik",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/vostok-1-1.svg",
+			"ava": 2,
+			"wildcard": true
+		}, {
+			"name": "Perseus",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/perseus-rogue-myrmidon-1-1.svg",
+			"ava": 1,
+			"fireteam": ["haris"],
+			"countsAs": ["Securitate", "The Hollow Men"]
+		}, {
+			"name": "Wolfgang Amadeus Wolff",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wolfgang-amadeus-wolff-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}
+	]
+}

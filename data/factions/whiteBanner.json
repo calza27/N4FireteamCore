@@ -1,0 +1,97 @@
+{
+	"factionName": "White Banner Army",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Tian Gou",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tian-g-u-orbital-activity-squad-null-1.svg",
+			"ava": 3,
+			"wildcard": true,
+			"wildcardLimit": 1
+		}, {
+			"name": "Zhanshi",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zhanshi-1-1.svg",
+			"ava": 4,
+			"fireteam": ["core"]
+		}, {
+			"name": "Jing Qo",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jing-qo-null-1.svg",
+			"ava": 1,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Adil Mehmut",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/imperial-agent-adil-mehmut-special-division-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Lei Gong",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/lei-g-ng-invincibles-lord-of-thunder-null-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Ye Mao",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ye-mao-infantry-null-1.svg",
+			"ava": 5,
+			"fireteam": ["haris"]
+		}, {
+			"name": "Qiang Gao",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/captain-qiang-gao-invincibles-officer-null-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Shang Ji Invincibles",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Jujak",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jujak-regiment-null-1.svg",
+			"ava": 4,
+			"fireteam": ["duo"],
+			"canJoin": [
+				{
+					"name": "Shang Ji Invincibles",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "So-Ra Kwon",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/sergeant-so-ra-kwon-jujak-regiment-1-1.svg",
+			"ava": 1,
+			"fireteam": ["duo"],
+			"countsAs": ["Jujak"]
+		}, {
+			"name": "Shang Ji Invincibles",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shang-ji-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris", "duo"],
+			"wildcard": true
+		}, {
+			"name": "Blue Wolf",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/blue-wolf-mongol-cavalry-null-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Guija Squadrons",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/guijia-squadrons-1-1.svg",
+			"ava": 1,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Liang Kai",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/liang-kai-1-1.svg",
+			"ava": 1,
+			"countsAs": ["Shaolin Warrior Monks"]
+		}, {
+			"name": "Shaolin Warrior Monks",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shaolin-warrior-monks-1-1.svg",
+			"ava": 5,
+			"canJoin": [
+				{
+					"name": "Jing Qo",
+					"fireteam": ["duo"],
+					"ava": 1
+				}
+			]
+		}
+	]
+}

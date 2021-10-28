@@ -1,0 +1,83 @@
+{
+	"factionName": "Kosmoflot",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Frontoviks",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/frontoviks-separate-assault-bat-1-1.svg",
+			"fireteam": ["core", "haris"],
+			"ava": 4,
+			"canJoin": [
+				{
+					"name": "Kosmosoldat",
+					"fireteam": ["duo"]
+				}
+			]
+		}, {
+			"name": "Kazak Doktor",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kazak-doktor-1-1.svg",
+			"ava": 2,
+			"canJoin": [
+				{
+					"name": "Rokots",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Rokots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rokots-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core"]
+		}, {
+			"name": "The Unknown Ranger",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-unknown-ranger-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "The Scots Guard",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-scots-guards-1-1.svg",
+			"fireteam": ["core", "haris", "duo"],
+			"ava": 4
+		}, {
+			"name": "Kosmosoldat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kosmosoldat.svg",
+			"fireteam": ["duo"],
+			"ava": 2
+		}, {
+			"name": "Volkolak",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/volkolak-shock-troopers.svg",
+			"ava": 3,
+			"wildcard": true
+		}, {
+			"name": "Cadin Firststrike Donn",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/cadin-firststrike-donn-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Varangian Guard",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/varangian-guard-1-1.svg",
+			"ava": 4,
+			"fireteam": ["core", "haris", "duo"]
+		}, {
+			"name": "William Wallace",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/william-wallace-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Varangian Guard",
+					"fireteam": ["core", "haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Wolfgang Amadeus Wolff",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wolfgang-amadeus-wolff-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Rokots",
+					"fireteam": ["core"]
+				}
+			]
+		}
+	]
+}

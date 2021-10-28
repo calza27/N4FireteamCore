@@ -1,0 +1,74 @@
+{
+	"factionName": "Hassassin Bahram",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Avicenna",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/avicenna-mercenary-doctor-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Ghulam",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Ghulam",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ghulam-infantry-1-1.svg",
+			"ava": 4,
+			"fireteam": ["core"]
+		}, {
+			"name": "Hassassin Barids",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hassassin-barids-1-1.svg",
+			"ava": 2,
+			"canJoin": [
+				{
+					"name": "Ghulam",
+					"fireteam": ["core"]
+				}
+			]
+		}, {
+			"name": "Husam Yasbir",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hassassin-husam-yasbir-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Hassassin Lasiqs",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hassassin-lasiqs-1-1.svg",
+			"ava": 4,
+			"fireteam": ["core", "haris", "duo"]
+		}, {
+			"name": "Laila Sharif",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/husam-operative-leila-sharif-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Hassassin Govads",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hassassin-govads-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris", "duo"]
+		}, {
+			"name": "Hassassin Muyibs",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hassassin-muyibs-1-1.svg",
+			"ava": 6,
+			"fireteam": ["core", "haris"],
+			"wildcard": true
+		}, {
+			"name": "Yara Hadad",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yara-haddad-1-1.svg",
+			"ava": 1,
+			"wildcard": true
+		}, {
+			"name": "Asawira",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/asawira-regiment-1-1.svg",
+			"ava": 4,
+			"fireteam": ["haris", "duo"],
+			"wildcard": true
+		}, {
+			"name": "Shakush",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shakush-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}
+	]
+}

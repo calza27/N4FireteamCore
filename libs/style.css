@@ -1,0 +1,70 @@
+#pageContainer {
+	height: 100%;
+	width: 75%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.title {
+	font-weight: bold;
+    font-size: 26px;
+    text-decoration: underline;
+}
+
+.subTitle {
+	font-style: italic;
+    font-size: 20px;
+}
+
+.flexContainer {
+	clear: both;
+	display: flex;
+	margin: 10px 0px 20px 0px;
+}
+
+#armyContainer:not(.empty) {
+	border-top: 1px dashed black;
+	padding-top: 10px;
+}
+
+#factionContainer, #buildArea:not(.empty) {
+	border-top: 1px solid black;
+	padding-top: 10px;
+}
+
+.button:not(.unitButton,.fireteamButton) {
+	flex: 0 0 10%;
+	max-width: 10%;
+	text-align: center;
+}
+
+.builderContainer {
+	flex: 0 0 16.6%;
+	max-width: 16.6%;
+	text-align: center;
+}
+
+.img {
+	background-size: 96px;
+	width: 96px;
+    height: 96px;
+    position: relative;
+    z-index: 100;
+    background-repeat: no-repeat;
+	margin: 0 auto;
+}
+
+.highlighted > .img {
+	background-size: 90px;
+	border: 3px solid black;
+	border-radius: 50%;
+	box-shadow: 5px 5px #CCC;
+}
+
+.label {
+	margin-bottom: 20px;
+}
+
+.label.bottomMargin {
+	margin-bottom: 40px;
+}

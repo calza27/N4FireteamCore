@@ -1,0 +1,87 @@
+<div id="container">
+	<div class="row">
+		<div class="col-6">
+			<div class="flexContainer">
+				<div class="builderContainer" id="fireteamContainer">
+				</div>
+				<div class="builderContainer" id="member1Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="1">
+				</div>
+				<div class="builderContainer" id="member2Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="2">
+				</div>
+				<div class="builderContainer" id="member3Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="3">
+				</div>
+				<div class="builderContainer" id="member4Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="4">
+				</div>
+				<div class="builderContainer" id="member5Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="5">
+				</div>
+			</div>
+		</div>
+		<div class="col-6" style="border-left: 1px solid;">
+			<div class="label"><b>Built Fireteam</b></div>
+			<div class="flexContainer" id="builtFireTeam">
+				<div class="builderContainer" id="fireteamBuilt">
+				</div>
+				<div class="builderContainer memberBuilt" id="member1Built">
+				</div>
+				<div class="builderContainer memberBuilt" id="member2Built">
+				</div>
+				<div class="builderContainer memberBuilt" id="member3Built">
+				</div>
+				<div class="builderContainer memberBuilt" id="member4Built">
+				</div>
+				<div class="builderContainer memberBuilt" id="member5Built">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function() {
+			var newTitle = "FIRETEAM CORE";
+			var factionJSON = $("#buildArea")[0].factionJSON;
+			if(factionJSON) {
+				var selectedFactionLabel = factionJSON.factionName;
+				if(selectedFactionLabel) {
+					newTitle += ": " + selectedFactionLabel;
+				}
+				changeTitle(newTitle);
+			
+				var army = $("#buildArea")[0].army;
+				$('#fireteamContainer').html('');
+				if(army) {
+					var factionListFile = "data/fireteams.json";
+					$.getJSON(factionListFile, function(data) {
+						var fullFtData = [];
+						$.each(factionJSON.fireteams, function(i2, fireteam) {
+							$.each(data.fireteams, function(i1, ftData) {
+								if(ftData.name == fireteam) {
+									fullFtData.push(ftData);
+								}
+							});
+						});
+						
+						var optionList = "<div class=\"label bottomMargin\"><b>Fireteam Type</b></div>";
+						$.each(fullFtData, function(i1, fireteam) {
+							var fireteamImg = "<div class=\"fireteamImg img\" style=\"background-image: url(data/img/" + fireteam.imgSrc + ");\"></div>";
+							var fireteamLabel = "<div class=\"fireteamLabel label\"><b>" + fireteam.name + "</b></div>";
+							
+							var fireteamButton = "<div class=\"fireteamButton button\" onclick=\"changeFireteam('" + fireteam.name + "', this);\">";
+							fireteamButton += fireteamImg;
+							fireteamButton += fireteamLabel;
+							fireteamButton += "</div>";
+						
+							optionList += fireteamButton;
+						});
+						$("#fireteamContainer").html(optionList);
+					}).fail(function(){
+						alert("An error has occurred reading fireteam data.");
+					});
+				} else {
+					$('#buildArea').html('');
+					$('#buildArea').addClass('empty');
+				}
+			 } else {
+				alert("An error has occurred reading faction data.");
+			 }	
+		});
+	</script>
+</div>

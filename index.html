@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<!--CDN libraries-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="libs/style.css" rel="stylesheet" type="text/css" media="screen" />
+		
+		<!--own libraries-->
+		<script src="libs/utils.js"></script>
+		<script src="libs/dynamicLoading.js"></script>
+		<script> 
+			$(function(){
+				loadPage("views/homepage.html", "#pageContainer");
+			});
+			$(document).ready(function() {
+				$.ajaxSetup({
+					cache: false
+				});
+			});
+		</script>
+		<title>Fireteam Core</title>
+	</head>
+	<body>
+		<div id="pageContainer"></div>
+	</body>
+</html>

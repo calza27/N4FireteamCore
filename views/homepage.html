@@ -1,0 +1,68 @@
+<div id="title">
+	FIRETEAM CORE: HOME
+</div>
+<div id="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<span class="title">
+				Infinity N4 Fireteam Builder
+			</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<span class="subTitle">
+				<a href="https://forum.corvusbelli.com/threads/sectorial-army-fireteam-overviews.39841/" target="_blank">
+					Reference charts for relationships
+				</a>
+			</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<span class="subTitle">
+				Choose an army to begin
+			</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div id="factionContainer" class="flexContainer">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div id="armyContainer" class="flexContainer empty">
+			</div>
+		</div>
+	</div>
+	<div id="buildArea" class="empty">
+	</div>
+	<div class="row">
+		<div class="col-sm-6" id="noteBox">
+		</div>
+	</div>
+	<script>
+		$(document).ready(function() {
+			var factionListFile = "data/factions.json";
+			$.getJSON(factionListFile, function(data){
+				var optionList = "";
+				$.each(data.factions, function(i1, faction) {
+					var factionImg = "<div class=\"factionImg img\" style=\"background-image: url(" + faction.imgSrc + ");\"></div>";
+					var factionLabel = "<span class=\"factionLabel label\"><b>" + faction.name + "</b></span>";
+					
+					var factionButton = "<div class=\"factionButton button\" onclick=\"loadFaction('" + faction.name + "', this);\">";
+					factionButton += factionImg;
+					factionButton += factionLabel;
+					factionButton += "</div>";
+				
+					optionList += factionButton;
+				});
+				$("#factionContainer").html(optionList);
+			}).fail(function(){
+				alert("An error has occurred reading faction list.");
+			});
+		});
+	</script>
+</div>

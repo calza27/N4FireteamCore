@@ -1,0 +1,97 @@
+{
+	"factionName": "Ikari Company",
+	"fireteams": ["core", "haris", "duo"],
+	"units": [
+		{
+			"name": "Authorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Keisotsu Butai",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/keisotsu-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core"]
+		}, {
+			"name": "Kendrat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kendrat-renegades-krakot-1-1.svg",
+			"ava": 1,
+			"fireteam": ["duo"]
+		}, {
+			"name": "Brawlers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/brawlers-mercenary-enforcers-1-1.svg",
+			"ava": 4,
+			"fireteam": ["duo"],
+			"canJoin": [
+				{
+					"name": "Keisotsu Butai",
+					"fireteam": ["core"],
+					"ava": 1
+				}, {
+					"name": "Tanko Zensenbutai",
+					"fireteam": ["haris", "duo"],
+					"ava": 1
+				}, {
+					"name": "Wu Ming",
+					"fireteam": ["core", "haris"],
+					"ava": 1
+				}
+			]
+		}, {
+			"name": "Druze Shock Team",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/druze-shock-teams-1-1.svg",
+			"fireteam": ["haris", "duo"],
+			"ava": 4
+		}, {
+			"name": "Daiyokai Dengekitai",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/daiy-kai-dengekitai-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Tanko Zensenbutai",
+					"fireteam": ["haris", "duo"]
+				}
+			]
+		}, {
+			"name": "Tanko Zensenbutai",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tank-zensenbutai-1-1.svg",
+			"ava": 3,
+			"fireteam": ["haris", "duo"],
+			"canJoin": [
+				{
+					"name": "Keisotsu Butai",
+					"fireteam": ["core"],
+					"ava": 1
+				}
+			]
+		}, {
+			"name": "Wu Ming",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wu-ming-assault-corps-1-1.svg",
+			"ava": 5,
+			"fireteam": ["core", "haris"]
+		}, {
+			"name": "Clipper Dronbots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/clipper-dronbot-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Druze Shock Team",
+					"fireteam": ["haris", "duo"]
+				}, {
+					"name": "Wu Ming",
+					"fireteam": ["core", "haris"]
+				}
+			]
+		}, {
+			"name": "Krakot Renegades",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/krakot-renegades-1-1.svg",
+			"ava": 1,
+			"canJoin": [
+				{
+					"name": "Kendrat",
+					"fireteam": ["duo"]
+				}
+			]
+		}
+	]
+}
