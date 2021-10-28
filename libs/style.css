@@ -1,8 +1,16 @@
 #pageContainer {
 	height: 100%;
-	width: 75%;
 	margin: 0 auto;
 	text-align: center;
+}
+
+@media(min-width:1200px) {
+	#pageContainer {
+		height: 100%;
+		width: 75%;
+		margin: 0 auto;
+		text-align: center;
+	}
 }
 
 .title {
@@ -19,29 +27,81 @@
 .flexContainer {
 	clear: both;
 	display: flex;
-	margin: 10px 0px 20px 0px;
+	margin: 00px 0px 20px 0px;
+}
+
+#factionContainer, #armyContainer:not(.empty) {
+	border-top: 1px solid black;
+	padding-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 #armyContainer:not(.empty) {
 	border-top: 1px dashed black;
-	padding-top: 10px;
 }
 
-#factionContainer, #buildArea:not(.empty) {
+#buildArea:not(.empty) {
 	border-top: 1px solid black;
 	padding-top: 10px;
+	display: grid;
+	grid-template-columns: auto;
+}
+
+#buildArea .buildAreaContainer:first-child {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+#buildArea .buildAreaContainer:nth-child(2) {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+@media (min-width: 1600px) {
+	#buildArea:not(.empty) {
+		grid-template-columns: auto auto;
+	}
+	
+	#buildArea .buildAreaContainer:first-child {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	#buildArea .buildAreaContainer:nth-child(2) {
+		grid-column: 1;
+		grid-row: 1;
+	}
 }
 
 .button:not(.unitButton,.fireteamButton) {
 	flex: 0 0 10%;
 	max-width: 10%;
 	text-align: center;
+	min-width: 120px;
 }
 
 .builderContainer {
 	flex: 0 0 16.6%;
 	max-width: 16.6%;
 	text-align: center;
+	padding: 0px 3px 0px 3px;
+}
+
+.buildAreaContainer {
+	min-width: 600px;
+}
+
+@media(max-width:1599px) {
+	.buildAreaContainer:first-child {
+		border-bottom: 1px solid black;
+	}
+}
+
+@media(min-width:1600px) {
+	.buildAreaContainer:first-child {
+		border-left: 1px solid black;
+	}
 }
 
 .img {
@@ -49,7 +109,6 @@
 	background-size: 96px;
 	width: 96px;
     height: 96px;
-    position: relative;
     z-index: 100;
     background-repeat: no-repeat;
 	margin: 0 auto;
@@ -64,10 +123,42 @@
 	box-shadow: 5px 5px #CCC;
 }
 
+.unitImg.img, .fireteamImg.img {
+	background-size: 72px;
+	width: 72px;
+	height: 72px;
+}
+
+.highlighted > .unitImg.img, .highlighted > .fireteamImg.img {
+	background-size: 66px;
+}
+	
+.unitLabel.label, .fireteamLabel.label {
+	height: 60px;
+	font-size: 16px;
+}
+
+@media(max-width:1599px) {
+	.unitImg.img, .fireteamImg.img {
+		background-size: 48px;
+		width: 48px;
+		height: 48px;
+	}
+
+	.highlighted > .unitImg.img, .highlighted > .fireteamImg.img {
+		background-size: 42px;
+	}
+	
+	.unitLabel.label, .fireteamLabel.label {
+		height: 40px;
+		font-size: 13px;
+	}
+}
+
 .label {
 	margin-bottom: 20px;
 }
 
 .label.bottomMargin {
-	margin-bottom: 40px;
+	height: 50px;
 }
