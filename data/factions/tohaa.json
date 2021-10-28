@@ -19,14 +19,20 @@
 		}, {
 			"name": "Kriigel Agents",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kriigel-agents-1-1.svg",
-			"fireteam": ["triad", "special triad"],
+			"fireteam": ["triad"],
 			"ava": 1,
-			"notes": [
+			"countsAs": ["Kriigel Special"],
+			"cantJoin": [
 				{
-					"fireteam": ["special triad"],
-					"note": "Special Fireteam: Triad. 1 Kriigel Agent + 2 Reex."
+					"name": "Kriigel Special",
+					"fireteam": ["special triad"]
 				}
 			]
+		}, {
+			"name": "Kriigel Special",
+			"display": false,
+			"fireteam": ["special triad"],
+			"ava": 1
 		}, {
 			"name": "Kumotail Bioengineer",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kumotail-bioingeneers-1-1.svg",
@@ -38,7 +44,7 @@
 			"ava": 2,
 			"canJoin": [
 				{
-					"name": "Kriigel Agents",
+					"name": "Kriigel Special",
 					"fireteam": ["special triad"],
 					"ava": 2
 				}

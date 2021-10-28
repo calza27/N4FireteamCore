@@ -16,10 +16,9 @@
 			"name": "Celestial Guard",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/celestial-guard-1-1.svg",
 			"fireteam": ["core"],
-			"countAs": "Celestial Guard Monitor"
+			"countsAs": ["Celestial Guard Monitor"]
 		}, {
 			"name": "Celestial Guard Monitor",
-			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/celestial-guard-1-1.svg",
 			"ava": 1,
 			"fireteam": ["core"],
 			"display": false

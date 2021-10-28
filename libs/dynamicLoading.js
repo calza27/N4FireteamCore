@@ -207,9 +207,11 @@ populateAvailableUnits = function(selector) {
 		var validUnits = [];
 		//find the units that can form or join the given fireteam
 		$.each(unitList, function(i1, unit) {
-			if(canJoinSeed(unit.name)) {
-				if(canAddMore(unit.name)) {
-					validUnits.push(unit);
+			if(unit.display !== false) {
+				if(canJoinSeed(unit.name)) {
+					if(canAddMore(unit.name)) {
+						validUnits.push(unit);
+					}
 				}
 			}
 		});
@@ -250,27 +252,23 @@ populateAvailableUnits = function(selector) {
 				}
 			});
 		});
-		//now find the units that count as something that can form the current fireteam
-			//ONLY IF THE FIRETEAM IS CORE, ENOMOTARCHOS, OR DUO
-		if(
-			$("#contents")[0].fireteam === "core"
-			|| $("#contents")[0].fireteam === "enomotarchos"
-			|| $("#contents")[0].fireteam === "duo"
-		) {
-			$.each(unitList, function(i1, unit) {
-				$.each(unit.countsAs, function(i2, unitCountsAs) {
-					if(validUnitNames.indexOf(unitCountsAs) != -1) {
-						validUnitNames.push(unit.name);
-						return false;
-					}
-				});
+		
+		$.each(unitList, function(i1, unit) {
+			$.each(unit.countsAs, function(i2, unitCountsAs) {
+				if(validUnitNames.indexOf(unitCountsAs) != -1) {
+					validUnitNames.push(unit.name);
+					return false;
+				}
 			});
-		}
+		});
+
 		//pushing the names to then fetch the objects, rather than just pushing the objects, maintains the object order, regardless of whetehr the unit has the fireteam skill, or is a 'counts as'
 		var validUnits = [];
 		$.each(unitList, function(i1, unit) {
-			if(validUnitNames.indexOf(unit.name) != -1) {
-				validUnits.push(unit);
+			if(unit.display !== false) {
+				if(validUnitNames.indexOf(unit.name) != -1) {
+					validUnits.push(unit);
+				}
 			}
 		});
 		
@@ -291,130 +289,114 @@ populateAvailableUnits = function(selector) {
 };
 
 calculateInitialSeedUnits = function(unitName) {
+	debugger;
 	var seedUnitList = [];
-	if(
-		$("#contents")[0].fireteam === "core"
-		|| $("#contents")[0].fireteam === "enomotarchos"
-		|| $("#contents")[0].fireteam === "duo"
-	) {	
-		//only need to worry about "counts as" if we're forming a core, enomotarchos, or duo fireteam
-		var unit = getUnitJSON(unitName);
-		if(unit) {
-			if(unit.fireteam != null && unit.fireteam.length > 0) {
-				//the selected unit can only act as a seed if it itself can form a fireteam
-				seedUnitList.push(unitName);
-			}
-			if(unit.countsAs != null && unit.countsAs.length > 0) {
-				$.each(unit.countsAs, function(i2, unitCountsAs) {
-					seedUnitList.push(unitCountsAs);
-				});
-			}
+	var unit = getUnitJSON(unitName);
+	if(unit) {
+		if(unit.fireteam != null && unit.fireteam.length > 0) {
+			//the selected unit can only act as a seed if it itself can form a fireteam
+			seedUnitList.push(unitName);
 		}
-	} else {
-		seedUnitList.push(unitName);
+		if(unit.countsAs != null && unit.countsAs.length > 0) {
+			$.each(unit.countsAs, function(i2, unitCountsAs) {
+				seedUnitList.push(unitCountsAs);
+			});
+		}
 	}
 	return seedUnitList;
 };
 
 clarifySeedUnits = function(unitName) {
-	if(
-		$("#contents")[0].fireteam === "core"
-		|| $("#contents")[0].fireteam === "enomotarchos"
-		|| $("#contents")[0].fireteam === "duo"
-	) {
-		var newSeedUnitList = [];
-		var seedUnitList = $("#contents")[0].seedUnit;
-		var unit = getUnitJSON(unitName);
-		if(unit) {
-			//found the data for the selected unit
-			//make an array of the fireteams it can join
-			//then return an array of values that exist in that array, and in the seedUnitList array
-			if(unit.wildcard) {
-				newSeedUnitList = seedUnitList;
-				if(unit.cantJoin != null && unit.cantJoin.length > 0) {
-					//cant join certain fireteams, so we're going to remove the fireteams listed in the cant join array from the seedUnit List
-					$.each(unit.cantJoin, function(i2, unitCantJoin) {
-						if(unitCantJoin.fireteam != null && unitCantJoin.fireteam.length > 0) {
-							var index = newSeedUnitList.indexOf(unitCantJoin.name);
-							if(index > -1) {
-								$.each(unitCantJoin.fireteam, function(i3, unitCantJoinFireteam) {
-									if(unitCantJoinFireteam === $("#contents")[0].fireteam) {
-										//only remove if they can't join the current version of the fireteam
-										newSeedUnitList.splice(index, 1);
-										return false;
-									}
-								});
-							}
-						} else {
-							var index = newSeedUnitList.indexOf(unitCantJoin.name);
-							if(index > -1) {
-								newSeedUnitList.splice(index, 1);
-							}
+	var newSeedUnitList = [];
+	var seedUnitList = $("#contents")[0].seedUnit;
+	var unit = getUnitJSON(unitName);
+	if(unit) {
+		//found the data for the selected unit
+		//make an array of the fireteams it can join
+		//then return an array of values that exist in that array, and in the seedUnitList array
+		if(unit.wildcard) {
+			newSeedUnitList = seedUnitList;
+			if(unit.cantJoin != null && unit.cantJoin.length > 0) {
+				//cant join certain fireteams, so we're going to remove the fireteams listed in the cant join array from the seedUnit List
+				$.each(unit.cantJoin, function(i2, unitCantJoin) {
+					if(unitCantJoin.fireteam != null && unitCantJoin.fireteam.length > 0) {
+						var index = newSeedUnitList.indexOf(unitCantJoin.name);
+						if(index > -1) {
+							$.each(unitCantJoin.fireteam, function(i3, unitCantJoinFireteam) {
+								if(unitCantJoinFireteam === $("#contents")[0].fireteam) {
+									//only remove if they can't join the current version of the fireteam
+									newSeedUnitList.splice(index, 1);
+									return false;
+								}
+							});
 						}
-					});
-				} else {
-					//this is an unrestricted wildcard, so return the current list
-					return newSeedUnitList;
-				}
-			} else {
-				if(unit.fireteam != null && unit.fireteam.length > 0) {
-					if(
-						unit.fireteam.indexOf($("#contents")[0].fireteam) > -1
-						&& seedUnitList.indexOf(unit.name) > -1
-					) {
-						//this unit can form the current fireteam, and is the current list of seeds, so add it to the new list of seeds
-						if(newSeedUnitList.indexOf(unit.name) == -1) {
-							newSeedUnitList.push(unit.name);
+					} else {
+						var index = newSeedUnitList.indexOf(unitCantJoin.name);
+						if(index > -1) {
+							newSeedUnitList.splice(index, 1);
 						}
 					}
+				});
+			} else {
+				//this is an unrestricted wildcard, so return the current list
+				return newSeedUnitList;
+			}
+		} else {
+			if(unit.fireteam != null && unit.fireteam.length > 0) {
+				if(
+					unit.fireteam.indexOf($("#contents")[0].fireteam) > -1
+					&& seedUnitList.indexOf(unit.name) > -1
+				) {
+					//this unit can form the current fireteam, and is the current list of seeds, so add it to the new list of seeds
+					if(newSeedUnitList.indexOf(unit.name) == -1) {
+						newSeedUnitList.push(unit.name);
+					}
 				}
-				if(unit.canJoin != null && unit.canJoin.length > 0) {
-					$.each(unit.canJoin, function(i2, unitCanJoin) {
-						if(seedUnitList.indexOf(unitCanJoin.name) > -1) {
-							//this unit can join the current fireteam of one or more of the units that is in the current list of seeds, so add thois units to the new list of seeds
-							if(unitCanJoin.fireteam != null && unitCanJoin.fireteam.length > 0) {
-								if(
-									unitCanJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
-								) {
-									if(newSeedUnitList.indexOf(unitCanJoin.name) == -1) {
-										newSeedUnitList.push(unitCanJoin.name);
-									}
-								}
-							} else {
+			}
+			if(unit.canJoin != null && unit.canJoin.length > 0) {
+				$.each(unit.canJoin, function(i2, unitCanJoin) {
+					if(seedUnitList.indexOf(unitCanJoin.name) > -1) {
+						//this unit can join the current fireteam of one or more of the units that is in the current list of seeds, so add thois units to the new list of seeds
+						if(unitCanJoin.fireteam != null && unitCanJoin.fireteam.length > 0) {
+							if(
+								unitCanJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
+							) {
 								if(newSeedUnitList.indexOf(unitCanJoin.name) == -1) {
 									newSeedUnitList.push(unitCanJoin.name);
 								}
 							}
+						} else {
+							if(newSeedUnitList.indexOf(unitCanJoin.name) == -1) {
+								newSeedUnitList.push(unitCanJoin.name);
+							}
 						}
-					});
-				}
-				if(unit.countsAs != null && unit.countsAs.length > 0) {
-					$.each(unit.countsAs, function(i2, unitCountsAs) {
-						var countsAsSeeds = clarifySeedUnits(unitCountsAs);
-						if(countsAsSeeds != null && countsAsSeeds.length > 0) {
-							$.each(countsAsSeeds, function(i3, countsAsSeed) {
-								if(seedUnitList.indexOf(countsAsSeed) > -1) {
-									if(newSeedUnitList.indexOf(countsAsSeed) == -1) {
-										newSeedUnitList.push(countsAsSeed);
-									}
+					}
+				});
+			}
+			if(unit.countsAs != null && unit.countsAs.length > 0) {
+				$.each(unit.countsAs, function(i2, unitCountsAs) {
+					var countsAsSeeds = clarifySeedUnits(unitCountsAs);
+					if(countsAsSeeds != null && countsAsSeeds.length > 0) {
+						$.each(countsAsSeeds, function(i3, countsAsSeed) {
+							if(seedUnitList.indexOf(countsAsSeed) > -1) {
+								if(newSeedUnitList.indexOf(countsAsSeed) == -1) {
+									newSeedUnitList.push(countsAsSeed);
 								}
-							});
-						}
-					});
-				}
+							}
+						});
+					}
+				});
 			}
 		}
-		return newSeedUnitList;
-	} else {
-		return $("#contents")[0].seedUnit;
 	}
+	return newSeedUnitList;
 };
 
 canJoinSeed = function(unitName) {
 	var canJoin = false;
 	var seedUnitList = $("#contents")[0].seedUnit;
 	var unit = getUnitJSON(unitName);
-	if(unit) {
+	if(unit && unit.display !== false) {
 		if(
 			$("#contents")[0].fireteam === "triad"
 			&& unit.fireteam != null
