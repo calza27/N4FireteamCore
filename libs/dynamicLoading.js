@@ -104,7 +104,6 @@ changeFireteam = function(fireteamType, elem) {
 };
 
 changeFireteamMember = function(selectedMember, elem) {
-	selectedMember = selectedMember.replace("\"", "'");
 	var memberNumber = parseInt($(elem).closest('.builderContainer').attr('data-attr-memberNum'));
 	
 	$('#member' + memberNumber + 'Container .unitButton.highlighted').removeClass('highlighted');
@@ -217,8 +216,8 @@ populateAvailableUnits = function(selector) {
 		$.each(validUnits, function(i, val) {
 			var unitImg = "<div class=\"unitImg img\" style=\"background-image: url(" + val.imgSrc + ");\"></div>";
 			var unitLabel = "<div class=\"unitLabel label\"><b>" + val.name + "</b></div>";
-			var codeName = val.name.replace("'", "&quot;");
-			var unitButton = "<div class=\"unitButton button\" onclick=\"changeFireteamMember('" + codeName + "', this);\">";
+			
+			var unitButton = "<div class=\"unitButton button\" onclick=\"changeFireteamMember(`" + val.name + "`, this);\">";
 			unitButton += unitImg;
 			unitButton += unitLabel;
 			unitButton += "</div>";
@@ -276,8 +275,8 @@ populateAvailableUnits = function(selector) {
 		$.each(validUnits, function(i, val) {
 			var unitImg = "<div class=\"unitImg img\" style=\"background-image: url(" + val.imgSrc + ");\"></div>";
 			var unitLabel = "<div class=\"unitLabel label\"><b>" + val.name + "</b></div>";
-			var codeName = val.name.replace("'", "&quot;");
-			var unitButton = "<div class=\"unitButton button\" onclick=\"changeFireteamMember('" + codeName + "', this);\">";
+			
+			var unitButton = "<div class=\"unitButton button\" onclick=\"changeFireteamMember(`" + val.name + "`, this);\">";
 			unitButton += unitImg;
 			unitButton += unitLabel;
 			unitButton += "</div>";
