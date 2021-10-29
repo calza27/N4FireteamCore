@@ -20,7 +20,8 @@
 			"canJoin": [
 				{
 					"name": "Dakini Tacbots",
-					"fireteam": ["core"]
+					"fireteam": ["core"],
+					"ava": 1
 				}
 			]
 		}, {
