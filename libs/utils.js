@@ -46,14 +46,14 @@ canAddMore = function(unitName) {
 	var unit = getUnitJSON(unitName);
 	if(unit) {
 		var counter = 0;
-		$.each($('#builtFireTeam .memberBuilt .unitLabel>b'), function(i, selectElem) {
+		$.each($('#builtFireTeam .memberBuilt .unitLabel'), function(i, selectElem) {
 			if($(selectElem).html() === unitName) {
 				counter++;
 			}
 		});
 		
 		if(unit.shareAVA != null && unit.shareAVA.length > 0) {
-			$.each($('#builtFireTeam .memberBuilt .unitLabel>b'), function(i, selectElem) {
+			$.each($('#builtFireTeam .memberBuilt .unitLabel'), function(i, selectElem) {
 				if(unit.shareAVA.indexOf($(selectElem).html()) > -1) {
 					counter++;
 				}

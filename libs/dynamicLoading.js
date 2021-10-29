@@ -212,10 +212,10 @@ populateAvailableUnits = function(selector) {
 			}
 		});
 		
-		var optionList = "<div class=\"label bottomMargin\"><b>Member " + memberNumber + "</b></div>";
+		var optionList = "<div class=\"sectionHeader\"><b><span class=\"hidden--xs\">Member</span> " + memberNumber + "</b></div>";
 		$.each(validUnits, function(i, val) {
 			var unitImg = "<div class=\"unitImg img\" style=\"background-image: url(" + val.imgSrc + ");\"></div>";
-			var unitLabel = "<div class=\"unitLabel label\"><b>" + val.name + "</b></div>";
+			var unitLabel = "<div class=\"unitLabel label\">" + val.name + "</div>";
 			
 			var unitButton = "<div class=\"unitButton button\" onclick=\"changeFireteamMember(`" + val.name + "`, this);\">";
 			unitButton += unitImg;
@@ -237,7 +237,7 @@ populateAvailableUnits = function(selector) {
 		clearUnitSelector('#member4Built');
 		clearUnitSelector('#member5Built');
 		
-		var optionList = optionList = "<div class=\"label bottomMargin\"><b>Member " + memberNumber + "</b></div>";
+		var optionList = optionList = "<div class=\"sectionHeader\"><b><span class=\"hidden--xs\">Member</span> " + memberNumber + "</b></div>";
 		var validUnitNames = [];
 		//find the units that can form the given fireteam
 		$.each(unitList, function(i1, unit) {
@@ -270,7 +270,7 @@ populateAvailableUnits = function(selector) {
 		
 		$.each(validUnits, function(i, val) {
 			var unitImg = "<div class=\"unitImg img\" style=\"background-image: url(" + val.imgSrc + ");\"></div>";
-			var unitLabel = "<div class=\"unitLabel label\"><b>" + val.name + "</b></div>";
+			var unitLabel = "<div class=\"unitLabel label\">" + val.name + "</div>";
 			
 			var unitButton = "<div class=\"unitButton button\" onclick=\"changeFireteamMember(`" + val.name + "`, this);\">";
 			unitButton += unitImg;
@@ -477,7 +477,7 @@ canJoinSeed = function(unitName) {
 populateBuiltUnit = function(unit, memberNumber) {
 	//populates the unit into the builtFireteam Area
 	var unitImg = "<div class=\"unitImg img\" style=\"background-image: url(" + unit.imgSrc + ");\"></div>";
-	var unitLabel = "<div class=\"unitLabel label\"><b>" + unit.name + "</b></div>";
+	var unitLabel = "<div class=\"unitLabel label\">" + unit.name + "</div>";
 	var unitButton = "<div class=\"unitButton button\">";
 	unitButton += unitImg;
 	unitButton += unitLabel;
