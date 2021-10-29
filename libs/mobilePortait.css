@@ -13,11 +13,11 @@
 }
 
 #pageContainer {
-	height: calc(100vh - 30px);
+	height: calc(100% - 30px);
 }
 
 #contents {
-	height: calc(100vh - 165px);
+	height: calc(100% - 135px);
 }
 
 .hidden--xs {

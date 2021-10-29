@@ -1,7 +1,12 @@
+html {
+	height: 100%;
+}
+
 body {
 	background-color: #ECECEC;
 	color: #222;
 	border-color: #222;
+	height: 100%;
 }
 
 body.dark {
@@ -11,7 +16,7 @@ body.dark {
 }
 
 #pageContainer {
-	height: 100vh;
+	height: 100%;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -155,11 +160,12 @@ body.dark .highlighted > .img {
 
 #footer {
 	font-size: 13px;
-	position: absolute;
+	position: fixed;
     bottom: 10px;
     width: 100vw;
     left: 0;
     text-align: center;
+	z-index: 20;
 }
 
 #footer .legal {
