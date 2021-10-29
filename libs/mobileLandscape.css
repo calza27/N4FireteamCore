@@ -1,0 +1,63 @@
+#darkModeCont {
+	display: block;
+    position: absolute;
+	top: 0;
+    right: 0;
+}
+
+.buildAreaContainer {
+	min-width: 600px;
+}
+
+.button:not(.unitButton,.fireteamButton) {
+	min-width: 70px;
+}
+
+.sectionHeader {
+	margin-bottom: 30px;
+}
+
+.visible--ml {
+	display: initial;
+}
+
+#buildTitle {
+	font-size: 24px;
+}
+
+.button {
+    min-width: 86px;
+	margin-bottom: 30px;
+}
+
+.img {
+	background-size: 72px;
+	width: 72px;
+    height: 72px;
+}
+
+.img.small {
+	background-size: 48px;
+	width: 48px;
+    height: 48px;
+}
+
+.highlighted > .img {
+	top: -3px;
+	left: -3px;
+	background-size: 68px;
+	border: 2px solid;
+	box-shadow: 3px 3px #BBB;
+}
+
+body.dark .highlighted > .img {
+	box-shadow: 3px 3px #666;
+}
+
+.highlighted > .img.small {
+	background-size: 42px;
+}
+
+.unitLabel.label, .fireteamLabel.label {
+	font-size: 16px;
+}

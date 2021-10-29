@@ -1,0 +1,107 @@
+#darkModeCont {
+	display: block;
+}
+
+#darkModeCont > div {
+    position: absolute;
+    right: 0;
+    width: auto;
+}
+
+#factionContainer, #armyContainer:not(.empty) {
+	justify-content: center;
+}
+
+#contents {
+	height: calc(100vh - 165px);
+}
+
+.hidden--xs {
+	display: none;
+}
+
+.visible--mp, .visible--ml {
+	display: initial;
+}
+
+.sectionHeader {
+	margin-bottom: 20px;
+}
+
+.buildAreaContainer {
+	width: 100%;
+}
+
+.label {
+	word-break: break-word;
+}
+
+.img {
+	background-size: 54px;
+	width: 54px;
+    height: 54px;
+}
+
+.img.small {
+	background-size: 48px;
+	width: 48px;
+    height: 48px;
+}
+
+.highlighted > .img {
+	top: -3px;
+	left: -3px;
+	background-size: 50px;
+	border: 2px solid;
+	box-shadow: 3px 3px #BBB;
+}
+
+body.dark .highlighted > .img {
+	box-shadow: 3px 3px #666;
+}
+
+
+.highlighted > .img.small {
+	background-size: 42px;
+}
+
+.button {
+    min-width: 86px;
+	margin-bottom: 20px;
+}
+
+#factionArmy .button, #backButton{
+	min-width: 50px;
+	margin-bottom: 0px;
+}
+
+#buildTitle {
+	font-size: 24px;
+}
+
+.builderContainer .button {
+	min-width: 50px;
+	margin-bottom: 0px;
+}
+
+.builderContainer:not(.memberBuilt) .img {
+	background-size: 36px;
+	width: 36px;
+    height: 36px;
+}
+
+.builderContainer:not(.memberBuilt) .highlighted > .img {
+	top: -3px;
+	left: -3px;
+	background-size: 34px;
+	border: 1px solid;
+	box-shadow: 3px 3px #BBB;
+}
+
+body.dark .builderContainer:not(.memberBuilt) .highlighted > .img {
+	box-shadow: 3px 3px #666;
+}
+
+.unitLabel.label, .fireteamLabel.label {
+	font-size: 13px;
+}
