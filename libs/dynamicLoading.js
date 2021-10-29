@@ -156,18 +156,22 @@ changeFireteamMember = function(selectedMember, elem) {
 		
 	} else {
 		$("#contents")[0].seedUnit = clarifySeedUnits(selectedMember);
-		$("#contents")[0].seedUnit = calculateInitialSeedUnits($("#member1Container")[0].selectedUnit);
-		if(memberNumber > 1) {
-			$("#contents")[0].seedUnit = clarifySeedUnits($("#member2Container")[0].selectedUnit);
-		}
-		if(memberNumber > 2) {
-			$("#contents")[0].seedUnit = clarifySeedUnits($("#member3Container")[0].selectedUnit);
-		}
-		if(memberNumber > 3) {
-			$("#contents")[0].seedUnit = clarifySeedUnits($("#member4Container")[0].selectedUnit);
-		}
-		if(memberNumber > 4) {
-			$("#contents")[0].seedUnit = clarifySeedUnits($("#member5Container")[0].selectedUnit);
+		if($("#contents")[0].seedUnit == null || $("#contents")[0].seedUnit.length == 0) {
+			if($("#member1Container")[0].selectedUnit) {
+				$("#contents")[0].seedUnit = calculateInitialSeedUnits($("#member1Container")[0].selectedUnit);
+			}
+			if($("#member2Container")[0].selectedUnit && memberNumber > 1) {
+				$("#contents")[0].seedUnit = clarifySeedUnits($("#member2Container")[0].selectedUnit);
+			}
+			if($("#member3Container")[0].selectedUnit && memberNumber > 2) {
+				$("#contents")[0].seedUnit = clarifySeedUnits($("#member3Container")[0].selectedUnit);
+			}
+			if($("#member4Container")[0].selectedUnit && memberNumber > 3) {
+				$("#contents")[0].seedUnit = clarifySeedUnits($("#member4Container")[0].selectedUnit);
+			}
+			if($("#member5Container")[0].selectedUnit && memberNumber > 4) {
+				$("#contents")[0].seedUnit = clarifySeedUnits($("#member5Container")[0].selectedUnit);
+			}
 		}
 	}
 	
@@ -290,7 +294,12 @@ calculateInitialSeedUnits = function(unitName) {
 	if(unit) {
 		if(unit.fireteam != null && unit.fireteam.length > 0) {
 			//the selected unit can only act as a seed if it itself can form a fireteam
-			seedUnitList.push(unitName);
+			$.each(unit.fireteam, function(i2, unitFireteam) {
+				if(unitFireteam == $("#contents")[0].fireteam) {
+					seedUnitList.push(unitName);
+					return false;
+				}
+			});
 		}
 		if(unit.countsAs != null && unit.countsAs.length > 0) {
 			$.each(unit.countsAs, function(i2, unitCountsAs) {
@@ -333,6 +342,7 @@ clarifySeedUnits = function(unitName) {
 						}
 					}
 				});
+				finalList = newSeedUnitList;
 			} else {
 				//this is an unrestricted wildcard, so return the current list
 				return newSeedUnitList;
