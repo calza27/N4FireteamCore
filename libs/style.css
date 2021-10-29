@@ -1,3 +1,15 @@
+body {
+	background-color: #ECECEC;
+	color: #222;
+	border-color: #222;
+}
+
+body.dark {
+	background-color: #282828;
+	color: #CCC;
+	border-color: #CCC;
+}
+
 #pageContainer {
 	height: 100%;
 	margin: 0 auto;
@@ -11,6 +23,20 @@
 		margin: 0 auto;
 		text-align: center;
 	}
+}
+
+#darkModeCont {
+	display: none;
+	height: 30px;
+    width: auto;
+	z-index: 5;
+}
+
+#darkModeCont > div {
+	width: auto;
+	padding: 5px 5px 0px 0px;
+    text-align: right;
+	cursor: pointer;
 }
 
 .title {
@@ -46,18 +72,18 @@
 }
 
 #factionContainer, #armyContainer:not(.empty) {
-	border-top: 1px solid black;
+	border-top: 1px solid;
 	padding-top: 30px;
 	display: flex;
 	flex-wrap: wrap;
 }
 
 #armyContainer:not(.empty) {
-	border-top: 1px dashed black;
+	border-top: 1px dashed;
 }
 
 #buildArea:not(.empty) {
-	border-top: 1px solid black;
+	border-top: 1px solid;
 	padding-top: 10px;
 	display: grid;
 	grid-template-columns: auto;
@@ -109,9 +135,13 @@
 	top: -5px;
 	left: -5px;
 	background-size: 90px;
-	border: 3px solid black;
+	border: 3px solid;
 	border-radius: 50%;
-	box-shadow: 5px 5px #CCC;
+	box-shadow: 5px 5px #BBB;
+}
+
+body.dark .highlighted > .img {
+	box-shadow: 5px 5px #666;
 }
 
 .label {

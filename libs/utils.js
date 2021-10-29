@@ -111,3 +111,13 @@ getUnitJSON = function(unitName) {
 	});
 	return targetUnit;
 };
+
+toggleDarkMode = function(elem) {
+	if($('body').hasClass('dark')) {
+		$('#dmc').prop('checked', false);
+		$('body').removeClass('dark');
+	} else {
+		$('#dmc').prop('checked', true);
+		$('body').addClass('dark');
+	}
+};
