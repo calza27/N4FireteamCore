@@ -161,3 +161,7 @@ body.dark .highlighted > .img {
     left: 0;
     text-align: center;
 }
+
+.visible--mp, .visible--ml {
+	display: none;
+}
