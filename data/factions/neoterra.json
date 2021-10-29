@@ -22,7 +22,13 @@
 			"name": "Fusiliers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusiliers-1-1.svg",
 			"fireteam": ["core"],
-			"ava": 5
+			"ava": 5,
+			"cantJoin": [
+				{
+					"name": "CSU",
+					"fireteam": ["duo"]
+				}
+			]
 		}, {
 			"name": "Machinist",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machinists-1-1.svg",
