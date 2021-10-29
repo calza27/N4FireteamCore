@@ -88,7 +88,7 @@ changeFireteam = function(fireteamType, elem) {
 		$.each(data.fireteams, function(i1, ftData) {
 			if(ftData.name == fireteamType) {
 				var fireteamImg = "<div class=\"fireteamImg img\" style=\"background-image: url(data/img/" + ftData.imgSrc + ");\"></div>";
-				var fireteamLabel = "<div class=\"fireteamLabel label\"><b>" + ftData.name + "</b></div>";
+				var fireteamLabel = "<div class=\"fireteamLabel label\">" + ftData.name + "</div>";
 				var fireteamButton = "<div class=\"fireteamButton button\">";
 				fireteamButton += fireteamImg;
 				fireteamButton += fireteamLabel;

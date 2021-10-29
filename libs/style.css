@@ -25,6 +25,11 @@ body.dark {
 	}
 }
 
+#contents {
+	height: calc(100vh - 120px);
+	overflow-y: auto;
+}
+
 #darkModeCont {
 	display: none;
 	height: 30px;
@@ -146,4 +151,13 @@ body.dark .highlighted > .img {
 
 .label {
 	min-height: 20px;
+}
+
+#footer {
+	font-size: 11px;
+	position: absolute;
+    bottom: 10px;
+    width: 100vw;
+    left: 0;
+    text-align: center;
 }
