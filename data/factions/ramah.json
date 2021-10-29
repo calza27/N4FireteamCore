@@ -50,7 +50,8 @@
 			"name": "Tarik Mansuri",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tarik-mansuri-khawarij-amir-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcard": true,
+			"wildcardFireTeams": ["core", "haris"]
 		}, {
 			"name": "Wild Bill",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wild-bill-legendary-gunslinger-1-1.svg",

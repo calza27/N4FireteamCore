@@ -466,7 +466,13 @@ canJoinSeed = function(unitName) {
 		}
 		if(!canJoin) {
 			if(unit.wildcard) {
-				canJoin = true;
+				if(unit.wildcardFireTeams != null && unit.wildcardFireTeams.length > 0) {
+					if(unit.wildcardFireTeams.indexOf($("#contents")[0].fireteam) > -1) {
+						canJoin = true;
+					}
+				} else {
+					canJoin = true;
+				}
 			}
 		}
 		$.each(unit.cantJoin, function(i2, unitCantJoin) {
