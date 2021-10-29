@@ -65,7 +65,7 @@ canAddMore = function(unitName) {
 			return false;
 		} else if(
 			unit.wildcard
-			&& $("#contents")[0].seedUnit !== unit.name
+			&& $("#contents")[0].seedUnit.indexOf(unit.name) == -1
 			&& unit.wildcardLimit != null
 			&& unit.wildcardLimit <= counter
 		) {
