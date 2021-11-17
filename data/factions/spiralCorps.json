@@ -95,6 +95,12 @@
 					"name": "Anaconda",
 					"fireteam": ["duo"]
 				}
+			],
+			"cantJoin": [
+				{
+					"name": "Taagma Schemers",
+					"fireteam": ["special triad"]
+				}
 			]
 		}, {
 			"name": "Chaksa Longarm",

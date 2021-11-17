@@ -311,110 +311,115 @@ calculateInitialSeedUnits = function(unitName) {
 };
 
 clarifySeedUnits = function(unitName) {
-	var finalList = [];
-	var newSeedUnitList = [];
-	var seedUnitList = $("#contents")[0].seedUnit;
-	var unit = getUnitJSON(unitName);
-	if(unit) {
-		//found the data for the selected unit
-		//make an array of the fireteams it can join
-		//then return an array of values that exist in that array, and in the seedUnitList array
-		if(unit.wildcard) {
-			newSeedUnitList = seedUnitList;
-			if(unit.cantJoin != null && unit.cantJoin.length > 0) {
-				//cant join certain fireteams, so we're going to remove the fireteams listed in the cant join array from the seedUnit List
-				$.each(unit.cantJoin, function(i2, unitCantJoin) {
-					if(unitCantJoin.fireteam != null && unitCantJoin.fireteam.length > 0) {
-						var index = newSeedUnitList.indexOf(unitCantJoin.name);
-						if(index > -1) {
-							$.each(unitCantJoin.fireteam, function(i3, unitCantJoinFireteam) {
-								if(unitCantJoinFireteam === $("#contents")[0].fireteam) {
-									//only remove if they can't join the current version of the fireteam
-									newSeedUnitList.splice(index, 1);
-									return false;
-								}
-							});
+	if($("#contents")[0].fireteam === 'triad') {
+		//triads are weird, don't bother clarifying the seed list
+		return $("#contents")[0].seedUnit;
+	} else {
+		var finalList = [];
+		var newSeedUnitList = [];
+		var seedUnitList = $("#contents")[0].seedUnit;
+		var unit = getUnitJSON(unitName);
+		if(unit) {
+			//found the data for the selected unit
+			//make an array of the fireteams it can join
+			//then return an array of values that exist in that array, and in the seedUnitList array
+			if(unit.wildcard) {
+				newSeedUnitList = seedUnitList;
+				if(unit.cantJoin != null && unit.cantJoin.length > 0) {
+					//cant join certain fireteams, so we're going to remove the fireteams listed in the cant join array from the seedUnit List
+					$.each(unit.cantJoin, function(i2, unitCantJoin) {
+						if(unitCantJoin.fireteam != null && unitCantJoin.fireteam.length > 0) {
+							var index = newSeedUnitList.indexOf(unitCantJoin.name);
+							if(index > -1) {
+								$.each(unitCantJoin.fireteam, function(i3, unitCantJoinFireteam) {
+									if(unitCantJoinFireteam === $("#contents")[0].fireteam) {
+										//only remove if they can't join the current version of the fireteam
+										newSeedUnitList.splice(index, 1);
+										return false;
+									}
+								});
+							}
+						} else {
+							var index = newSeedUnitList.indexOf(unitCantJoin.name);
+							if(index > -1) {
+								newSeedUnitList.splice(index, 1);
+							}
 						}
-					} else {
-						var index = newSeedUnitList.indexOf(unitCantJoin.name);
-						if(index > -1) {
-							newSeedUnitList.splice(index, 1);
-						}
-					}
-				});
-				finalList = newSeedUnitList;
+					});
+					finalList = newSeedUnitList;
+				} else {
+					//this is an unrestricted wildcard, so return the current list
+					return newSeedUnitList;
+				}
 			} else {
-				//this is an unrestricted wildcard, so return the current list
-				return newSeedUnitList;
-			}
-		} else {
-			if(unit.fireteam != null && unit.fireteam.length > 0) {
-				if(
-					unit.fireteam.indexOf($("#contents")[0].fireteam) > -1
-					&& seedUnitList.indexOf(unit.name) > -1
-				) {
-					//this unit can form the current fireteam, and is the current list of seeds, so add it to the new list of seeds
-					if(newSeedUnitList.indexOf(unit.name) == -1) {
-						newSeedUnitList.push(unit.name);
+				if(unit.fireteam != null && unit.fireteam.length > 0) {
+					if(
+						unit.fireteam.indexOf($("#contents")[0].fireteam) > -1
+						&& seedUnitList.indexOf(unit.name) > -1
+					) {
+						//this unit can form the current fireteam, and is the current list of seeds, so add it to the new list of seeds
+						if(seedUnitList.indexOf(unit.name) != -1) {
+							newSeedUnitList.push(unit.name);
+						}
 					}
 				}
-			}
-			if(unit.canJoin != null && unit.canJoin.length > 0) {
-				$.each(unit.canJoin, function(i2, unitCanJoin) {
-					if(seedUnitList.indexOf(unitCanJoin.name) > -1) {
-						//this unit can join the current fireteam of one or more of the units that is in the current list of seeds, so add thois units to the new list of seeds
-						if(unitCanJoin.fireteam != null && unitCanJoin.fireteam.length > 0) {
-							if(
-								unitCanJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
-							) {
+				if(unit.canJoin != null && unit.canJoin.length > 0) {
+					$.each(unit.canJoin, function(i2, unitCanJoin) {
+						if(seedUnitList.indexOf(unitCanJoin.name) > -1) {
+							//this unit can join the current fireteam of one or more of the units that is in the current list of seeds, so add thois units to the new list of seeds
+							if(unitCanJoin.fireteam != null && unitCanJoin.fireteam.length > 0) {
+								if(
+									unitCanJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
+								) {
+									if(newSeedUnitList.indexOf(unitCanJoin.name) == -1) {
+										newSeedUnitList.push(unitCanJoin.name);
+									}
+								}
+							} else {
 								if(newSeedUnitList.indexOf(unitCanJoin.name) == -1) {
 									newSeedUnitList.push(unitCanJoin.name);
 								}
 							}
-						} else {
-							if(newSeedUnitList.indexOf(unitCanJoin.name) == -1) {
-								newSeedUnitList.push(unitCanJoin.name);
-							}
 						}
-					}
-				});
-			}
-			if(unit.countsAs != null && unit.countsAs.length > 0) {
-				$.each(unit.countsAs, function(i2, unitCountsAs) {
-					var countsAsSeeds = clarifySeedUnits(unitCountsAs);
-					if(countsAsSeeds != null && countsAsSeeds.length > 0) {
-						$.each(countsAsSeeds, function(i3, countsAsSeed) {
-							if(seedUnitList.indexOf(countsAsSeed) > -1) {
-								if(newSeedUnitList.indexOf(countsAsSeed) == -1) {
-									newSeedUnitList.push(countsAsSeed);
+					});
+				}
+				if(unit.countsAs != null && unit.countsAs.length > 0) {
+					$.each(unit.countsAs, function(i2, unitCountsAs) {
+						var countsAsSeeds = clarifySeedUnits(unitCountsAs);
+						if(countsAsSeeds != null && countsAsSeeds.length > 0) {
+							$.each(countsAsSeeds, function(i3, countsAsSeed) {
+								if(seedUnitList.indexOf(countsAsSeed) > -1) {
+									if(newSeedUnitList.indexOf(countsAsSeed) == -1) {
+										newSeedUnitList.push(countsAsSeed);
+									}
 								}
-							}
-						});
+							});
+						}
+					});
+				}
+				
+				
+				$.each(newSeedUnitList, function(i2, seedUnit) {
+					var addToList = true;
+					var seedUnitData = getUnitJSON(seedUnit);
+					if(seedUnitData) {
+						if(seedUnitData.cantJoin != null && seedUnitData.cantJoin.length > 0) {
+							$.each(seedUnitData.cantJoin, function(i2, seedCantJoin) {
+								if(seedCantJoin.name === unitName) {
+									addToList = false;
+									return false;
+								}
+							});
+						} 
+					}
+					if(addToList) {
+						finalList.push(seedUnit);
 					}
 				});
 			}
-			
-			
-			$.each(newSeedUnitList, function(i2, seedUnit) {
-				var addToList = true;
-				var seedUnitData = getUnitJSON(seedUnit);
-				if(seedUnitData) {
-					if(seedUnitData.cantJoin != null && seedUnitData.cantJoin.length > 0) {
-						$.each(seedUnitData.cantJoin, function(i2, seedCantJoin) {
-							if(seedCantJoin.name === unitName) {
-								addToList = false;
-								return false;
-							}
-						});
-					} 
-				}
-				if(addToList) {
-					finalList.push(seedUnit);
-				}
-			});
 		}
+		return finalList;
 	}
-	return finalList;
 };
 
 canJoinSeed = function(unitName) {
