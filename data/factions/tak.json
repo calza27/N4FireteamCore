@@ -44,9 +44,9 @@
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/line-kazaks-1-1.svg",
 			"fireteam": ["core"]
 		}, {
-			"name": "Tankhunters",
-			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tankhunters-1-1.svg",
-			"ava": 4,
+			"name": "Col. Yevgueni Voronin",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/col-yevgueni-voronin-1-1.svg",
+			"ava": 1,
 			"wildcard": true
 		}, {
 			"name": "Ratnik",
