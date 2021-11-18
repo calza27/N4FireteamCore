@@ -109,6 +109,9 @@
 			"shareAVA": ["Joan of Arc V2"],
 			"canJoin": [
 				{
+					"name": "Knight Hospitaller",
+					"fireteam": ["duo"]
+				}, {
 					"name": "Teutonic Knights",
 					"fireteam": ["duo"]
 				}, {
@@ -130,6 +133,9 @@
 			"shareAVA": ["Joan of Arc"],
 			"canJoin": [
 				{
+					"name": "Knight Hospitaller",
+					"fireteam": ["duo"]
+				}, {
 					"name": "Teutonic Knights",
 					"fireteam": ["duo"]
 				}, {
