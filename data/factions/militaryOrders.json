@@ -110,7 +110,7 @@
 			"canJoin": [
 				{
 					"name": "Teutonic Knights",
-					"fireteam": ["core", "haris", "duo"]
+					"fireteam": ["duo"]
 				}, {
 					"name": "Bulleteer Armbots",
 					"fireteam": ["duo"]
@@ -131,7 +131,7 @@
 			"canJoin": [
 				{
 					"name": "Teutonic Knights",
-					"fireteam": ["core", "haris", "duo"]
+					"fireteam": ["duo"]
 				}, {
 					"name": "Bulleteer Armbots",
 					"fireteam": ["duo"]
