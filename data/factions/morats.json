@@ -76,7 +76,7 @@
 			"name": "Daturazi",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/daturazi-witch-soldiers-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": ["core"]
 		}, {
 			"name": "Kendrat",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kendrat-renegades-krakot-1-1.svg",
