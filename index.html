@@ -12,7 +12,14 @@
 		<script src="libs/utils.js"></script>
 		<script src="libs/dynamicLoading.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script> 
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSC3ZBTMWY"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-ZSC3ZBTMWY');
+			
 			$(function(){
 				loadPage("views/homepage.html", "#contents");
 			});
