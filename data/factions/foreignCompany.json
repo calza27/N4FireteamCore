@@ -13,6 +13,9 @@
 				}, {
 					"name": "Kaplan Tactical Services",
 					"fireteam": ["core", "haris", "duo"]
+				}, {
+					"name": "Hannibal",
+					"fireteam": ["core"]
 				}
 			]
 		}, {
@@ -25,6 +28,7 @@
 			"name": "Hannibal",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hannibal-mercenary-team-leader-1-1.svg",
 			"ava": 1,
+			"fireteam": ["core"],
 			"canJoin": [
 				{
 					"name": "Orc Trooper",
@@ -45,6 +49,9 @@
 				}, {
 					"name": "Kaplan Tactical Services",
 					"fireteam": ["core", "haris", "duo"]
+				}, {
+					"name": "Hannibal",
+					"fireteam": ["core"]
 				}
 			]
 		}, {
@@ -93,6 +100,9 @@
 				}, {
 					"name": "Neoterra Bolts",
 					"fireteam": ["core", "haris", "duo"]
+				}, {
+					"name": "Hannibal",
+					"fireteam": ["core"]
 				}
 			]
 		}, {
@@ -106,6 +116,9 @@
 				}, {
 					"name": "Neoterra Bolts",
 					"fireteam": ["core", "haris", "duo"]
+				}, {
+					"name": "Hannibal",
+					"fireteam": ["core"]
 				}
 			]
 		}
