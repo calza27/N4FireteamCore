@@ -245,19 +245,22 @@ populateAvailableUnits = function(selector) {
 		var validUnitNames = [];
 		//find the units that can form the given fireteam
 		$.each(unitList, function(i1, unit) {
-			$.each(unit.fireteam, function(i2, unitFireteam) {
-				if(unitFireteam === $("#contents")[0].fireteam) {
-					validUnitNames.push(unit.name);
-					return false;
-				}
-			});
+			if(unit.fireteam != null && unit.fireteam.indexOf($("#contents")[0].fireteam) != -1) {
+				//unit can start the given fireteam, so add them to the list
+				validUnitNames.push(unit.name);
+			}
 		});
 		
 		$.each(unitList, function(i1, unit) {
 			$.each(unit.countsAs, function(i2, unitCountsAs) {
 				if(validUnitNames.indexOf(unitCountsAs) != -1) {
-					validUnitNames.push(unit.name);
-					return false;
+					//this unit counts as something that can form the team we're creating
+					if($("#contents")[0].fireteam !== 'haris' || (unit.fireteam != null && unit.fireteam.indexOf('haris') != -1)) {
+						//if we're not forming a haris, then the counts as lets this unit form the team
+							//otherwise, the unit in question must have the fireteam haris skill in order to form the team
+						validUnitNames.push(unit.name);
+						return false;
+					}
 				}
 			});
 		});
