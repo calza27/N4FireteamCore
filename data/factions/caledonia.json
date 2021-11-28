@@ -27,13 +27,13 @@
 					"fireteam": ["core"]
 				}, {
 					"name": "Mormaers",
-					"fireteam": ["core", "haris", "duo"]
+					"fireteam": ["haris", "duo"]
 				}
 			]
 		}, {
 			"name": "Mormaers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/caledonian-mormaers-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
+			"fireteam": ["haris", "duo"],
 			"ava": 3
 		}, {
 			"name": "Galwegian",
