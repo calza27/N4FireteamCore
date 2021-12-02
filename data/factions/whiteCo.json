@@ -61,7 +61,8 @@
 			"name": "Haidao",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/h-idao-special-support-group-1-1.svg",
 			"ava": 3,
-			"wildcard": true
+			"wildcard": true,
+			"wildcardLimit": 1
 		}, {
 			"name": "Jujak",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jujak-regiment-null-1.svg",
