@@ -7,7 +7,13 @@
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
 			"ava": 2,
 			"wildcard": true,
-			"fireteam": ["duo"]
+			"fireteam": ["duo"],
+			"cantJoin": [
+				{
+					"name": "Scarface",
+					"fireteam": ["duo"]
+				}
+			]
 		}, {
 			"name": "Motorized Bounty Hunters",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
@@ -17,7 +23,13 @@
 			"name": "Velerya Gromoz",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/valerya-gromoz-mercenary-hacker-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcard": true,
+			"cantJoin": [
+				{
+					"name": "Scarface",
+					"fireteam": ["duo"]
+				}
+			]
 		}, {
 			"name": "Brawlers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/brawlers-mercenary-enforcers-1-1.svg",
@@ -41,7 +53,13 @@
 			"name": "Security Chief Arslan",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/security-chief-arslan-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcard": true,
+			"cantJoin": [
+				{
+					"name": "Scarface",
+					"fireteam": ["duo"]
+				}
+			]
 		}, {
 			"name": "Scarface",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/scarface-and-cordelia-1-1.svg",
@@ -67,12 +85,24 @@
 			"name": "Clipper Dronbots",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/clipper-dronbot-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcard": true,
+			"cantJoin": [
+				{
+					"name": "Scarface",
+					"fireteam": ["duo"]
+				}
+			]
 		}, {
 			"name": "Wolfgang Amadeus Wolff",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wolfgang-amadeus-wolff-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcard": true,
+			"cantJoin": [
+				{
+					"name": "Scarface",
+					"fireteam": ["duo"]
+				}
+			]
 		}
 	]
 }
