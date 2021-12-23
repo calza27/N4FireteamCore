@@ -7,13 +7,7 @@
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
 			"ava": 2,
 			"wildcard": true,
-			"fireteam": ["duo"],
-			"cantJoin": [
-				{
-					"name": "Scarface",
-					"fireteam": ["duo"]
-				}
-			]
+			"fireteam": ["duo"]
 		}, {
 			"name": "Motorized Bounty Hunters",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
@@ -64,11 +58,27 @@
 			"name": "Scarface",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/scarface-and-cordelia-1-1.svg",
 			"ava": 1,
-			"fireteam": ["duo"]
+			"fireteam": ["duo"],
+			"canJoin": [
+				{
+					"name": "Cordelia Turner",
+					"fireteam": ["duo"],
+					"ava": 1
+				}, {
+					"name": "Brawlers",
+					"fireteam": ["duo"],
+					"ava": 1
+				}, {
+					"name": "Authorized Bounty Hunters",
+					"fireteam": ["duo"],
+					"ava": 1
+				}
+			]
 		}, {
 			"name": "Cordelia Turner",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/scarface-and-cordelia-3-1.svg",
 			"ava": 1,
+			"fireteam": ["duo"],
 			"canJoin": [
 				{
 					"name": "Scarface",
