@@ -255,9 +255,12 @@ populateAvailableUnits = function(selector) {
 			$.each(unit.countsAs, function(i2, unitCountsAs) {
 				if(validUnitNames.indexOf(unitCountsAs) != -1) {
 					//this unit counts as something that can form the team we're creating
-					if($("#contents")[0].fireteam !== 'haris' || (unit.fireteam != null && unit.fireteam.indexOf('haris') != -1)) {
-						//if we're not forming a haris, then the counts as lets this unit form the team
-							//otherwise, the unit in question must have the fireteam haris skill in order to form the team
+					if(
+						($("#contents")[0].fireteam !== 'haris' || (unit.fireteam != null && unit.fireteam.indexOf('haris') != -1))
+						&& ($("#contents")[0].fireteam !== 'duo' || (unit.fireteam != null && unit.fireteam.indexOf('duo') != -1))
+					) {
+						//if we're not forming a haris or a duo, then the counts as lets this unit form the team
+							//otherwise, the unit in question must have the fireteam haris/duo skill in order to form the team
 						validUnitNames.push(unit.name);
 						return false;
 					}
