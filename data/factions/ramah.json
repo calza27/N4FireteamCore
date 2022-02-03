@@ -66,7 +66,14 @@
 			"name": "Zhayedan",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zhayedan-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": ["core", "haris"],
+			"canJoin": [
+				{
+					"name": "Maghariba Guard",
+					"fireteam": ["duo"],
+					"ava": 1
+				}
+			]
 		}, {
 			"name": "Al Fasid",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/al-fasid-regiment-1-1.svg",
