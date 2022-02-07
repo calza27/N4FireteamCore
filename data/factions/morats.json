@@ -25,14 +25,14 @@
 					"name": "Vanguard Infantry",
 					"fireteam": ["core"]
 				}, {
-					"name": "Suryat",
+					"name": "Suryats",
 					"fireteam": ["core", "haris", "duo"]
 				}, {
 					"name": "Sogorat",
 					"fireteam": ["duo"]
 				}, {
-					"name": "Kurgat",
-					"fireteam": ["haris", "duo"]
+					"name": "Raicho",
+					"fireteam": ["duo"]
 				}
 			]
 		}, {
@@ -72,6 +72,11 @@
 					"ava": 1
 				}
 			]
+		}, {
+			"name": "Raicho",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/raicho-armored-brigade-1-1.svg",
+			"fireteam": ["duo"],
+			"ava": 2
 		}, {
 			"name": "Daturazi",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/daturazi-witch-soldiers-1-1.svg",
