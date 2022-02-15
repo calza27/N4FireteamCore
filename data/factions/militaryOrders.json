@@ -81,7 +81,13 @@
 			"name": "Gabriele De Fersen",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/gabriele-de-fersen-1-1.svg",
 			"ava": 1,
-			"countsAs": ["Knight Hospitaller"]
+			"countsAs": ["Knight Hospitaller"],
+			"canJoin": [
+				{
+					"name": "Knight Santiago",
+					"fireteam": ["duo"]
+				}
+			]
 		}, {
 			"name": "Knight Hospitaller",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knights-hospitaller-1-1.svg",
