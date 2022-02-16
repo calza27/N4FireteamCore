@@ -75,13 +75,71 @@ canAddMore = function(unitName) {
 			return false;
 		} else {
 			canAddMore = true;
-			$.each(unit.canJoin, function(i2, unitCanJoin) {
-				if(unitCanJoin.ava != null && unitCanJoin.ava > 0) {
-					if(
-						$("#contents")[0].seedUnit != null
-						&& $("#contents")[0].seedUnit.length > 0
-						&& $("#contents")[0].seedUnit.indexOf(unitCanJoin.name) > -1
-					) {
+			if($("#contents")[0].seedUnit.indexOf(unit.name) == -1) {
+				$.each(unit.canJoin, function(i2, unitCanJoin) {
+					if(unitCanJoin.ava != null && unitCanJoin.ava > 0) {
+						if(
+							$("#contents")[0].seedUnit != null
+							&& $("#contents")[0].seedUnit.length > 0
+							&& $("#contents")[0].seedUnit.indexOf(unitCanJoin.name) > -1
+						) {
+							if(
+								unitCanJoin.fireteam == null
+								|| unitCanJoin.fireteam.length == 0
+								|| unitCanJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
+							) {
+								if(unitCanJoin.ava <= counter) {
+									canAddMore = false;
+									return false;
+								}
+							}
+						}
+					}
+				});
+			}
+		}
+	}
+	return canAddMore;
+};
+
+validMemeberCount = function(unitName, teamLeadName) {
+	var canAddMore = false;
+	var unit = getUnitJSON(unitName);
+	if(unit) {
+		var counter = 0;
+		$.each($('#builtFireTeam .memberBuilt .unitLabel'), function(i, selectElem) {
+			if($(selectElem).html() === unitName) {
+				counter++;
+			}
+		});
+		
+		if(unit.shareAVA != null && unit.shareAVA.length > 0) {
+			$.each($('#builtFireTeam .memberBuilt .unitLabel'), function(i, selectElem) {
+				if(unit.shareAVA.indexOf($(selectElem).html()) > -1) {
+					counter++;
+				}
+			});
+		}
+		
+		if(unit.ava != null && unit.ava > 0 && unit.ava <= counter) {
+			//we've hit the hard limit on army ava, so return false
+			return false;
+		} else if(
+			unit.wildcard
+			&& $("#contents")[0].seedUnit.indexOf(unit.name) == -1
+			&& unit.wildcardLimit != null
+			&& unit.wildcardLimit <= counter
+		) {
+			//this unit can wildcard, is not in a native fireteam
+			//has a limit to how many times it can wildcard into a link
+			// and has hit that limit
+			return false;
+		} else {
+			canAddMore = true;
+			if(unit.canJoin) {
+				//unit has defined can joins
+				$.each(unit.canJoin, function(i2, unitCanJoin) {
+					if(unitCanJoin.name === teamLeadName) {
 						if(
 							unitCanJoin.fireteam == null
 							|| unitCanJoin.fireteam.length == 0
@@ -93,8 +151,8 @@ canAddMore = function(unitName) {
 							}
 						}
 					}
-				}
-			});
+				});
+			}
 		}
 	}
 	return canAddMore;

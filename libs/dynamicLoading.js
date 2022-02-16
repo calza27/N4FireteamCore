@@ -155,8 +155,8 @@ changeFireteamMember = function(selectedMember, elem) {
 		}
 		
 	} else {
-		$("#contents")[0].seedUnit = clarifySeedUnits(selectedMember);
-		if($("#contents")[0].seedUnit == null || $("#contents")[0].seedUnit.length == 0) {
+		/*$("#contents")[0].seedUnit = clarifySeedUnits(selectedMember);
+		if($("#contents")[0].seedUnit == null || $("#contents")[0].seedUnit.length == 0) {*/
 			if($("#member1Container")[0].selectedUnit) {
 				$("#contents")[0].seedUnit = calculateInitialSeedUnits($("#member1Container")[0].selectedUnit);
 			}
@@ -172,7 +172,7 @@ changeFireteamMember = function(selectedMember, elem) {
 			if($("#member5Container")[0].selectedUnit && memberNumber > 4) {
 				$("#contents")[0].seedUnit = clarifySeedUnits($("#member5Container")[0].selectedUnit);
 			}
-		}
+		//}
 	}
 	
 	if(//the following tests to see if we've added the last possible member of the fireteam, if we haven't we can show a new dropdown and proceed
@@ -312,6 +312,13 @@ calculateInitialSeedUnits = function(unitName) {
 				seedUnitList.push(unitCountsAs);
 			});
 		}
+		if(unit.canJoin != null && unit.canJoin.length > 0) {
+			$.each(unit.canJoin, function(i2, canJoinObj) {
+				if(canJoinObj.fireteam.indexOf($("#contents")[0].fireteam) > -1) {
+					seedUnitList.push(canJoinObj.name);
+				}
+			});
+		}
 	}
 	return seedUnitList;
 };
@@ -372,17 +379,9 @@ clarifySeedUnits = function(unitName) {
 				if(unit.canJoin != null && unit.canJoin.length > 0) {
 					$.each(unit.canJoin, function(i2, unitCanJoin) {
 						if(seedUnitList.indexOf(unitCanJoin.name) > -1) {
-							//this unit can join the current fireteam of one or more of the units that is in the current list of seeds, so add thois units to the new list of seeds
-							if(unitCanJoin.fireteam != null && unitCanJoin.fireteam.length > 0) {
-								if(
-									unitCanJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
-								) {
-									if(newSeedUnitList.indexOf(unitCanJoin.name) == -1) {
-										newSeedUnitList.push(unitCanJoin.name);
-									}
-								}
-							} else {
-								if(newSeedUnitList.indexOf(unitCanJoin.name) == -1) {
+							//this unit can join the current fireteam of one or more of the units that is in the current list of seeds, so add this units to the new list of seeds
+							if(canJoinUnitList(unit.name, [unitCanJoin.name])) {
+								if(validMemeberCount(unit.name, unitCanJoin.name)) {
 									newSeedUnitList.push(unitCanJoin.name);
 								}
 							}
@@ -429,8 +428,12 @@ clarifySeedUnits = function(unitName) {
 };
 
 canJoinSeed = function(unitName) {
-	var canJoin = false;
 	var seedUnitList = $("#contents")[0].seedUnit;
+	return canJoinUnitList(unitName, seedUnitList);
+}
+
+canJoinUnitList = function(unitName, unitList) {
+	var canJoin = false;
 	var unit = getUnitJSON(unitName);
 	if(unit && unit.display !== false) {
 		if(
@@ -442,7 +445,7 @@ canJoinSeed = function(unitName) {
 			//we're building a fireteam traid, and this unit can join triads
 			return true;
 		}
-		if(seedUnitList.indexOf(unit.name) > -1) {
+		if(unitList.indexOf(unit.name) > -1) {
 			//this unit is directly referenced in the list of seed units, so we can add it
 			canJoin = true;
 		}
@@ -450,7 +453,7 @@ canJoinSeed = function(unitName) {
 			if(unit.canJoin != null && unit.canJoin.length > 0) {
 				$.each(unit.canJoin, function(i2, unitCanJoin) {
 					if(
-						seedUnitList.indexOf(unitCanJoin.name) > -1
+						unitList.indexOf(unitCanJoin.name) > -1
 						&& (
 							unitCanJoin.fireteam == null
 							|| unitCanJoin.fireteam.length == 0
@@ -467,7 +470,7 @@ canJoinSeed = function(unitName) {
 		if(!canJoin) {
 			if(unit.countsAs != null && unit.countsAs.length > 0) {
 				$.each(unit.countsAs, function(i2, unitCountsAs) {
-					if(canJoinSeed(unitCountsAs)) {
+					if(canJoinUnitList(unitCountsAs, unitList)) {
 						//this unit counts as a unit that can join the fireteam
 						canJoin = true;
 						return false;
@@ -487,7 +490,7 @@ canJoinSeed = function(unitName) {
 			}
 		}
 		$.each(unit.cantJoin, function(i2, unitCantJoin) {
-			if(seedUnitList.indexOf(unitCantJoin.name) > -1) {
+			if(unitList.indexOf(unitCantJoin.name) > -1) {
 				if(
 					unitCantJoin.fireteam == null
 					|| unitCantJoin.fireteam.length == 0
