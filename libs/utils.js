@@ -121,7 +121,7 @@ validMemeberCount = function(unitName, teamLeadName) {
 			});
 		}
 		
-		if(unit.ava != null && unit.ava > 0 && unit.ava <= counter) {
+		if(unit.ava != null && unit.ava > 0 && unit.ava < counter) {
 			//we've hit the hard limit on army ava, so return false
 			return false;
 		} else if(
@@ -145,7 +145,7 @@ validMemeberCount = function(unitName, teamLeadName) {
 							|| unitCanJoin.fireteam.length == 0
 							|| unitCanJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
 						) {
-							if(unitCanJoin.ava <= counter) {
+							if(unitCanJoin.ava < counter) {
 								canAddMore = false;
 								return false;
 							}

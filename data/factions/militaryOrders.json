@@ -170,7 +170,7 @@
 		}, {
 			"name": "Teutonic Knights",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/teutonic-knights-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
+			"fireteam": ["core", "haris"],
 			"ava": 3
 		}, {
 			"name": "Bulleteer Armbots",

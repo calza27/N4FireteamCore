@@ -302,20 +302,26 @@ calculateInitialSeedUnits = function(unitName) {
 			//the selected unit can only act as a seed if it itself can form a fireteam
 			$.each(unit.fireteam, function(i2, unitFireteam) {
 				if(unitFireteam == $("#contents")[0].fireteam) {
-					seedUnitList.push(unitName);
-					return false;
+					if(seedUnitList.indexOf(unitName) == -1) {
+						seedUnitList.push(unitName);
+						return false;
+					}
 				}
 			});
 		}
 		if(unit.countsAs != null && unit.countsAs.length > 0) {
 			$.each(unit.countsAs, function(i2, unitCountsAs) {
-				seedUnitList.push(unitCountsAs);
+				if(seedUnitList.indexOf(unitCountsAs) == -1) {
+					seedUnitList.push(unitCountsAs);
+				}
 			});
 		}
 		if(unit.canJoin != null && unit.canJoin.length > 0) {
 			$.each(unit.canJoin, function(i2, canJoinObj) {
 				if(canJoinObj.fireteam.indexOf($("#contents")[0].fireteam) > -1) {
-					seedUnitList.push(canJoinObj.name);
+					if(seedUnitList.indexOf(canJoinObj.name) == -1) {
+						seedUnitList.push(canJoinObj.name);
+					}
 				}
 			});
 		}

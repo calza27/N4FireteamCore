@@ -11,6 +11,13 @@
 					"name": "Taagma Schemers",
 					"fireteam": ["special triad"]
 				}
+			],
+			"fireteam": ["special triad"],
+			"notes": [
+				{
+					"fireteam": ["special triad"],
+					"note": "Special Fireteam: Triad. 1 Taagma Schemer + 2 Auxiliars FTO"
+				}
 			]
 		}, {
 			"name": "Hatail Aelis Keesan",
@@ -27,6 +34,10 @@
 					"name": "Kiel-Saan",
 					"fireteam": ["special triad"],
 					"ava": 2
+				}, {
+					"name": "Draal Saboteurs",
+					"fireteam": ["special triad"],
+					"ava": 2
 				}
 			]
 		}, {
@@ -40,6 +51,13 @@
 			"fireteam": ["triad"],
 			"ava": 2,
 			"countsAs": ["Kriigel Special"],
+			"canJoin": [
+				{
+					"name": "Reex Special",
+					"fireteam": ["special triad"],
+					"ava": 1
+				}
+			],
 			"cantJoin": [
 				{
 					"name": "Kriigel Special",
@@ -60,6 +78,19 @@
 			"name": "Reex Escorts",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/reex-escorts-1-1.svg",
 			"ava": 2,
+			"countsAs": ["Reex Special"],
+			"canJoin": [
+				{
+					"name": "Reex Special",
+					"fireteam": ["special triad"],
+					"ava": 2
+				}
+			]
+		}, {
+			"name": "Reex Special",
+			"display": false,
+			"ava": 2,
+			"fireteam": ["special triad"],
 			"canJoin": [
 				{
 					"name": "Kriigel Special",
@@ -70,21 +101,36 @@
 		}, {
 			"name": "Taagma Schemers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/taagma-schemers-1-1.svg",
-			"fireteam": ["triad", "special triad"],
+			"fireteam": ["triad"],
 			"ava": 3,
 			"canJoin": [
 				{
 					"name": "Anaconda",
 					"fireteam": ["duo"]
+				}, {
+					"name": "Chaksa Auxiliars",
+					"fireteam": ["special triad"],
+					"ava": 1
 				}
 			],
-			"countsAs": ["Brawlers"],
+			"countsAs": ["Brawlers", "Taagma Special"],
 			"notes": [
 				{
 					"fireteam": ["special triad"],
 					"note": "Special Fireteam: Triad. 1 Taagma Schemer + 2 Auxiliars FTO"
 				}
+			],
+			"cantJoin": [
+				{
+					"name": "Taagma Special",
+					"fireteam": ["special triad"]
+				}
 			]
+		}, {
+			"name": "Taagma Special",
+			"display": false,
+			"fireteam": ["special triad"],
+			"ava": 1
 		}, {
 			"name": "Brawlers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/brawlers-mercenary-enforcers-1-1.svg",
@@ -98,7 +144,7 @@
 			],
 			"cantJoin": [
 				{
-					"name": "Taagma Schemers",
+					"name": "Taagma Special",
 					"fireteam": ["special triad"]
 				}
 			]
@@ -116,7 +162,13 @@
 			"name": "Kiel-Saan",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kiel-saan-covert-assault-unit-1-1.svg",
 			"fireteam": ["special triad"],
-			"ava": 3
+			"ava": 3,
+			"canJoin": [
+				{
+					"name": "Draal Saboteurs",
+					"fireteam": ["special triad"]
+				}
+			]
 		}, {
 			"name": "Neema Saatar",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/neema-saatar-1-1.svg",
@@ -130,13 +182,12 @@
 		}, {
 			"name": "Draal Saboteurs",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/draal-saboteurs-1-1.svg",
-			"fireteam": ["triad"],
+			"fireteam": ["triad", "special triad"],
 			"ava": 3,
 			"canJoin": [
 				{
 					"name": "Kiel-Saan",
-					"fireteam": ["special triad"],
-					"ava": 2
+					"fireteam": ["special triad"]
 				}
 			]
 		}
