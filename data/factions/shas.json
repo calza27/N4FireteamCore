@@ -60,11 +60,11 @@
 			"ava": 2,
 			"canJoin": [
 				{
-					"name": "Gwailos Infantry",
+					"name": "Gwailos",
 					"fireteam": ["haris"],
 					"ava": 2
 				}, {
-					"name": "Gwailos Infantry",
+					"name": "Gwailos",
 					"fireteam": ["duo"],
 					"ava": 1
 				}
