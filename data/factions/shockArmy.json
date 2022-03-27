@@ -1,62 +1,125 @@
 {
 	"factionName": "Shock Army of Acontecimento",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Regulars",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Acontecimento",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Tikbalang",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Regulars",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/acontecimento-regulars-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Regulars",
+					"min" : "1",
+					"max" : "5"
+				}, {
+					"name": "Acontecimento",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Agnes Ferreira",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/agnes-ferreira-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Machinist",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machinists-1-1.svg",
 			"ava": 2,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Bagh-Mari",
-					"fireteam": ["core", "haris"],
-					"ava": 2
+					"name": "Regulars",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Acontecimento",
+					"min" : "0",
+					"max" : "2"
 				}
 			]
 		}, {
 			"name": "Bagh-Mari",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/bagh-mari-unit-1-1.svg",
-			"fireteam": ["core", "haris"],
 			"ava": 5,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Regulars",
-					"fireteam": ["core"],
-					"ava": 2
+					"min" : "0",
+					"max" : "2"
+				}, {
+					"name": "Acontecimento",
+					"min" : "0",
+					"max" : "5",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Lt. Stephen Rao",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/lt-stephen-rao-bagh-mari-unit-1-1.svg",
-			"fireteam": ["haris"],
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Bagh-Mari"]
+		}, {
+			"name": "Knight of Montessa",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-knights-of-montesa-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Tikbalang",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Orc Troops",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/orc-troops-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
 			"ava": 5,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Regulars",
-					"fireteam": ["core"],
-					"ava": 1
+					"min" : "0",
+					"max" : "2"
+				}, {
+					"name": "Acontecimento",
+					"min" : "0",
+					"max" : "5",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Tikbalang",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tikbalangs-1-1.svg",
-			"fireteam": ["duo"],
-			"ava": 2
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Tikbalang",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Bulleteer Armbots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/armbots-bulleteer-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Acontecimento",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}
 	]
 }

@@ -1,63 +1,139 @@
 {
 	"factionName": "Tartary Army Corps",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Line Kazaks",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Veterans",
+			"types": ["core", "haris", "duo"],
+			"keywords": ["Veteran"]
+		}, {
+			"name": "Dynamo Reg.",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Ratnik",
+			"types": ["haris", "duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "112, Emergency Service",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/112-emergency-service-1-1.svg",
 			"ava": 2,
-			"canJoin": [
+			"shareAVA": ["112, Motorized"],
+			"fireteam": [
 				{
-					"name": "Frontoviks",
-					"fireteam": ["core", "haris"]
+					"name": "Veterans",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "112, Motorized",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/112-emergency-service-1-1.svg",
+			"ava": 2,
+			"shareAVA": ["112, Emergency Service"],
+			"fireteam": [
+				{
+					"name": "Dynamo Reg.",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Beasthunter",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/beasthunters-free-guild-null-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Line Kazaks",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Dynamo",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/dynamo-1-1.svg",
-			"fireteam": ["duo"],
-			"ava": 5
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Dynamo Reg.",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Frontoviks",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/frontoviks-separate-assault-bat-1-1.svg",
-			"fireteam": ["core", "haris"],
 			"ava": 5,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Line Kazaks",
-					"fireteam": ["core"],
-					"ava": 1
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Veterans",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["Veteran"]
 				}
 			]
 		}, {
 			"name": "Kazak Doktor",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kazak-doktor-1-1.svg",
 			"ava": 3,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Line Kazaks",
-					"fireteam": ["core"]
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["Line Kazaks"]
 				}
 			]
 		}, {
 			"name": "Line Kazaks",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/line-kazaks-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Line Kazaks",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Col. Yevgueni Voronin",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/col-yevgueni-voronin-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Line Kazaks", "Veteran"]
 		}, {
 			"name": "Ratnik",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ratnik-1-1.svg",
-			"fireteam": ["duo"],
-			"ava": 2
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Ratnik",
+					"min" : "1",
+					"max" : "3"
+				}
+			]
 		}, {
 			"name": "Veteran Kazaks",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/veteran-kazaks-1-1.svg",
 			"ava": 5, 
-			"fireteam": ["core", "haris", "duo"], 
+			"fireteam": [
+				{
+					"name": "Veterans",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["Veteran"]
+				}
+			],
+			"wildcardMax": 3,
 			"wildcard": true
 		}
 	]

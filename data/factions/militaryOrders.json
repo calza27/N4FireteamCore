@@ -1,27 +1,68 @@
 {
 	"factionName": "Military Orders",
-	"fireteams": ["core", "crusade", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Military Orders",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Order Sergeants",
+			"types": ["haris"]
+		}, {
+			"name": "Crusade",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Knights",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Coadjutor Crosiers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/coadjutor-crosiers-military-order-infantry-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Military Orders",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Indigo Brother Konstantinos",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/indigo-brother-konstantinos-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Coadjutor Crosiers", "Order Sergeants"]
 		}, {
 			"name": "Knight Commander",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knight-commander-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Coadjutor Crosiers",
-					"fireteam": ["core"]
+					"name": "Military Orders",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Coadjutor Crosiers"]
 				}
 			]
 		}, {
+			"name": "Curator",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/military-order-curators-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Military Orders",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Order Sergeants",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Order Sergeants"]
+				}
+			]
+		},{
 			"name": "Machinist",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machinists-1-1.svg",
 			"ava": 1,
@@ -37,146 +78,179 @@
 		}, {
 			"name": "Order Sergeants",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/order-sergeants-1-1.svg",
-			"fireteam": ["haris"],
 			"ava": 4,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Teutonic Knights",
-					"fireteam": ["core", "haris", "duo"],
-					"ava": 1
+					"name": "Military Orders",
+					"min" : "0",
+					"max" : "3"
 				}, {
-					"name": "Knight Hospitaller",
-					"fireteam": ["core", "haris", "duo"],
-					"ava": 1
-				}, {
-					"name": "Coadjutor Crosiers",
-					"fireteam": ["core"]
+					"name": "Order Sergeants",
+					"min" : "1",
+					"max" : "3"
 				}
 			]
 		}, {
 			"name": "Infirmarers of Saint Lazarus",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/infirmarers-of-saint-lazarus-1-1.svg",
 			"ava": 2,
-			"wildcard": true,
-			"cantJoin": [
+			"fireteam": [
 				{
-					"name": "Joan of Arc",
-					"fireteam": ["crusade"]
+					"name": "Military Orders",
+					"min" : "0",
+					"max" : "1"
 				}, {
-					"name": "Joan of Arc V2",
-					"fireteam": ["crusade"]
+					"name": "Order Sergeants",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Order Sergeants"]
+				}, {
+					"name": "Knights",
+					"min" : "0",
+					"max" : "1",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Black Friar",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/panoceanian-black-friars-1-1.svg",
 			"ava": 2,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Coadjutor Crosiers",
-					"fireteam": ["core"]
+					"name": "Military Orders",
+					"min" : "0",
+					"max" : "2"
 				}
 			]
 		}, {
 			"name": "Gabriele De Fersen",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/gabriele-de-fersen-1-1.svg",
 			"ava": 1,
-			"countsAs": ["Knight Hospitaller"],
-			"canJoin": [
-				{
-					"name": "Knight Santiago",
-					"fireteam": ["duo"]
-				}
-			]
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Knight Hospitaller"]
 		}, {
 			"name": "Knight Hospitaller",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knights-hospitaller-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
 			"ava": 5,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Joan of Arc",
-					"fireteam": ["crusade"],
-					"ava": 4
-				}, {
-					"name": "Joan of Arc V2",
-					"fireteam": ["crusade"],
-					"ava": 4
-				}, {
-					"name": "Knight of Justice",
-					"fireteam": ["duo"]
+					"name": "Crusade",
+					"min" : "1",
+					"max" : "5"
 				}
 			]
 		}, {
 			"name": "Joan of Arc",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jeanne-d-arc-1-1.svg",
-			"fireteam": ["crusade"],
 			"ava": 1,
 			"shareAVA": ["Joan of Arc V2"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Knight Hospitaller",
-					"fireteam": ["duo"]
+					"name": "Crusade",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Knight Hospitaller"]
 				}, {
-					"name": "Teutonic Knights",
-					"fireteam": ["duo"]
-				}, {
-					"name": "Bulleteer Armbots",
-					"fireteam": ["duo"]
-				}, {
-					"name": "Knight Santiago",
-					"fireteam": ["duo"]
-				}, {
-					"name": "Knight of Justice",
-					"fireteam": ["duo"]
+					"name": "Knights",
+					"min" : "0",
+					"max" : "1",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Joan of Arc V2",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jeanne-d-arc-v2-mobility-armor-1-1.svg",
-			"fireteam": ["crusade"],
 			"ava": 1,
 			"shareAVA": ["Joan of Arc"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Knight Hospitaller",
-					"fireteam": ["duo"]
+					"name": "Crusade",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Knight Hospitaller"]
 				}, {
-					"name": "Teutonic Knights",
-					"fireteam": ["duo"]
-				}, {
-					"name": "Bulleteer Armbots",
-					"fireteam": ["duo"]
-				}, {
-					"name": "Knight Santiago",
-					"fireteam": ["duo"]
-				}, {
-					"name": "Knight of Justice",
-					"fireteam": ["duo"]
+					"name": "Knights",
+					"min" : "0",
+					"max" : "1",
+					"required": true
 				}
 			]
 		}, {
+			"name": "Kyle Hawkins",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knight-hospitaller-kyle-hawkins-1-1.svg",
+			"ava": 1,
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Knight Hospitaller"]
+		}, {
 			"name": "Knight of Justice",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knight-of-justice-1-1.svg",
-			"fireteam": ["duo"],
 			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Knights",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			],
+			"wildcardMax": 2,
 			"wildcard": true
+		}, {
+			"name": "Knight of Montessa",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-knights-of-montesa-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Knights",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Knight Santiago",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knights-of-santiago-1-1.svg",
-			"fireteam": ["duo"],
 			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Knights",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			],
+			"wildcardMax": 3,
 			"wildcard": true
 		}, {
 			"name": "Teutonic Knights",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/teutonic-knights-1-1.svg",
-			"fireteam": ["core", "haris"],
-			"ava": 3
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Military Orders",
+					"min" : "0",
+					"max" : "3",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Bulleteer Armbots",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/armbots-bulleteer-1-1.svg",
-			"fireteam": ["duo"],
-			"ava": 2
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Order Sergeants",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Knights",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}
 	]
 }

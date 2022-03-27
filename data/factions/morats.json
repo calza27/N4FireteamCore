@@ -1,120 +1,309 @@
 {
 	"factionName": "Morat Aggression Force",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Morat",
+			"types": ["core", "haris", "duo"],
+			"keywords": ["morat"]
+		}, {
+			"name": "Tarlok",
+			"types": ["core", "haris", "duo"],
+			"note": "All members of a Tarlok Fireteam are considered to have the 'Terrain (Jungle)' skill.",
+			"bonus": "Terrain (Jungle)",
+			"keywords": ["tarlok"]
+		}, {
+			"name": "Hungries",
+			"types": ["core", "haris"],
+			"note": "Members of this fireteam will be regular and will not apply impetuous as long as Oznat FTO is part of that fireteam. If Oznat stops being part of the fireteam, the whole fireteam will be cancelled."
+		}, {
+			"name": "Armoured",
+			"types": ["duo"]
+		}, {
+			"name": "Krakot Renegades",
+			"types": ["duo"],
+			"note": "[Renegades] is a fireteam trait that guarentees composition bonus only among other renegades"
+		}, {
+			"name": "Rodoks",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Daturazi",
+			"types": ["core", "haris", "duo"]
+		}
+	],
 	"units": [
 		{
+			"name": "Dartok",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/dartok-cybercombat-team-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Morat",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["morat"]
+				}, {
+					"name": "Tarlok",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["tarlok"]
+				}
+			]
+		}, {
 			"name": "Krakot Renegades",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/krakot-renegades-1-1.svg",
 			"ava": 3,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Krakot Renegades",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Kurgat",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kurgat-reg-of-assault-engineers-1-1.svg",
 			"ava": 3,
-			"fireteam": ["haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Morat",
+					"min" : "0",
+					"max" : "3",
+					"required": true,
+					"keywords": ["morat"]
+				}
+			]
 		}, {
 			"name": "Vanguard Infantry",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/morat-vanguard-infantry-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Morat",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["morat"]
+				}, {
+					"name": "Tarlok",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["tarlok"]
+				}
+			]
 		}, {
 			"name": "Treitak Anyat",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/treitak-anyat-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["morat"]
+		}, {
+			"name": "Zabuk",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zabuk-morat-enslavers-1-1.svg",
+			"ava": 1,
+			"fireteam": [
 				{
-					"name": "Vanguard Infantry",
-					"fireteam": ["core"]
-				}, {
-					"name": "Suryats",
-					"fireteam": ["core", "haris", "duo"]
-				}, {
-					"name": "Sogorat",
-					"fireteam": ["duo"]
-				}, {
-					"name": "Raicho",
-					"fireteam": ["duo"]
+					"name": "Morat",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Kornak Gazarot",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kornak-gazarot-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["morat"]
+		}, {
+			"name": "Kyosot",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kyosot-killing-platoon-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Morat",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Raktorak",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/raktorak-morat-sergeant-major-1-1.svg",
 			"ava": 2,
-			"wildcard": true
+			"wildcardMax": 2,
+			"wildcard": true,
+			"keywords": ["morat"]
 		}, {
 			"name": "Rodok",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rodok-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": [
+				{
+					"name": "Rodoks",
+					"min" : "1",
+					"max" : "3"
+				}
+			]
 		}, {
 			"name": "Yaogat",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yaogat-strike-infantry-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": [
+				{
+					"name": "Morat",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["morat"]
+				}, {
+					"name": "Tarlok",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["tarlok"]
+				}
+			]
+		}, {
+			"name": "Kaitok",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kaitok-shock-regiment-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Morat",
+					"min" : "0",
+					"max" : "3",
+					"required": true,
+					"keywords": ["morat"]
+				}, {
+					"name": "Tarlok",
+					"min" : "0",
+					"max" : "3",
+					"required": true,
+					"keywords": ["tarlok"]
+				}
+			]
+		}, {
+			"name": "Rindak FTO",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rindak-emergency-brigade-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Morat",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Sogorat",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/sogarat-tempest-regiment-1-1.svg",
-			"fireteam": ["duo"],
-			"ava": 3
-		}, {
-			"name": "Suryats",
-			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/suryats-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
-			"ava": 5,
-			"canJoin": [
+			"ava": 3,
+			"fireteam": [
 				{
-					"name": "Vanguard Infantry",
-					"fireteam": ["core"],
-					"ava": 1
+					"name": "Armoured",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
+		}, {
+			"name": "Suryat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/suryats-1-1.svg",
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Morat",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["morat"]
+				}, {
+					"name": "Tarlok",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["tarlok"]
+				}
+			]
+		}, {
+			"name": "Bultrak",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/bultrak-mobile-armored-regiment-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Armoured",
+					"min" : "0",
+					"max" : "2",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Raicho",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/raicho-armored-brigade-1-1.svg",
-			"fireteam": ["duo"],
-			"ava": 2
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Armoured",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Daturazi",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/daturazi-witch-soldiers-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Daturazi",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Kendrat",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kendrat-renegades-krakot-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Krakot Renegades",
-					"fireteam": ["duo"]
+					"min" : "0",
+					"max" : "1",
+					"required": true,
+					"keywords": ["Krakot Renegades"]
 				}
 			]
 		}, {
 			"name": "Oznat",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/oznat-morat-hunting-regiment-1-1.svg",
 			"ava": 2,
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Hungries",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Gakis",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-hungries-gakis-1-1.svg",
 			"ava": 4,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Oznat",
-					"fireteam": ["core"]
+					"name": "Hungries",
+					"min" : "0",
+					"max" : "4"
 				}
 			]
 		}, {
 			"name": "Pretas",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-hungries-pretas-1-1.svg",
 			"ava": 4,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Oznat",
-					"fireteam": ["core"]
+					"name": "Hungries",
+					"min" : "0",
+					"max" : "4"
 				}
 			]
 		}

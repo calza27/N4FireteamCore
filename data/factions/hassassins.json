@@ -1,74 +1,126 @@
 {
 	"factionName": "Hassassin Bahram",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Ghulam",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Hassassin Bahram",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Shakush",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Avicenna",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/avicenna-mercenary-doctor-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Ghulam",
-					"fireteam": ["core"]
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Ghulam",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ghulam-infantry-1-1.svg",
 			"ava": 4,
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Ghulam",
+					"min" : "1",
+					"max" : "4"
+				}
+			]
 		}, {
 			"name": "Hassassin Barids",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hassassin-barids-1-1.svg",
 			"ava": 2,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Ghulam",
-					"fireteam": ["core"]
+					"min" : "0",
+					"max" : "2"
 				}
 			]
 		}, {
 			"name": "Husam Yasbir",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hassassin-husam-yasbir-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Ghulam", "Hassassin Muyib"]
 		}, {
 			"name": "Hassassin Lasiqs",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hassassin-lasiqs-1-1.svg",
 			"ava": 4,
-			"fireteam": ["core", "haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Hassassin Bahram",
+					"min" : "0",
+					"max" : "4",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Laila Sharif",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/husam-operative-leila-sharif-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Ghulam", "Hassassin Muyib"]
 		}, {
 			"name": "Hassassin Govads",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hassassin-govads-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Hassassin Bahram",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Hassassin Muyibs",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hassassin-muyibs-1-1.svg",
 			"ava": 6,
-			"fireteam": ["core", "haris"],
+			"fireteam": [
+				{
+					"name": "Hassassin Bahram",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			],
+			"wildcardMax": 4,
 			"wildcard": true
 		}, {
 			"name": "Yara Hadad",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yara-haddad-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Asawira",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/asawira-regiment-1-1.svg",
-			"ava": 4,
-			"fireteam": ["haris", "duo"],
+			"ava": 3,
+			"wildcardMax": 3,
 			"wildcard": true
 		}, {
 			"name": "Shakush",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shakush-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Shakush",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
 		}
 	]
 }

@@ -1,81 +1,183 @@
 {
 	"factionName": "Kosmoflot",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Rokots",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Kosmoflot",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Kosmosoldats",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Chernobog",
+			"types": ["duo"]
+		}, {
+			"name": "Varangian Guard",
+			"types": ["core", "haris", "duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Frontoviks",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/frontoviks-separate-assault-bat-1-1.svg",
-			"fireteam": ["core", "haris"],
-			"ava": 4,
-			"canJoin": [
+			"ava": 5,
+			"fireteam": [
 				{
-					"name": "Kosmosoldat",
-					"fireteam": ["duo"]
+					"name": "Kosmoflot",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}, {
+					"name": "Kosmosoldats",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Kazak Doktor",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kazak-doktor-1-1.svg",
 			"ava": 2,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Rokots",
-					"fireteam": ["core"]
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Mekhaniks",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mekhaniks-flight-engineers-corps-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Rokots",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["Rokots"]
 				}
 			]
 		}, {
 			"name": "Rokots",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rokots-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Rokots",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "The Unknown Ranger",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-unknown-ranger-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
+			"wildcard": true
+		}, {
+			"name": "Wardriver",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wardrivers-merc-hackers-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Rokots",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Strannik",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/strannik-outer-patrol-1-1.svg",
+			"ava": 2,
+			"wildcardMax": 2,
 			"wildcard": true
 		}, {
 			"name": "The Scots Guard",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-scots-guards-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
-			"ava": 4
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Kosmoflot",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Kosmosoldat",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kosmosoldat.svg",
-			"fireteam": ["duo"],
-			"ava": 2
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Kosmosoldats",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Patchers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/patchers-structural-response-team-1-1.svg",
+			"ava": 2,
+			"wildcardMax": 2,
+			"wildcard": true,
+			"keywords": ["Rokots"]
 		}, {
 			"name": "Volkolak",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/volkolak-shock-troopers.svg",
 			"ava": 3,
-			"wildcard": true
+			"wildcardMax": 3,
+			"wildcard": true,
+			"keywords": ["Rokots"]
+		}, {
+			"name": "Chernobog",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chernobog-armored-detachment-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Chernobog",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Cadin Firststrike Donn",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/cadin-firststrike-donn-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Varangian Guard",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/varangian-guard-1-1.svg",
 			"ava": 4,
-			"fireteam": ["core", "haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Varangian Guard",
+					"min" : "1",
+					"max" : "4"
+				}
+			]
 		}, {
 			"name": "William Wallace",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/william-wallace-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Varangian Guard",
-					"fireteam": ["core", "haris", "duo"]
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Varangian Guard"]
 				}
 			]
 		}, {
 			"name": "Wolfgang Amadeus Wolff",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wolfgang-amadeus-wolff-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Rokots",
-					"fireteam": ["core"]
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}

@@ -1,80 +1,141 @@
 {
 	"factionName": "Varuna Immediate Reaction Division",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Fusiliers",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Kamau",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Orc",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Cavalry",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Bipandra",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusilier-indigo-bipandra-1-1.svg",
 			"ava": 1,
-			"countsAs": ["Fusiliers"]
+			"fireteam": [
+				{
+					"name": "Fusiliers",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Fusiliers"]
+				}
+			]
 		}, {
 			"name": "Richard Quinn",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusilier-indigo-richard-quinn-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Fusiliers", "Kamau"]
 		}, {
 			"name": "Fusiliers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusiliers-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Fusiliers",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Kamau",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kamau-amphibian-intervention-teams-1-1.svg",
-			"fireteam": ["core", "haris"],
 			"ava": 5,
-			"wildcard": true
-		}, {
-			"name": "Machinist",
-			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machinists-1-1.svg",
-			"ava": 2,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Kamau",
-					"fireteam": ["core", "haris"]
+					"min" : "1",
+					"max" : "5"
+				}
+			],
+			"wildcardMax": 4,
+			"wildcard": true
+		}, {
+			"name": "Machinist Varuna Div",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machinists-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Kamau",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["Kamau"]
+				}
+			]
+		}, {
+			"name": "Uma Sørensen",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/captain-uma-sorensen-null-1.svg",
+			"ava": 1,
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Fusiliers", "Kamau"]
+		}, {
+			"name": "Knight of Montessa",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-knights-of-montesa-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Cavalry",
+					"min" : "0",
+					"max" : "2",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Orc Trooper",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/orc-troops-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
 			"ava": 5,
 			"shareAVA": ["Orc Trooper (Varuna Div)"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Orc Trooper (Varuna Div)",
-					"fireteam": ["core", "haris", "duo"]
+					"name": "Orc",
+					"min" : "1",
+					"max" : "5"
 				}
 			]
 		}, {
 			"name": "Orc Trooper (Varuna Div)",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/orc-troops-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
 			"ava": 5,
 			"shareAVA": ["Orc Trooper"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Orc Trooper",
-					"fireteam": ["core", "haris", "duo"]
-				}, {
 					"name": "Fusiliers",
-					"fireteam": ["core"],
-					"ava" : 2
+					"min" : "0",
+					"max" : "2"
 				}
 			]
 		}, {
 			"name": "Patsy Garnett",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/patsy-garnett-1-1.svg",
-			"fireteam": ["haris", "duo"],
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Orc Trooper"]
 		}, {
 			"name": "Squalos",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/squalos-1-1.svg",
-			"fireteam": ["duo"],
-			"ava": 2
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Cavalry",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Clipper Dronbot",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/clipper-dronbot-1-1.svg",
-			"ava": 2,
+			"wildcardMax": 1,
 			"wildcard": true
 		}
 	]

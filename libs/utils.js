@@ -27,10 +27,22 @@ evalJSFromHtml = function (html) {
     }
 };
 
-clearUnitSelector = function(selector) {
-	$(selector).hide();
-	$(selector).html('');
-	$(selector)[0].selectedUnit = null;
+clearUnitSelector = function(memberNum) {
+	$('#member' + memberNum + 'Container').hide();
+	$('#member' + memberNum + 'Container').html('');
+	$('#member' + memberNum + 'Container')[0].selectedUnit = null;
+	
+	if(memberNum == 1) {
+		$("#contents")[0].member1 = null;
+	} else if(memberNum == 2) {
+		$("#contents")[0].member2 = null;
+	} else if(memberNum == 3) {
+		$("#contents")[0].member3 = null;
+	} else if(memberNum == 4) {
+		$("#contents")[0].member4 = null;
+	} else if(memberNum == 5) {
+		$("#contents")[0].member5 = null;
+	}
 };
 
 getUnitListJSON = function() {
@@ -42,120 +54,75 @@ getUnitListJSON = function() {
 };
 
 canAddMore = function(unitName) {
-	var canAddMore = false;
 	var unit = getUnitJSON(unitName);
-	if(unit) {
+	if(unit) {		
 		var counter = 0;
-		$.each($('#builtFireTeam .memberBuilt .unitLabel'), function(i, selectElem) {
-			if($(selectElem).html() === unitName) {
+		if($("#contents")[0].member1 && $("#contents")[0].member1.name === unitName) {
+			counter++;
+		}
+		if($("#contents")[0].member2 && $("#contents")[0].member2.name === unitName) {
+			counter++;
+		}
+		if($("#contents")[0].member3 && $("#contents")[0].member3.name === unitName) {
+			counter++;
+		}
+		if($("#contents")[0].member4 && $("#contents")[0].member4.name === unitName) {
+			counter++;
+		}
+		if($("#contents")[0].member5 && $("#contents")[0].member5.name === unitName) {
+			counter++;
+		}
+		if(unit.shareAVA != null && unit.shareAVA.length > 0) {
+			if($("#contents")[0].member1 && unit.shareAVA.indexOf($("#contents")[0].member1.name) > -1) {
 				counter++;
 			}
-		});
-		
-		if(unit.shareAVA != null && unit.shareAVA.length > 0) {
-			$.each($('#builtFireTeam .memberBuilt .unitLabel'), function(i, selectElem) {
-				if(unit.shareAVA.indexOf($(selectElem).html()) > -1) {
-					counter++;
-				}
-			});
+			if($("#contents")[0].member2 && unit.shareAVA.indexOf($("#contents")[0].member2.name) > -1) {
+				counter++;
+			}
+			if($("#contents")[0].member3 && unit.shareAVA.indexOf($("#contents")[0].member3.name) > -1) {
+				counter++;
+			}
+			if($("#contents")[0].member4 && unit.shareAVA.indexOf($("#contents")[0].member4.name) > -1) {
+				counter++;
+			}
+			if($("#contents")[0].member5 && unit.shareAVA.indexOf($("#contents")[0].member5.name) > -1) {
+				counter++;
+			}
 		}
 		
 		if(unit.ava != null && unit.ava > 0 && unit.ava <= counter) {
 			//we've hit the hard limit on army ava, so return false
 			return false;
-		} else if(
-			unit.wildcard
-			&& $("#contents")[0].seedUnit.indexOf(unit.name) == -1
-			&& unit.wildcardLimit != null
-			&& unit.wildcardLimit <= counter
-		) {
-			//this unit can wildcard, is not in a native fireteam
-			//has a limit to how many times it can wildcard into a link
-			// and has hit that limit
-			return false;
-		} else {
-			canAddMore = true;
-			if($("#contents")[0].seedUnit.indexOf(unit.name) == -1) {
-				$.each(unit.canJoin, function(i2, unitCanJoin) {
-					if(unitCanJoin.ava != null && unitCanJoin.ava > 0) {
-						if(
-							$("#contents")[0].seedUnit != null
-							&& $("#contents")[0].seedUnit.length > 0
-							&& $("#contents")[0].seedUnit.indexOf(unitCanJoin.name) > -1
-						) {
-							if(
-								unitCanJoin.fireteam == null
-								|| unitCanJoin.fireteam.length == 0
-								|| unitCanJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
-							) {
-								if(unitCanJoin.ava <= counter) {
-									canAddMore = false;
-									return false;
-								}
-							}
-						}
-					}
-				});
-			}
 		}
-	}
-	return canAddMore;
-};
-
-validMemeberCount = function(unitName, teamLeadName) {
-	var canAddMore = false;
-	var unit = getUnitJSON(unitName);
-	if(unit) {
-		var counter = 0;
-		$.each($('#builtFireTeam .memberBuilt .unitLabel'), function(i, selectElem) {
-			if($(selectElem).html() === unitName) {
-				counter++;
+		var hitFireteamMax = false;
+		var checkWildcard = true;
+		$.each(unit.fireteam, function(i, fireteam) {
+			if(fireteam.name === $("#contents")[0].fireteamLabel) {
+				checkWildcard = false;
+				if(fireteam.max <= counter) {
+					hitFireteamMax = true;
+				}
+				return false;
 			}
 		});
-		
-		if(unit.shareAVA != null && unit.shareAVA.length > 0) {
-			$.each($('#builtFireTeam .memberBuilt .unitLabel'), function(i, selectElem) {
-				if(unit.shareAVA.indexOf($(selectElem).html()) > -1) {
-					counter++;
-				}
-			});
-		}
-		
-		if(unit.ava != null && unit.ava > 0 && unit.ava < counter) {
-			//we've hit the hard limit on army ava, so return false
+		if(hitFireteamMax) {
 			return false;
-		} else if(
-			unit.wildcard
-			&& $("#contents")[0].seedUnit.indexOf(unit.name) == -1
-			&& unit.wildcardLimit != null
-			&& unit.wildcardLimit <= counter
+		}
+		if(
+			checkWildcard
+			&& unit.wildcard
+			&& unit.wildcardMax != null
+			&& unit.wildcardMax <= counter
 		) {
-			//this unit can wildcard, is not in a native fireteam
+			//this unit can wildcard
 			//has a limit to how many times it can wildcard into a link
-			// and has hit that limit
+			//and has hit that limit
 			return false;
-		} else {
-			canAddMore = true;
-			if(unit.canJoin) {
-				//unit has defined can joins
-				$.each(unit.canJoin, function(i2, unitCanJoin) {
-					if(unitCanJoin.name === teamLeadName) {
-						if(
-							unitCanJoin.fireteam == null
-							|| unitCanJoin.fireteam.length == 0
-							|| unitCanJoin.fireteam.indexOf($("#contents")[0].fireteam) > -1
-						) {
-							if(unitCanJoin.ava < counter) {
-								canAddMore = false;
-								return false;
-							}
-						}
-					}
-				});
-			}
 		}
+		//at this point we haven't hit unit AVA, fireteam max, or wildcard max, so we can add more of this unit
+		return true;
 	}
-	return canAddMore;
+	return false;
 };
 
 getUnitJSON = function(unitName) {
@@ -178,4 +145,30 @@ toggleDarkMode = function(elem) {
 		$('#dmc').prop('checked', true);
 		$('body').addClass('dark');
 	}
+};
+
+getUnitKeywords = function(unitName) {
+	var keywordList = [];
+	var unit = getUnitJSON(unitName);
+	if(unit != null) {
+		keywordList.push(unit.name);
+		if(unit.keywords != null && unit.keywords.length > 0) {
+			$.each(unit.keywords, function(i, keyword) {
+				keywordList.push(keyword);
+			});
+		}
+		if($("#contents")[0].fireteamLabel != null) {
+			$.each(unit.fireteam, function(i1, fireteam) {
+				if(fireteam.name === $("#contents")[0].fireteamLabel) {
+					if(fireteam.keywords != null && fireteam.keywords.length > 0) {
+						$.each(fireteam.keywords, function(i, keyword) {
+							keywordList.push(keyword);
+						});
+					}
+					return false;
+				}
+			});
+		}
+	}
+	return keywordList;
 };

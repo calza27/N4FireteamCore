@@ -1,104 +1,222 @@
 {
 	"factionName": "Tohaa",
-	"fireteams": ["triad", "special triad"],
+	"fireteams": [
+		{
+			"name": "Triad",
+			"types": ["haris"]
+		}, {
+			"name": "Reex Escorts",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Chaksa",
+			"types": ["haris", "duo"],
+			"keywords": ["chaksa"]
+		}
+	],
 	"units": [
 		{
-			"name": "Hatail Aelis Keesan",
-			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hatail-aelis-keesan-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 1
-		}, {
-			"name": "Kaeltar Specialist",
-			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kaeltar-specialists-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 2
-		}, {
-			"name": "Kamael",
-			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kamael-light-infantry-1-1.svg",
-			"fireteam": ["triad"]
-		}, {
-			"name": "Kriigel Agents",
-			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kriigel-agents-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 1,
-			"countsAs": ["Kriigel Special"],
-			"cantJoin": [
+			"name": "Chaksa Auxiliars",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chaksa-auxiliars-1-1.svg",
+			"ava": 4,
+			"fireteam": [
 				{
-					"name": "Kriigel Special",
-					"fireteam": ["special triad"]
+					"name": "Chaksa",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["chaksa"]
 				}
 			]
 		}, {
-			"name": "Kriigel Special",
-			"display": false,
-			"fireteam": ["special triad"],
-			"ava": 1
+			"name": "Hatail Aelis Keesan",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hatail-aelis-keesan-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Kaeltar Specialist",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kaeltar-specialists-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Kamael",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kamael-light-infantry-1-1.svg",
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "3"
+				}
+			]
+		}, {
+			"name": "Kriigel Agents",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kriigel-agents-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Reex Escorts",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Kumotail Bioengineer",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kumotail-bioingeneers-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 2
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Reex Escorts",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/reex-escorts-1-1.svg",
 			"ava": 2,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Kriigel Special",
-					"fireteam": ["special triad"],
-					"ava": 2
+					"name": "Reex Escorts",
+					"min" : "1",
+					"max" : "2"
 				}
 			]
 		}, {
 			"name": "Sakiel Regiment",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/sakiel-regiment-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 6
+			"ava": 6,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "3"
+				}
+			]
 		}, {
 			"name": "Sukeul Commandos",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/sukeul-commandos-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 4
+			"ava": 4,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "3"
+				}
+			]
 		}, {
 			"name": "Taagma Schemers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/taagma-schemers-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 1
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Chaksa Longarm",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chaksa-longarms-1-1.svg",
+			"ava": 4,
+			"fireteam": [
+				{
+					"name": "Chaksa",
+					"min" : "1",
+					"max" : "3",
+					"keywords": ["chaksa"]
+				}
+			]
 		}, {
 			"name": "Gao-Rael",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/gao-rael-unit-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 4
+			"ava": 4,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "3"
+				}
+			]
 		}, {
 			"name": "Kosuil",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kosuil-assault-pioneers-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 2
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Taquel Officer",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/taqeul-officers-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 2
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Ectros Regiment",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ectros-regiment-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 4
+			"ava": 4,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "3"
+				}
+			]
 		}, {
 			"name": "Neema Saatar",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/neema-saatar-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 1
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Draal Saboteurs",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/draal-saboteurs-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 1
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Makaul",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/makaul-troops-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 6
+			"ava": 6,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "3"
+				}
+			]
 		}
 	]
 }

@@ -1,41 +1,128 @@
 {
 	"factionName": "USAriadna Ranger Force",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Grunts",
+			"types": ["core", "haris"]
+		}, {
+			"name": "USARF",
+			"types": ["core", "haris", "duo"],
+			"keywords": ["USARF"]
+		}, {
+			"name": "Blackjack",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Mavericks",
+			"types": ["haris", "duo"]
+		}
+	],
 	"units": [
 		{
+			"name": "112, Emergency Service",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/112-emergency-service-1-1.svg",
+			"ava": 2,
+			"shareAVA": ["112, Motorized"],
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Grunts"]
+		}, {
+			"name": "112, Motorized",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/112-emergency-service-1-1.svg",
+			"ava": 2,
+			"shareAVA": ["112, Emergency Service"],
+			"fireteam": [
+				{
+					"name": "Mavericks",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
 			"name": "The Unknown Ranger",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-unknown-ranger-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Grunts", "USARF"]
 		}, {
 			"name": "Wild Bill",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wild-bill-legendary-gunslinger-1-1.svg",
 			"ava": 1,
-			"countsAs": ["Grunts"]
+			"fireteam": [
+				{
+					"name": "Grunts",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Grunts"]
+				}
+			]
 		}, {
 			"name": "Rosalind Rosie Munroe",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/grunt-intel-rosalind-rosie-munroe-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Grunts"]
 		}, {
 			"name": "Marauders",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/marauders-5307th-ranger-unit-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
-			"ava": 5
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "USARF",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["USARF"]
+				}
+			]
+		}, {
+			"name": "Mavericks",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mavericks-1-1.svg",
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Mavericks",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Grunts",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/usariadna-grunts-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Grunts",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Minutemen",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/minutemen-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
 			"ava": 5,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Grunts",
-					"fireteam": ["core"],
-					"ava": 1
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "USARF",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["USARF"]
+				}
+			]
+		}, {
+			"name": "Blackjack",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/blackjacks-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Blackjack",
+					"min" : "1",
+					"max" : "3"
 				}
 			]
 		}

@@ -1,111 +1,234 @@
 {
 	"factionName": "StarCo. Free Company of the Star",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "StarCo",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Riot Grrls",
+			"types": ["core", "haris"]
+		}, {
+			"name": "PMC",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Amored",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Outrage",
+			"types": ["haris", "duo"],
+			"keywords": ["Outrage"]
+		}
+	],
 	"units": [
 		{
 			"name": "Avicenna",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/avicenna-mercenary-doctor-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Riot Grrls",
-					"fireteam": ["core", "haris"]
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Alguaciles",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/corregidor-alguaciles-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "StarCo",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			]
 		}, {
 			"name": "CSU",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/csu-corporate-security-unit-1-1.svg",
 			"ava": 3,
-			"fireteam": ["duo"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Brawlers",
-					"fireteam": ["haris", "duo"]
+					"name": "PMC",
+					"min" : "0",
+					"max" : "3",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Daktaris",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/daktaris-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Alguaciles",
-					"fireteam": ["core"]
-				}, {
-					"name": "Mobile Brigada",
-					"fireteam": ["core"]
+					"name": "StarCo",
+					"min" : "0",
+					"max" : "1",
+					"kaywords": ["Alguaciles"]
 				}
 			]
 		}, {
 			"name": "Emily Handelman",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/emily-handelman-intel-agent-1-1.svg",
 			"ava": 1,
-			"fireteam": ["duo"],
+			"fireteam": [
+				{
+					"name": "Outrage",
+					"min" : "0",
+					"max" : "1",
+					"required": true,
+					"keywords": ["Outrage"]
+				}
+			],
+			"wildcardMax": "1",
+			"wildcard": true
+		}, {
+			"name": "Fiddler",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fiddler-aristeia-s-ex-toymaker-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Riot Grrls",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Riot Grrls"]
+				}
+			]
+		}, {
+			"name": "Knauf",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knauf-outlaw-sniper-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Outrage",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Outrage"]
+				}
+			],
+			"wildcardMax": "1",
 			"wildcard": true
 		}, {
 			"name": "Raoul Spector",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/raoul-spector-mercenary-operative-1-1.svg",
 			"ava": 1,
+			"wildcardMax": "1",
 			"wildcard": true
 		}, {
 			"name": "Uhahu",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/uhahu-hacker-for-hire-1-1.svg",
 			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Outrage",
+					"min" : "0",
+					"max" : "1",
+					"required": true,
+					"keywords": ["Outrage"]
+				}
+			],
+			"wildcardMax": "1",
 			"wildcard": true
 		}, {
 			"name": "Brawlers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/brawlers-mercenary-enforcers-1-1.svg",
 			"ava": 4,
-			"fireteam": ["haris", "duo"]
+			"fireteam": [
+				{
+					"name": "PMC",
+					"min" : "0",
+					"max" : "3",
+					"required": true
+				}
+			],
+			"wildcardMax": "3",
+			"wildcard": true
+		}, {
+			"name": "Digger",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/diggers-armed-prospectors-1-1.svg",
+			"ava": 2,
+			"wildcardMax": "2",
+			"wildcard": true,
+			"keywords": ["Brawlers"]
 		}, {
 			"name": "Mobile Brigada",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mobile-brigada-1-1.svg",
 			"ava": 4,
-			"fireteam": ["core"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Alguaciles",
-					"fireteam": ["core"]
+					"name": "StarCo",
+					"min" : "0",
+					"max" : "5",
+					"required": true
 				}, {
-					"name": "Anaconda",
-					"fireteam": ["duo"]
+					"name": "Amored",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Riot Grrls",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/riot-grrls-1-1.svg",
-			"ava": 4,
-			"fireteam": ["core", "haris"]
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Riot Grrls",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
+		}, {
+			"name": "Tsyklon Sputnik",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tsyklon-sputniks-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Amored",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Anaconda",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/anaconda-merc-tag-squad-1-1.svg",
-			"fireteam": ["duo"],
-			"ava": 2
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Amored",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Triphammer",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/triphammers-repurposed-industrial-tags-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Amored",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Irmandinhos",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/irmandinhos-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Anaconda",
-					"fireteam": ["duo"]
+					"name": "Amored",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Señor Massacre",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/senor-massacre-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Alguaciles",
-					"fireteam": ["core"]
-				}, {
-					"name": "Mobile Brigada",
-					"fireteam": ["core"]
+					"name": "StarCo",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}

@@ -1,65 +1,144 @@
 {
 	"factionName": "Caledonia Highlander Army",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Caledonia Volunteers",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Scots Guard",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Highlander Grey",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Mormaers",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Galwegians",
+			"types": ["core"]
+		}, {
+			"name": "9th Wulver",
+			"types": ["core", "haris"]
+		}
+	],
 	"units": [
 		{
+			"name": "112, Emergency Service",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/112-emergency-service-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Caledonia Volunteers",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
 			"name": "Volunteers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/caledonian-volunteers-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Caledonia Volunteers",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Isobel McGregor",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/volunteer-intel-isobel-mcgregor-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Volunteers"]
 		}, {
 			"name": "The Scots Guard",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-scots-guards-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
-			"ava": 5
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Scots Guard",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Highlander Greys",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/3rd-highlander-greys-1-1.svg",
-			"fireteam": ["core"],
 			"ava": 5,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Volunteers",
-					"fireteam": ["core"]
+					"name": "Caledonia Volunteers",
+					"min" : "0",
+					"max" : "3"
+				}, {
+					"name": "Highlander Grey",
+					"min" : "1",
+					"max" : "5"
 				}, {
 					"name": "Mormaers",
-					"fireteam": ["haris", "duo"]
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["Mormaers"]
 				}
 			]
 		}, {
 			"name": "Mormaers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/caledonian-mormaers-1-1.svg",
-			"fireteam": ["haris", "duo"],
-			"ava": 3
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Mormaers",
+					"min" : "1",
+					"max" : "3"
+				}
+			]
 		}, {
 			"name": "Galwegian",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/45th-highlanders-rifles-1-1.svg",
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "William Wallace",
-					"fireteam": ["core"],
-					"ava": 4
+					"name": "Galwegians",
+					"min" : "1",
+					"max" : "5"
 				}
 			]
 		}, {
 			"name": "Wulvers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/9th-wulver-grenadiers-1-1.svg",
-			"fireteam": ["core", "haris"],
-			"ava": 4
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "9th Wulver",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Cadin Firststrike Donn",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/cadin-firststrike-donn-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Wulvers"]
 		}, {
 			"name": "William Wallace",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/william-wallace-1-1.svg",
-			"fireteam": ["core"],
 			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Galwegians",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Galwegian"]
+				},
+				{
+					"name": "9th Wulver",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Wulvers"]
+				}
+			],
+			"wildcardMax": 1,
 			"wildcard": true
 		}
 	]

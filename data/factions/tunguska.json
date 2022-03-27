@@ -1,27 +1,103 @@
 {
 	"factionName": "Jurisdictional Command of Tunguska",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Securitate",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Spetskorp (Special Corps)",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Hollow Men",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Kriza Boracs",
+			"types": ["duo"]
+		}, {
+			"name": "Bounty Hunters",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Nayemnik (Mercenary)",
+			"types": ["haris", "duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Authorized Bounty Hunter",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
-			"ava": 2,
-			"fireteam": ["duo"]
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Bounty Hunters",
+					"min" : "0",
+					"max" : "3",
+					"required": true
+				}
+			]
+		}, {
+			"name": "Father Lucian Sforza",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/father-lucien-sforza-1-1.svg",
+			"ava": 1,
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Grenzers"]
+		}, {
+			"name": "Fiddler",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fiddler-aristeia-s-ex-toymaker-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Spetskorp (Special Corps)",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Cheerkillers"]
+				}, {
+					"name": "Nayemnik (Mercenary)",
+					"min" : "0",
+					"max" : "1",
+					"required": true,
+					"keywords": ["Nayemnik"]
+				}
+			]
+		}, {
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Bounty Hunters",
+					"min" : "0",
+					"max" : "3",
+					"required": true,
+					"keywords": ["Authorized Bounty Hunters"]
+				}
+			]
 		}, {
 			"name": "Cheerkillers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tunguska-cheerkillers-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Spetskorp (Special Corps)",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Jelena Kovac",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jelena-kovac.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Securitate"]
 		}, {
 			"name": "Miranda Ashcroft",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miranda-ashcroft-authorized-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Authorized Bounty Hunter"]
 		}, {
 			"name": "Motorized Bounty Hunters",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
@@ -31,77 +107,138 @@
 			"name": "Raoul Spector",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/raoul-spector-mercenary-operative-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"fireteam": [
+				{
+					"name": "Nayemnik (Mercenary)",
+					"min" : "0",
+					"max" : "1",
+					"required": true,
+					"keywords": ["Nayemnik"]
+				}
+			],
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Grenzers"]
 		}, {
 			"name": "Securitate",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/securitate-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Securitate",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Interventors",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tunguska-interventors-1-1.svg",
 			"ava": 4,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Securitate",
-					"fireteam": ["core"]
+					"min" : "0",
+					"max" : "3"
 				}
 			]
 		}, {
 			"name": "Grenzers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/grenzers-grenz-security-team-1-1.svg",
 			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Spetskorp (Special Corps)",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			],
+			"wildcardMax": 2,
 			"wildcard": true
 		}, {
 			"name": "Kriza Boracs",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kriza-boracs-special-crisis-unit-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "The Hollow Men",
-					"fireteam": ["core", "haris", "duo"]
+					"name": "Hollow Men",
+					"min" : "0",
+					"max" : "2"
+				}, {
+					"name": "Kriza Boracs",
+					"min" : "1",
+					"max" : "2"
 				}
 			]
 		}, {
 			"name": "The Hollow Men",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-hollow-men-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Hollow Men",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Stempler Zond",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/stempler-zonds-1-1.svg",
 			"ava": 2,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "The Hollow Men",
-					"fireteam": ["core", "haris", "duo"]
+					"name": "Hollow Men",
+					"min" : "0",
+					"max" : "2"
 				}, {
-					"name": "Perseus",
-					"fireteam": ["haris"],
-					"ava" : 1
+					"name": "Nayemnik (Mercenary)",
+					"min" : "0",
+					"max" : "1",
+					"required": true,
+					"keywords": ["Nayemnik"]
 				}
 			]
 		}, {
 			"name": "Tsyklon Sputnik",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tsyklon-sputniks-1-1.svg",
 			"ava": 2,
+			"wildcardMax": 2,
 			"wildcard": true
 		}, {
 			"name": "Vostok Sputnik",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/vostok-1-1.svg",
 			"ava": 2,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Perseus",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/perseus-rogue-myrmidon-1-1.svg",
 			"ava": 1,
-			"fireteam": ["haris"],
-			"countsAs": ["Securitate", "The Hollow Men"]
+			"fireteam": [
+				{
+					"name": "Securitate",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Securitate"]
+				}, {
+					"name": "Hollow Men",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["The Hollow Men"]
+				}, {
+					"name": "Nayemnik (Mercenary)",
+					"min" : "0",
+					"max" : "1",
+					"required": true,
+					"keywords": ["Nayemnik"]
+				}
+			]
 		}, {
 			"name": "Wolfgang Amadeus Wolff",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wolfgang-amadeus-wolff-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Authorized Bounty Hunter"]
 		}
 	]
 }

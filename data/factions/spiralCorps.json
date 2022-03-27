@@ -1,193 +1,232 @@
 {
 	"factionName": "Spiral Corps",
-	"fireteams": ["core", "triad", "special triad", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Brawler",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Triad",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Special Triad",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Reex Escorts",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Chaksa",
+			"types": ["haris", "duo"],
+			"keywords": ["chaksa"]
+		}, {
+			"name": "Anaconda",
+			"types": ["haris", "duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Chaksa Auxiliars",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chaksa-auxiliars-1-1.svg",
 			"ava": 4,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Taagma Schemers",
-					"fireteam": ["special triad"]
-				}
-			],
-			"fireteam": ["special triad"],
-			"notes": [
-				{
-					"fireteam": ["special triad"],
-					"note": "Special Fireteam: Triad. 1 Taagma Schemer + 2 Auxiliars FTO"
+					"name": "Chaksa",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["chaksa"]
 				}
 			]
 		}, {
 			"name": "Hatail Aelis Keesan",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hatail-aelis-keesan-1-1.svg",
-			"fireteam": ["triad"],
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Kaauri Sentinels",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kaauri-sentinels-1-1.svg",
 			"ava": 6,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Kiel-Saan",
-					"fireteam": ["special triad"],
-					"ava": 2
-				}, {
-					"name": "Draal Saboteurs",
-					"fireteam": ["special triad"],
-					"ava": 2
+					"name": "Special Triad",
+					"min" : "0",
+					"max" : "3"
 				}
 			]
 		}, {
 			"name": "Kaeltar Specialist",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kaeltar-specialists-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 1
-		}, {
-			"name": "Kriigel Agents",
-			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kriigel-agents-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 2,
-			"countsAs": ["Kriigel Special"],
-			"canJoin": [
+			"ava": 1,
+			"fireteam": [
 				{
-					"name": "Reex Special",
-					"fireteam": ["special triad"],
-					"ava": 1
-				}
-			],
-			"cantJoin": [
-				{
-					"name": "Kriigel Special",
-					"fireteam": ["special triad"]
+					"name": "Triad",
+					"min" : "0",
+					"max" : "1",
+					"required": true
 				}
 			]
 		}, {
-			"name": "Kriigel Special",
-			"display": false,
-			"fireteam": ["special triad"],
-			"ava": 1
+			"name": "Kriigel Agents",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kriigel-agents-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}, {
+					"name": "Reex Escorts",
+					"min" : "1",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Kumotail Bioengineer",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kumotail-bioingeneers-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 1
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "1",
+					"required": true
+				}
+			]
+		}, {
+			"name": "Monstrucker",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/monstruckers-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Brawler",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Reex Escorts",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/reex-escorts-1-1.svg",
 			"ava": 2,
-			"countsAs": ["Reex Special"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Reex Special",
-					"fireteam": ["special triad"],
-					"ava": 2
-				}
-			]
-		}, {
-			"name": "Reex Special",
-			"display": false,
-			"ava": 2,
-			"fireteam": ["special triad"],
-			"canJoin": [
-				{
-					"name": "Kriigel Special",
-					"fireteam": ["special triad"],
-					"ava": 2
+					"name": "Reex Escorts",
+					"min" : "1",
+					"max" : "2"
 				}
 			]
 		}, {
 			"name": "Taagma Schemers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/taagma-schemers-1-1.svg",
-			"fireteam": ["triad"],
 			"ava": 3,
-			"canJoin": [
-				{
-					"name": "Anaconda",
-					"fireteam": ["duo"]
-				}, {
-					"name": "Chaksa Auxiliars",
-					"fireteam": ["special triad"],
-					"ava": 1
-				}
-			],
-			"countsAs": ["Brawlers", "Taagma Special"],
-			"notes": [
-				{
-					"fireteam": ["special triad"],
-					"note": "Special Fireteam: Triad. 1 Taagma Schemer + 2 Auxiliars FTO"
-				}
-			],
-			"cantJoin": [
-				{
-					"name": "Taagma Special",
-					"fireteam": ["special triad"]
-				}
-			]
-		}, {
-			"name": "Taagma Special",
-			"display": false,
-			"fireteam": ["special triad"],
-			"ava": 1
+			"wildcardMax": 3,
+			"wildcard": true,
+			"keywords": ["Brawlers"]
 		}, {
 			"name": "Brawlers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/brawlers-mercenary-enforcers-1-1.svg",
 			"ava": 4,
-			"fireteam": ["core", "haris", "duo"],
-			"canJoin": [
+			"fireteam": [
 				{
+					"name": "Brawler",
+					"min" : "1",
+					"max" : "4"
+				}, {
+					"name": "Chaksa",
+					"min" : "0",
+					"max" : "1"
+				}, {
 					"name": "Anaconda",
-					"fireteam": ["duo"]
-				}
-			],
-			"cantJoin": [
-				{
-					"name": "Taagma Special",
-					"fireteam": ["special triad"]
+					"min" : "0",
+					"max" : "2"
 				}
 			]
 		}, {
 			"name": "Chaksa Longarm",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chaksa-longarms-1-1.svg",
 			"ava": 3,
-			"fireteam": ["haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Chaksa",
+					"min" : "1",
+					"max" : "3",
+					"keywords": ["chaksa"]
+				}
+			]
 		}, {
 			"name": "Kosuil",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kosuil-assault-pioneers-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 3
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "3",
+					"required": true
+				}
+			]
+		}, {
+			"name": "Diggers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/diggers-armed-prospectors-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Brawler",
+					"min" : "0",
+					"max" : "2"
+				}, {
+					"name": "Anaconda",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Kiel-Saan",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kiel-saan-covert-assault-unit-1-1.svg",
-			"fireteam": ["special triad"],
 			"ava": 3,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Draal Saboteurs",
-					"fireteam": ["special triad"]
+					"name": "Special Triad",
+					"min" : "1",
+					"max" : "3"
 				}
 			]
 		}, {
 			"name": "Neema Saatar",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/neema-saatar-1-1.svg",
-			"fireteam": ["triad"],
-			"ava": 1
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Triad",
+					"min" : "0",
+					"max" : "1",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Anaconda",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/anaconda-merc-tag-squad-1-1.svg",
-			"fireteam": ["duo"],
-			"ava": 1
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Anaconda",
+					"min" : "1",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Draal Saboteurs",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/draal-saboteurs-1-1.svg",
-			"fireteam": ["triad", "special triad"],
 			"ava": 3,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Kiel-Saan",
-					"fireteam": ["special triad"]
+					"name": "Triad",
+					"min" : "0",
+					"max" : "3",
+					"required": true
+				}, {
+					"name": "Special Triad",
+					"min" : "0",
+					"max" : "3"
 				}
 			]
 		}

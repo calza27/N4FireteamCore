@@ -1,124 +1,161 @@
 {
 	"factionName": "Foreign Company",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Securitate",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Kaplan",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "ForCo",
+			"types": ["core", "haris"],
+			"keywords": ["ForCo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Avicenna",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/avicenna-mercenary-doctor-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Orc Trooper",
-					"fireteam": ["core", "haris"]
+					"name": "Kaplan",
+					"min" : "0",
+					"max" : "1",
+					"kaywords": ["Kaplan Tactical Services"]
 				}, {
-					"name": "Kaplan Tactical Services",
-					"fireteam": ["core", "haris", "duo"]
-				}, {
-					"name": "Hannibal",
-					"fireteam": ["core"]
+					"name": "ForCo",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Beasthunter",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/beasthunters-free-guild-null-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Kaplan",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "CSU",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/csu-corporate-security-unit-1-1.svg",
-			"fireteam": ["duo"],
 			"ava": 3,
-			"countsAs": ["Securitate"]
+			"fireteam": [
+				{
+					"name": "Securitate",
+					"min" : "0",
+					"max" : "3",
+					"keywords": ["Securitate"]
+				}
+			]
 		}, {
 			"name": "Hannibal",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hannibal-mercenary-team-leader-1-1.svg",
 			"ava": 1,
-			"fireteam": ["core"],
-			"canJoin": [
-				{
-					"name": "Orc Trooper",
-					"fireteam": ["core", "haris"]
-				}, {
-					"name": "Neoterra Bolts",
-					"fireteam": ["core", "haris", "duo"]
-				}
-			]
+			"wildcardMax": "1",
+			"wildcard": true,
+			"keywords": ["ForCo", "Bolt"]
 		}, {
 			"name": "Laxmee",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/laxmee-hacker-of-fortune-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Orc Trooper",
-					"fireteam": ["core", "haris"]
+					"name": "Kaplan",
+					"min" : "0",
+					"max" : "1"
 				}, {
-					"name": "Kaplan Tactical Services",
-					"fireteam": ["core", "haris", "duo"]
-				}, {
-					"name": "Hannibal",
-					"fireteam": ["core"]
+					"name": "ForCo",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["ForCo"]
 				}
 			]
 		}, {
 			"name": "Securitate",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/securitate-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Securitate",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Wild Bill",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wild-bill-legendary-gunslinger-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Kaplan Tactical Services",
-					"fireteam": ["core", "haris", "duo"]
+					"name": "Kaplan",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Kaplan Tactical Services",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kts-kaplan-tactical-services-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
-			"ava": 4
+			"ava": 4,
+			"fireteam": [
+				{
+					"name": "Kaplan",
+					"min" : "1",
+					"max" : "4"
+				}
+			]
 		}, {
 			"name": "Neoterra Bolts",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/neoterra-bolts-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
 			"ava": 4,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Orc Trooper",
-					"fireteam": ["core", "haris"]
+					"name": "ForCo",
+					"min" : "0",
+					"max" : "4",
+					"required": true,
+					"keywords": ["ForCo", "Bolt"]
 				}
 			]
 		}, {
 			"name": "Orc Trooper",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/orc-troops-1-1.svg",
-			"fireteam": ["core", "haris"],
-			"ava": 4
+			"ava": 4,
+			"fireteam": [
+				{
+					"name": "ForCo",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["ForCo"]
+				}
+			]
 		}, {
 			"name": "Señor Massacre",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/senor-massacre-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Orc Trooper",
-					"fireteam": ["core", "haris"]
-				}, {
-					"name": "Neoterra Bolts",
-					"fireteam": ["core", "haris", "duo"]
-				}, {
-					"name": "Hannibal",
-					"fireteam": ["core"]
+					"name": "ForCo",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["ForCo"]
 				}
 			]
 		}, {
 			"name": "Valkyrie",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/valkyrie-elite-bodyguard-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Orc Trooper",
-					"fireteam": ["core", "haris"]
-				}, {
-					"name": "Neoterra Bolts",
-					"fireteam": ["core", "haris", "duo"]
-				}, {
-					"name": "Hannibal",
-					"fireteam": ["core"]
+					"name": "ForCo",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["ForCo", "Bolt"]
 				}
 			]
 		}

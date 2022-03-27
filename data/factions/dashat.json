@@ -1,84 +1,180 @@
 {
 	"factionName": "Dashat Company",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Ghulam",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Brawlers",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Odalisques",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Zuyong",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Assault",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Authorized Bounty Hunters",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
 			"ava": 4,
-			"fireteam": ["duo"],
+			"wildcardMax": "4",
 			"wildcard": true
 		}, {
 			"name": "Father Lucian Sforza",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/father-lucien-sforza-1-1.svg",
 			"ava": 1,
-			"fireteam": ["duo"],
+			"wildcardMax": "1",
 			"wildcard": true
+		}, {
+			"name": "Fiddler",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fiddler-aristeia-s-ex-toymaker-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Ghulam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Ghulam",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ghulam-infantry-1-1.svg",
-			"fireteam": ["core"],
-			"ava": 6
+			"ava": 6,
+			"fireteam": [
+				{
+					"name": "Ghulam",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Miranda Ashcroft",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miranda-ashcroft-authorized-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": "1",
+			"wildcard": true,
+			"keywords": ["Odalisques"]
+		}, {
+			"name": "Monstrucker",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/monstruckers-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Brawlers",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Motorized Bounty Hunters",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Assault",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			],
+			"keywords": ["Authorized Bounty Hunters"]
 		}, {
 			"name": "Odalisques",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/odalisques-1-1.svg",
 			"ava": 4,
-			"fireteam": ["haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Odalisques",
+					"min" : "1",
+					"max" : "3"
+				}
+			]
 		}, {
 			"name": "Velerya Gromoz",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/valerya-gromoz-mercenary-hacker-1-1.svg",
 			"ava": 1,
+			"wildcardMax": "1",
 			"wildcard": true
 		}, {
 			"name": "Brawlers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/brawlers-mercenary-enforcers-1-1.svg",
-			"fireteam": ["core", "haris", "duo"],
-			"ava": 4
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Brawlers",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
+		}, {
+			"name": "Al Fasid",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/al-fasid-regiment-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Assault",
+					"min" : "0",
+					"max" : "1",
+					"required": true
+				}
+			]
+		}, {
+			"name": "Digger",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/diggers-armed-prospectors-1-1.svg",
+			"ava": 2,
+			"wildcardMax": 2,
+			"wildcard": true,
+			"keywords": ["Brawlers"]
 		}, {
 			"name": "Zuyong Invincibles",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zuy-ng-invincibles-1-1.svg",
-			"fireteam": ["core", "haris"],
-			"ava": 4
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Zuyong",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Maghariba Guard",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/maghariba-guard-1-1.svg",
-			"fireteam": ["duo"],
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Rafiq",
-					"fireteam": ["duo"]
+					"name": "Assault",
+					"min" : "0",
+					"max" : "1",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Rafiq",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rafiq-remotes-1-1.svg",
-			"fireteam": ["duo"],
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Maghariba Guard",
-					"fireteam": ["duo"]
+					"name": "Assault",
+					"min" : "0",
+					"max" : "1",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Yaoxie Rui Shi",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yaoxie-rui-shi-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Zuyong Invincibles",
-					"fireteam": ["core", "haris"]
+					"name": "Zuyong",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}

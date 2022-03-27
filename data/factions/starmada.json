@@ -1,103 +1,226 @@
 {
 	"factionName": "Starmada",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Security",
+			"types": ["core", "haris"],
+			"keywords": ["security"]
+		}, {
+			"name": "Nyokas",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Betatroopers",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Bronzes",
+			"types": ["duo"]
+		}, {
+			"name": "Lawkeepers",
+			"types": ["duo"]
+		}, {
+			"name": "Chaksa Longarms",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Varangian Guard",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Bluecoat",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/bluecoats-1-1.svg",
 			"ava": 4,
-			"fireteam": ["core", "haris"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Kappa",
-					"fireteam": ["core"]
+					"name": "Security",
+					"min" : "0",
+					"max" : "4",
+					"required": true,
+					"keywords": ["security"]
+				}
+			]
+		}, {
+			"name": "Katherine Cho",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ensign-katherine-cho-psi-unit-null-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Security",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["security"]
 				}
 			]
 		}, {
 			"name": "Kappa",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kappa-unit-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Security",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["security"]
+				}
+			]
+		}, {
+			"name": "Lawkeepers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/lawkeepers-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Lawkeepers",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Nyoka",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/nyoka-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": [
+				{
+					"name": "Nyokas",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Parvati",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/parvati-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Psi-Cops",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/psi-cops-1-1.svg",
 			"ava": 2,
+			"wildcardMax": 2,
 			"wildcard": true
+		}, {
+			"name": "Raveneye Officers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/raveneye-officers-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Security",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["security"]
+				}
+			]
 		}, {
 			"name": "Shona Carano",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shona-carano-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Tian Gou",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tian-g-u-orbital-activity-squad-null-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Chaksa Longarm",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chaksa-longarms-1-1.svg",
 			"ava": 3,
-			"fireteam": ["haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Chaksa Longarms",
+					"min" : "1",
+					"max" : "3"
+				}
+			]
+		}, {
+			"name": "Epsilon",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/epsilon-unit-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Nyokas",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Betatroopers",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Betatrooper",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/betatroopers-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": [
+				{
+					"name": "Betatroopers",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Bronzes",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/bronzes-1-1.svg",
 			"ava": 3,
-			"fireteam": ["duo"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Bluecoat",
-					"fireteam": ["core", "haris"]
-				}, {
-					"name": "Nyoka",
-					"fireteam": ["core", "haris"]
-				}, {
-					"name": "Betatrooper",
-					"fireteam": ["core", "haris"]
+					"name": "Bronzes",
+					"min" : "1",
+					"max" : "2"
 				}
-			]
+			],
+			"wildcardMax": 2,
+			"wildcard": true,
+			"keywords": ["Nyoka"]
 		}, {
 			"name": "Hector",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hector-homerid-champion-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Nyoka",
-					"fireteam": ["core", "haris"]
+					"name": "Nyokas",
+					"min" : "0",
+					"max" : "1"
 				}, {
-					"name": "Betatrooper",
-					"fireteam": ["core", "haris"]
+					"name": "Betatroopers",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Knight Santiago",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knights-of-santiago-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Bronzes",
-					"fireteam": ["duo"]
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Oko Copperbot",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/oko-copperbots-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Lawkeepers",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Varangian Guard",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/varangian-guard-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Varangian Guard",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
 		}
 	]
 }

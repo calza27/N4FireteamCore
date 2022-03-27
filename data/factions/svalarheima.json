@@ -1,133 +1,229 @@
 {
 	"factionName": "Svalarheima's Winter Force",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Fusiliers",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Nisses",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "WinterFor Alpha",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "WinterFor Beta",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Chaksa Longarms",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Bulleteer",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Agnes Ferreira",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/agnes-ferreira-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Richard Quinn",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusilier-indigo-richard-quinn-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Fusiliers"]
 		}, {
 			"name": "Fusiliers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusiliers-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Fusiliers",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Karhu",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/karhu-special-team-1-1.svg",
-			"fireteam": ["haris", "duo"],
 			"ava": 5,
+			"fireteam": [
+				{
+					"name": "WinterFor Beta",
+					"min" : "0",
+					"max" : "3",
+					"required": true
+				}
+			],
+			"wildcardMax": 4,
 			"wildcard": true
 		}, {
 			"name": "Machinist",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machinists-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Nisses",
-					"fireteam": ["core", "haris"]
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Nisses"]
 				}
 			]
 		}, {
 			"name": "Shona Carano",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shona-carano-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Chaksa Longarm",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chaksa-longarms-1-1.svg",
 			"ava": 3,
-			"fireteam": ["haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Chaksa Longarms",
+					"min" : "1",
+					"max" : "3"
+				}
+			]
 		}, {
 			"name": "Uma Sørensen",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/captain-uma-sorensen-null-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Fusiliers", "Nisses"]
 		}, {
 			"name": "Infirmarers of Saint Lazarus",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/infirmarers-of-saint-lazarus-1-1.svg",
 			"ava": 2,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Fusiliers",
-					"fireteam": ["core"],
-					"ava": 1
+					"min" : "0",
+					"max" : "1"
 				}, {
-					"name": "Knight Hospitaller",
-					"fireteam": ["haris"],
-					"ava": 1
-				}, {
-					"name": "Knight of Justice",
-					"fireteam": ["duo"],
-					"ava": 1
+					"name": "WinterFor Beta",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Nisses",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/nisses-1-1.svg",
-			"fireteam": ["core", "haris"],
-			"ava": 4
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Nisses",
+					"min" : "1",
+					"max" : "5"
+				}, {
+					"name": "WinterFor Beta",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Gunnar Lundmark",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/gunnar-lundmark-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Fusiliers", "Karhu"]
 		}, {
 			"name": "Vargar",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/vargar-maximum-security-team-1-1.svg",
-			"fireteam": ["core", "haris"],
 			"ava": 5,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Orc Troopers",
-					"fireteam": ["core", "haris"],
-					"ava": 2
+					"name": "WinterFor Alpha",
+					"min" : "0",
+					"max" : "3",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Bøyg Soldiers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/boyg-soldiers-1-1.svg",
-			"fireteam": ["duo"],
-			"ava": 2
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "WinterFor Beta",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Knight Hospitaller",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knights-hospitaller-1-1.svg",
-			"fireteam": ["haris"],
 			"ava": 3,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Knight of Justice",
-					"fireteam": ["duo"],
-					"ava": 1
+					"name": "WinterFor Beta",
+					"min" : "0",
+					"max" : "3",
+					"required": true
+				}
+			]
+		}, {
+			"name": "Kyle Hawkins",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knight-hospitaller-kyle-hawkins-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Fusiliers",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "WinterFor Beta",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Knight of Justice",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knight-of-justice-1-1.svg",
-			"fireteam": ["duo"],
 			"ava": 2,
+			"fireteam": [
+				{
+					"name": "WinterFor Beta",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			],
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Orc Troopers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/orc-troops-1-1.svg",
-			"fireteam": ["core", "haris"],
 			"ava": 5,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Fusiliers",
-					"fireteam": ["core"],
-					"ava": 2
+					"min" : "0",
+					"max" : "2"
+				}, {
+					"name": "WinterFor Alpha",
+					"min" : "0",
+					"max" : "5",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Bulleteer Armbots",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/armbots-bulleteer-1-1.svg",
-			"fireteam": ["duo"],
-			"ava": 2
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Bulleteer",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
 		}
 	]
 }

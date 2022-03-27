@@ -1,83 +1,162 @@
 {
 	"factionName": "Shasvastii Expeditionary Force",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Nox",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Jayth Cutthroats",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Haiduks",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Gwailos",
+			"types": ["haris", "duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Agent Dukash",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/agent-dukash-vashar-special-corps-null-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Nox"]
+		}, {
+			"name": "Aida Swanson",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/aida-swanson-1-1.svg",
+			"ava": 1,
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Nox"]
 		}, {
 			"name": "Jayth Cutthroats",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jayth-cutthroats-1-1.svg",
-			"fireteam": ["haris", "duo"],
-			"ava": 4
+			"ava": 4,
+			"fireteam": [
+				{
+					"name": "Jayth Cutthroats",
+					"min" : "1",
+					"max" : "3"
+				}
+			]
+		}, {
+			"name": "Oktavia",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/oktavia-grimsdottir-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Nox",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Sargosh",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/sargosh-null-1.svg",
 			"ava": 1,
-			"fireteam": ["haris", "duo"],
-			"countsAs": ["Jayth Cutthroats"]
+			"fireteam": [
+				{
+					"name": "Jayth Cutthroats",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Jayth Cutthroats"]
+				}
+			]
+		}, {
+			"name": "Haiduks",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shasvastii-haiduks-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Haiduks",
+					"min" : "1",
+					"max" : "3",
+					"keywords": ["Haiduks"]
+				}
+			]
 		}, {
 			"name": "Nox",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shasvastii-nox-troops-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Nox",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Sheskiin",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/cadmus-naish-agent-sheskiin-1-1.svg",
 			"ava": 1,
 			"shareAVA": ["Boarding Action Sheskiin"],
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Tensho Expert",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shasvastii-tensho-experts-1-1.svg",
 			"ava": 1,
-			"countsAs": ["Nox"]
+			"fireteam": [
+				{
+					"name": "Nox",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Nox"]
+				}
+			]
 		}, {
 			"name": "Victor Messer",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/victor-messer-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Corax Hasht",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shasvastii-corax-hasht-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Nox"]
 		}, {
 			"name": "Boarding Action Sheskiin",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/boarding-action-cadmus-naish-agent-sheskiin-null-1.svg",
 			"ava": 1,
 			"shareAVA": ["Sheskiin"],
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Gwailos",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shasvastii-gwailos-1-1.svg",
-			"fireteam": ["haris", "duo"],
-			"ava": 1
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Gwailos",
+					"min" : "1",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "M-Drone",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/m-drones-1-1.svg",
 			"ava": 2,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Gwailos",
-					"fireteam": ["haris"],
-					"ava": 2
-				}, {
-					"name": "Gwailos",
-					"fireteam": ["duo"],
-					"ava": 1
+					"min" : "0",
+					"max" : "2"
 				}
 			]
 		}, {
 			"name": "T-Drone",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/t-drones-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Nox",
-					"fireteam": ["core"],
-					"ava": 1
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Nox"]
 				}
 			]
 		}

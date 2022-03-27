@@ -1,97 +1,205 @@
 {
 	"factionName": "Invincible Army",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Zhanshi",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Invincible",
+			"types": ["core", "haris", "duo"],
+			"keywords": ["Invincible"]
+		}, {
+			"name": "Yan Huo",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Shock",
+			"types": ["duo"]
+		}, {
+			"name": "Forward",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Chung-Hee Jeong",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mech-engineer-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Zhanshi"]
 		}, {
+			"name": "Mech-Engineer",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mech-engineer-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Zhanshi",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Zhanshi"]
+				}
+			]
+		},{
 			"name": "Zhanshi",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zhanshi-1-1.svg",
-			"ava": 4,
-			"fireteam": ["core"]
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Zhanshi",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Lei Gong",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/lei-g-ng-invincibles-lord-of-thunder-null-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Invincible"]
 		}, {
 			"name": "Qiang Gao",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/captain-qiang-gao-invincibles-officer-null-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Invincible"]
 		}, {
 			"name": "Haidao",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/h-idao-special-support-group-1-1.svg",
 			"ava": 3,
+			"wildcardMax": 3,
 			"wildcard": true
 		}, {
 			"name": "Hulang Shocktroopers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hulang-shocktroopers-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"],
+			"fireteam": [
+				{
+					"name": "Shock",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}, {
+					"name": "Forward",
+					"min" : "1",
+					"max" : "2"
+				}
+			],
+			"wildcardMax": 2,
 			"wildcard": true
 		}, {
 			"name": "Krit Kokram",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/krit-kokram-1-1.svg",
 			"ava": 1,
-			"fireteam": ["duo"],
-			"wildcard": true
+			"fireteam": [
+				{
+					"name": "Forward",
+					"min" : "0",
+					"max" : "1"
+				}
+			],
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Invincible"]
 		}, {
 			"name": "Mowang",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mowang-troops-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Shock",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Shang Ji Invincibles",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shang-ji-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris", "duo"],
-			"wildcard": true
+			"fireteam": [
+				{
+					"name": "Invincible",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["Invincible"]
+				}
+			],
+			"wildcardMax": 4,
+			"wildcard": true,
+			"keywords": ["Invincible"]
 		}, {
 			"name": "Tai Sheng",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tai-sheng-zuy-ng-invincibles-nco-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Invincible"]
 		}, {
 			"name": "Yan Huo Invincibles",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yan-hu-invicibles-1-1.svg",
 			"ava": 4,
-			"fireteam": ["duo"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Zuyong Invincibles",
-					"fireteam": ["haris"]
+					"name": "Yan Huo",
+					"min" : "1",
+					"max" : "2"
 				}
 			]
 		}, {
 			"name": "Zuyong Invincibles",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zuy-ng-invincibles-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris", "duo"],
-			"notes": [
+			"fireteam": [
 				{
-					"fireteam": ["haris"],
-					"note": "Special Fireteam: Haris. 1 Zuyong Invincibles + 2 Yan Huo FTO"
+					"name": "Invincible",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["Invincible"]
+				}, {
+					"name": "Yan Huo",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Guija Squadrons",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/guijia-squadrons-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Shock",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Son-Bae Yaokong",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/son-bae-yaokong-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Yaopu Pangguling",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yaopu-pangguling-1-1.svg",
 			"ava": 2,
+			"wildcardMax": 2,
 			"wildcard": true
+		}, {
+			"name": "Yaoxie Rui Shi",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yaoxie-rui-shi-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Invincible",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}
 		
 	]

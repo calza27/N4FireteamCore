@@ -1,85 +1,143 @@
 {
 	"factionName": "Neoterran Capitaline Army",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Fusiliers",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Neoterra Bolts",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Orc",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Armored Cavalry",
+			"types": ["duo"]
+		}, {
+			"name": "CSU",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "CSU",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/csu-corporate-security-unit-1-1.svg",
-			"fireteam": ["duo"],
 			"ava": 2,
-			"countsAs": ["Fusiliers"]
+			"fireteam": [
+				{
+					"name": "Fusiliers",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["Fusiliers"]
+				}, {
+					"name": "CSU",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Bipandra",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusilier-indigo-bipandra-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Fusiliers"]
 		}, {
 			"name": "Richard Quinn",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusilier-indigo-richard-quinn-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Fusiliers"]
 		}, {
 			"name": "Fusiliers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fusiliers-1-1.svg",
-			"fireteam": ["core"],
 			"ava": 5,
-			"cantJoin": [
+			"fireteam": [
 				{
-					"name": "CSU",
-					"fireteam": ["duo"]
+					"name": "Fusiliers",
+					"min" : "1",
+					"max" : "5"
 				}
 			]
 		}, {
 			"name": "Machinist",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machinists-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Neoterra Bolts",
-					"fireteam": ["core"]
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Neoterra Bolts"]
 				}
 			]
 		}, {
 			"name": "Shona Carano",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shona-carano-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
+		}, {
+			"name": "Uma Sørensen",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/captain-uma-sorensen-null-1.svg",
+			"ava": 1,
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Fusiliers", "Neoterra Bolts"]
 		}, {
 			"name": "Neoterra Bolts",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/neoterra-bolts-1-1.svg",
-			"fireteam": ["core", "haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Neoterra Bolts",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Black Friar",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/panoceanian-black-friars-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Aquila Guard",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/aquila-guard-1-1.svg",
 			"ava": 3,
+			"wildcardMax": 3,
 			"wildcard": true
 		}, {
 			"name": "Orc Trooper",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/orc-troops-1-1.svg",
-			"fireteam": ["core", "haris"],
 			"ava": 5,
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Fusiliers",
-					"fireteam": ["core"],
-					"ava": 2
+					"min" : "0",
+					"max" : "2"
+				}, {
+					"name": "Orc",
+					"min" : "1",
+					"max" : "5"
 				}
 			]
 		}, {
 			"name": "Squalos",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/squalos-1-1.svg",
-			"fireteam": ["duo"],
-			"ava": 2
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Armored Cavalry",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Bulleteer Armbots",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/armbots-bulleteer-1-1.svg",
-			"fireteam": ["duo"],
 			"ava": 2,
+			"wildcardMax": 2,
 			"wildcard": true
 		}
 	]

@@ -1,95 +1,200 @@
 {
 	"factionName": "Ikari Company",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Keisotsus",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Wu Ming",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Tanko",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Druzes",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Scarface",
+			"types": ["duo"]
+		}, {
+			"name": "Krakot Renegades",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Authorized Bounty Hunters",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"]
+			"wildcardMax": "2",
+			"wildcard": true
 		}, {
 			"name": "Keisotsu Butai",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/keisotsu-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Keisotsus",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
-			"name": "Kendrat",
-			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kendrat-renegades-krakot-1-1.svg",
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
 			"ava": 1,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Scarface",
+					"min" : "0",
+					"max" : "1"
+				}
+			],
+			"keywords": ["Authorized Bounty Hunters"]
+		}, {
+			"name": "Krakot Renegades",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/krakot-renegades-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Krakot Renegades",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Taowu",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/taowu-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Druzes",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Druze Shock Team"]
+				}
+			]
 		}, {
 			"name": "Brawlers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/brawlers-mercenary-enforcers-1-1.svg",
 			"ava": 4,
-			"fireteam": ["duo"],
-			"canJoin": [
-				{
-					"name": "Keisotsu Butai",
-					"fireteam": ["core"],
-					"ava": 1
-				}, {
-					"name": "Tanko Zensenbutai",
-					"fireteam": ["haris", "duo"],
-					"ava": 1
-				}, {
-					"name": "Wu Ming",
-					"fireteam": ["core", "haris"],
-					"ava": 1
-				}
-			]
+			"wildcardMax": "2",
+			"wildcard": true,
+			"keywords": ["Druze Shock Team"]
 		}, {
 			"name": "Druze Shock Team",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/druze-shock-teams-1-1.svg",
-			"fireteam": ["haris", "duo"],
-			"ava": 4
+			"ava": 4,
+			"fireteam": [
+				{
+					"name": "Druzes",
+					"min" : "1",
+					"max" : "3"
+				}
+			]
+		}, {
+			"name": "Security Chief Arslan",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/security-chief-arslan-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Druzes",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Druze Shock Team"]
+				}
+			]
 		}, {
 			"name": "Daiyokai Dengekitai",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/daiy-kai-dengekitai-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Tanko Zensenbutai",
-					"fireteam": ["haris", "duo"]
+					"name": "Tanko",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
+		}, {
+			"name": "Digger",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/diggers-armed-prospectors-1-1.svg",
+			"ava": 2,
+			"wildcardMax": "2",
+			"wildcard": true,
+			"keywords": ["Druze Shock Team"]
 		}, {
 			"name": "Tanko Zensenbutai",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tank-zensenbutai-1-1.svg",
 			"ava": 3,
-			"fireteam": ["haris", "duo"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Keisotsu Butai",
-					"fireteam": ["core"],
-					"ava": 1
+					"name": "Keisotsus",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Tanko",
+					"min" : "1",
+					"max" : "3"
 				}
 			]
 		}, {
 			"name": "Wu Ming",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wu-ming-assault-corps-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": [
+				{
+					"name": "Wu Ming",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
+		}, {
+			"name": "Scarface",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/scarface-and-cordelia-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Scarface",
+					"min" : "1",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Cordelia Turner",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/scarface-and-cordelia-3-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Scarface",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Clipper Dronbots",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/clipper-dronbot-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Druze Shock Team",
-					"fireteam": ["haris", "duo"]
-				}, {
 					"name": "Wu Ming",
-					"fireteam": ["core", "haris"]
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Druzes",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
-			"name": "Krakot Renegades",
-			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/krakot-renegades-1-1.svg",
+			"name": "Kendrat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kendrat-renegades-krakot-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Kendrat",
-					"fireteam": ["duo"]
+					"name": "Krakot Renegades",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Krakot Renegades"]
 				}
 			]
 		}

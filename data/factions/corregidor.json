@@ -1,77 +1,208 @@
 {
 	"factionName": "Jurisdictional Command of Corregidor",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Corregidor",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Correctional",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Geckos",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Armored",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Alguaciles",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/corregidor-alguaciles-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Corregidor",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Alguacil Vortex Lupe Balboa",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/alguacil-vortex-lupe-balboa-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Alguaciles"]
 		}, {
 			"name": "Daktaris",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/daktaris-1-1.svg",
 			"ava": 2,
-			"wildcard": true
+			"wildcardMax": 2,
+			"wildcard": true,
+			"keywords": ["Alguaciles"]
 		}, {
 			"name": "Jazmin Jazz Caticovas",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jazz-billie-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Valerya Gromoz",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/valerya-gromoz-mercenary-hacker-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
+		}, {
+			"name": "Lobos",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/lobos-correctional-response-group-1-1.svg",
+			"ava": 4,
+			"fireteam": [
+				{
+					"name": "Corregidor",
+					"min" : "0",
+					"max" : "4",
+					"keywords": ["Alguaciles"]
+				}, {
+					"name": "Correctional",
+					"min" : "0",
+					"max" : "4",
+					"required": true,
+					"keywords": ["Correctional"]
+				}
+			]
 		}, {
 			"name": "Wildcats",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wildcats-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": [
+				{
+					"name": "Corregidor",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			],
+			"wildcardMax": 1,
+			"wildcard": true
+		}, {
+			"name": "Diggers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/diggers-armed-prospectors-1-1.svg",
+			"ava": 1,
+			"wildcardMax": 1,
+			"wildcard": true
 		}, {
 			"name": "Evaders",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/evaders-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"],
-			"wildcard": true
+			"fireteam": [
+				{
+					"name": "Corregidor",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Mobile Brigada",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mobile-brigada-1-1.svg",
 			"ava": 6,
-			"fireteam": ["core"],
-			"wildcard": true
+			"fireteam": [
+				{
+					"name": "Corregidor",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			]
+		}, {
+			"name": "Diablos",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-diablos-of-d-block-1-1.svg",
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Correctional",
+					"min" : "0",
+					"max" : "4",
+					"required": true,
+					"keywords": ["Correctional"]
+				}
+			]
+		}, {
+			"name": "Gator Squad",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/gator-squadron-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Armored",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Gecko Squad",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/gecko-squad-1-1.svg",
 			"ava": 4,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Geckos",
+					"min" : "1",
+					"max" : "3"
+				}, {
+					"name": "Armored",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Iguana Squad",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/iguana-squadron-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Armored",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Tsyklon Sputnik",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tsyklon-sputniks-1-1.svg",
 			"ava": 2,
+			"wildcardMax": 2,
 			"wildcard": true
 		}, {
 			"name": "Vostok Sputnik",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/vostok-1-1.svg",
 			"ava": 2,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Jaguars",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/corregidor-jaguars-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": [
+				{
+					"name": "Correctional",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Señor Massacre",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/senor-massacre-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Jaguars"]
 		}, {
 			"name": "Wolfgang Amadeus Wolff",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wolfgang-amadeus-wolff-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}
 	]

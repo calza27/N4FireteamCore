@@ -1,86 +1,173 @@
 {
 	"factionName": "Steel Phalanx",
-	"fireteams": ["enomotarchos", "duo"],
+	"fireteams": [
+		{
+			"name": "Myrmidons",
+			"types": ["core"]
+		}, {
+			"name": "Dactyls",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Thoraktitai",
+			"types": ["core"]
+		}, {
+			"name": "Achilles",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Acmon",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/acmon-sergeant-of-dactyls-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Dactyls"]
 		}, {
 			"name": "Dactyls",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/dactyls-1-1.svg",
 			"ava": 4,
-			"fireteam": ["enomotarchos", "duo"]
+			"fireteam": [
+				{
+					"name": "Dactyls",
+					"min" : "1",
+					"max" : "4"
+				}
+			]
 		}, {
 			"name": "Thrasymedes",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/chandra-sergeant-thrasymedes-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Thoraktitai"]
 		}, {
 			"name": "Nesaie Alkê",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/nesaie-alke-1-1.svg",
 			"ava": 1,
-			"countsAs": ["Thoraktitai"]
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Thoraktitai"]
 		}, {
 			"name": "Thoraktitai",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/thorakitai-1-1.svg",
 			"ava": 6,
-			"fireteam": ["enomotarchos"]
+			"fireteam": [
+				{
+					"name": "Thoraktitai",
+					"min" : "1",
+					"max" : "3"
+				}
+			]
 		}, {
 			"name": "Achilles V2 (Hoplite Armour)",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/achilles-v2-hoplite-armor-1-1.svg",
 			"ava": 1,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Achilles",
+					"min" : "1",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Ajax",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ajax-the-great-myrmidon-officer-1-1.svg",
 			"ava": 1,
-			"countsAs": ["Myrmidon"]
+			"fireteam": [
+				{
+					"name": "Myrmidons",
+					"min" : "0",
+					"max" : "1",
+					"required": true,
+					"keywords": ["Myrmidon"]
+				}
+			]
 		}, {
 			"name": "Hector",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hector-homerid-champion-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Patroclus",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/patroclus-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Achilles V2 (Hoplite Armour)",
-					"fireteam": ["duo"]
+					"name": "Achilles",
+					"min" : "1",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Hippolyta",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hippolyta-amazon-officer-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Eudoros",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/eudoros-myrmidon-officer-1-1.svg",
 			"ava": 1,
-			"countsAs": ["Myrmidon"]
+			"fireteam": [
+				{
+					"name": "Myrmidons",
+					"min" : "0",
+					"max" : "1",
+					"required": true,
+					"keywords": ["Myrmidon"]
+				}
+			]
 		}, {
 			"name": "Machaon",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/machaon-1-1.svg",
 			"ava": 1,
-			"countsAs": ["Myrmidon"]
+			"fireteam": [
+				{
+					"name": "Myrmidons",
+					"min" : "0",
+					"max" : "1",
+					"required": true,
+					"keywords": ["Myrmidon"]
+				}
+			]
 		}, {
 			"name": "Myrmidon Officer",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/myrmidon-officer-1-1.svg",
 			"ava": 3,
-			"countsAs": ["Myrmidon"]
+			"fireteam": [
+				{
+					"name": "Myrmidons",
+					"min" : "0",
+					"max" : "3",
+					"required": true,
+					"keywords": ["Myrmidon"]
+				}
+			]
 		}, {
 			"name": "Myrmidon",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/myrmidons-1-1.svg",
-			"fireteam": ["enomotarchos"]
+			"fireteam": [
+				{
+					"name": "Myrmidons",
+					"min" : "0",
+					"max" : "3"
+				}
+			]
 		}, {
 			"name": "Phoenix",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/phoenix-veteran-myrmidon-officer-1-1.svg",
 			"ava": 1,
-			"countsAs": ["Myrmidon"]
+			"fireteam": [
+				{
+					"name": "Myrmidons",
+					"min" : "0",
+					"max" : "1",
+					"required": true,
+					"keywords": ["Myrmidon"]
+				}
+			]
 		}
 	]
 }

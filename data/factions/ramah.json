@@ -1,124 +1,229 @@
 {
 	"factionName": "Ramah Taskforce",
-	"fireteams": ["core", "haris", "duo"],
-	"units": [
+	"fireteams": [
 		{
 			"name": "Ghulam",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Mukhtar",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Janissaries",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Armored Assault",
+			"types": ["duo"]
+		}
+	],
+	"units": [
+		{
+			"name": "Beasthunter",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/beasthunters-free-guild-null-1.svg",
+			"fireteam": [
+				{
+					"name": "Ghulam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Fiddler",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/fiddler-aristeia-s-ex-toymaker-1-1.svg",
+			"fireteam": [
+				{
+					"name": "Ghulam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Ghulam",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ghulam-infantry-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Ghulam",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Leila Sharif",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/husam-operative-leila-sharif-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Ghulam"]
 		}, {
 			"name": "Khawarijs",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/khawarijs-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"],
-			"countsAs": ["Ghulam"]
+			"fireteam": [
+				{
+					"name": "Ghulam",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Rahman Rouhani",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rahman-rouhani-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Mukhtar",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mukhtar-active-response-unit-1-1.svg",
 			"ava": 4,
-			"fireteam": ["haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Mukhtar",
+					"min" : "1",
+					"max" : "3"
+				}
+			]
 		}, {
 			"name": "Naffatun",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/naffatun-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core"],
-			"countsAs": ["Ghulam"]
+			"fireteam": [
+				{
+					"name": "Ghulam",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["Ghulam"]
+				}
+			]
 		}, {
 			"name": "Namurr",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/namurr-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Janissaries",
-					"fireteam": ["core", "haris"],
-					"ava": 1
+					"name": "Ghulam",
+					"min" : "0",
+					"max" : "2",
+					"required": true
 				}
 			],
-			"countsAs": ["Ghulam"]
+			"wildcardMax": 2,
+			"wildcard": true
 		}, {
 			"name": "Tarik Mansuri",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tarik-mansuri-khawarij-amir-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true,
-			"wildcardFireTeams": ["core", "haris"]
+			"keywords": ["Khawarijs"]
 		}, {
 			"name": "Wild Bill",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wild-bill-legendary-gunslinger-1-1.svg",
 			"ava": 1,
-			"countsAs": ["Janissaries"]
+			"fireteam": [
+				{
+					"name": "Janissaries",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Yara Hadad",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yara-haddad-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Zhayedan",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zhayedan-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Maghariba Guard",
-					"fireteam": ["duo"],
-					"ava": 1
+					"name": "Ghulam",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["Ghulam"]
+				}, {
+					"name": "Armored Assault",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Al Fasid",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/al-fasid-regiment-1-1.svg",
 			"ava": 3,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Rafiq",
-					"fireteam": ["duo"]
+					"name": "Janissaries",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Armored Assault",
+					"min" : "0",
+					"max" : "2",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Janissaries",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/janissaries-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": [
+				{
+					"name": "Janissaries",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Hortlak Janissaries",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hortlak-janissaries-1-1.svg",
 			"ava": 2,
-			"countsAs": ["Janissaries"]
+			"fireteam": [
+				{
+					"name": "Janissaries",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["Janissaries"]
+				}
+			]
 		}, {
 			"name": "Maghariba Guard",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/maghariba-guard-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Rafiq",
-					"fireteam": ["duo"]
+					"name": "Armored Assault",
+					"min" : "0",
+					"max" : "2",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Shakusk",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shakush-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Armored Assault",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Rafiq",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rafiq-remotes-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Maghariba Guard",
-					"fireteam": ["duo"]
+					"name": "Armored Assault",
+					"min" : "0",
+					"max" : "2",
+					"required": true
 				}
 			]
 		}

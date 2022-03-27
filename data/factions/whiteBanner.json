@@ -1,95 +1,195 @@
 {
 	"factionName": "White Banner Army",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Zhanshi",
+			"types": ["core", "haris"]
+		}, {
+			"name": "White Banner",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Blue Wolf",
+			"types": ["duo"]
+		}, {
+			"name": "Shaolin",
+			"types": ["haris", "duo"],
+			"note": "The members of this fireteam are considered regular meanwhile Lian Kai or Jin Wo be part of the fireteam."
+		}
+	],
 	"units": [
 		{
+			"name": "Beasthunter",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/beasthunters-free-guild-null-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Zhanshi",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Chung-Hee Jeong",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mech-engineer-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Zhanshi",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Zhanshi"]
+				}
+			]
+		}, {
 			"name": "Tian Gou",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tian-g-u-orbital-activity-squad-null-1.svg",
 			"ava": 3,
-			"wildcard": true,
-			"wildcardLimit": 1
+			"wildcardMax": 1,
+			"wildcard": true
+			
 		}, {
 			"name": "Zhanshi",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zhanshi-1-1.svg",
-			"ava": 4,
-			"fireteam": ["core"]
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Zhanshi",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
+		}, {
+			"name": "Zhanshi Yisheng",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zhanshi-yisheng-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Zhanshi",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Zhanshi"]
+				}
+			]
 		}, {
 			"name": "Jing Qo",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jing-qo-null-1.svg",
 			"ava": 1,
-			"fireteam": ["duo"]
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Shaolin Warrior Monks"]
 		}, {
 			"name": "Adil Mehmut",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/imperial-agent-adil-mehmut-special-division-1-1.svg",
 			"ava": 1,
+			"shareAVA": ["Adil Mehmut, Crane Rank Armour"],
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Lei Gong",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/lei-g-ng-invincibles-lord-of-thunder-null-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Shang Ji Invincibles"]
 		}, {
 			"name": "Ye Mao",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ye-mao-infantry-null-1.svg",
 			"ava": 5,
-			"fireteam": ["haris"]
+			"fireteam": [
+				{
+					"name": "White Banner",
+					"min" : "0",
+					"max" : "3",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Qiang Gao",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/captain-qiang-gao-invincibles-officer-null-1.svg",
 			"ava": 1,
-			"canJoin": [
-				{
-					"name": "Shang Ji Invincibles",
-					"fireteam": ["core", "haris", "duo"]
-				}
-			]
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Shang Ji Invincibles"]
+		}, {
+			"name": "Adil Mehmut, Crane Rank Armour",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/imperial-agent-adil-mehmut-special-division-1-1.svg",
+			"ava": 1,
+			"shareAVA": ["Adil Mehmut"],
+			"wildcardMax": 1,
+			"wildcard": true
 		}, {
 			"name": "Jujak",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jujak-regiment-null-1.svg",
 			"ava": 4,
-			"fireteam": ["duo"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Shang Ji Invincibles",
-					"fireteam": ["core", "haris", "duo"]
+					"name": "White Banner",
+					"min" : "0",
+					"max" : "5",
+					"required": true,
+					"keywords": ["Shang Ji Invincibles"]
 				}
 			]
 		}, {
 			"name": "So-Ra Kwon",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/sergeant-so-ra-kwon-jujak-regiment-1-1.svg",
 			"ava": 1,
-			"fireteam": ["duo"],
-			"countsAs": ["Jujak"]
+			"fireteam": [
+				{
+					"name": "White Banner",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Jujak", "Shang Ji Invincibles"]
+				}
+			]
 		}, {
 			"name": "Shang Ji Invincibles",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shang-ji-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris", "duo"],
+			"fireteam": [
+				{
+					"name": "White Banner",
+					"min" : "0",
+					"max" : "5",
+					"required": true
+				}
+			],
+			"wildcardMax": 2,
 			"wildcard": true
 		}, {
 			"name": "Blue Wolf",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/blue-wolf-mongol-cavalry-null-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"]
-		}, {
-			"name": "Guija Squadrons",
-			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/guijia-squadrons-1-1.svg",
-			"ava": 1,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Blue Wolf",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
 		}, {
 			"name": "Liang Kai",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/liang-kai-1-1.svg",
 			"ava": 1,
-			"countsAs": ["Shaolin Warrior Monks"]
+			"fireteam": [
+				{
+					"name": "Shaolin",
+					"min" : "0",
+					"max" : "1",
+					"required": true,
+					"keywords": ["Shaolin Warrior Monks"]
+				}
+			]
 		}, {
 			"name": "Shaolin Warrior Monks",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shaolin-warrior-monks-1-1.svg",
 			"ava": 5,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Jing Qo",
-					"fireteam": ["duo"],
-					"ava": 1
+					"name": "Shaolin",
+					"min" : "0",
+					"max" : "2",
+					"required": true
 				}
 			]
 		}

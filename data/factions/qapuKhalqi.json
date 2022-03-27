@@ -1,118 +1,212 @@
 {
 	"factionName": "Qapu Khalqi",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Ghulam",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Qapu Khalqi",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Azra'il",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Djanbazan",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Janissaries",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Druze Bayram Security",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Kaplans",
+			"types": ["core", "haris", "duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Alguaciles",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/corregidor-alguaciles-1-1.svg",
 			"ava": 4,
-			"countsAs": ["Ghulam"]
+			"fireteam": [
+				{
+					"name": "Ghulam",
+					"min" : "0",
+					"max" : "4"
+				}
+			]
 		}, {
 			"name": "Ghulam",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ghulam-infantry-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Ghulam",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Hafza",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hafza-unit-1-1.svg",
 			"ava": 4,
-			"wildcard": true,
-			"wildcardLimit": 2,
-			"cantJoin": [
+			"fireteam": [
 				{
-					"name": "Kaplan Tactical Services"
+					"name": "Ghulam",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["Ghulam"]
 				}, {
-					"name": "Druze Shock Team"
+					"name": "Qapu Khalqi",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["Odalisques", "Sekban"]
+				}, {
+					"name": "Djanbazan",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["Djanbazan"]
+				}, {
+					"name": "Janissaries",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["Janissaries"]
 				}
-			]
+			],
+			"wildcardMax": 2,
+			"wildcard": true
 		}, {
 			"name": "Leila Sharif",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/husam-operative-leila-sharif-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Ghulam"]
 		}, {
 			"name": "Rahman Rouhani",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rahman-rouhani-1-1.svg",
 			"ava": 1,
+			"wildcardMax": 1,
 			"wildcard": true
 		}, {
 			"name": "Odalisques",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/odalisques-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"],
-			"wildcard": true,
-			"wildcardLimit": 2,
-			"cantJoin": [
+			"fireteam": [
 				{
-					"name": "Kaplan Tactical Services"
-				}, {
-					"name": "Druze Shock Team"
+					"name": "Qapu Khalqi",
+					"min" : "0",
+					"max" : "5",
+					"required": true
 				}
-			]
+			],
+			"wildcardMax": 2,
+			"wildcard": true
 		}, {
 			"name": "Wild Bill",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wild-bill-legendary-gunslinger-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Kaplan Tactical Services",
-					"fireteam": ["core", "haris"]
+					"name": "Janissaries",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Kaplans",
+					"min" : "0",
+					"max" : "1"
 				}
-			],
-			"countsAs": ["Janissaries"]
+			]
 		}, {
 			"name": "Djanbazan",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/djanbazan-tactical-group-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": [
+				{
+					"name": "Djanbazan",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Druze Shock Team",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/druze-shock-teams-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "duo"]
+			"fireteam": [
+				{
+					"name": "Druze Bayram Security",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
+		}, {
+			"name": "Security Chief Arslan",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/security-chief-arslan-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Druze Bayram Security",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Druze Shock Team"]
+				}
+			]
 		}, {
 			"name": "Kaplan Tactical Services",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kts-kaplan-tactical-services-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": [
+				{
+					"name": "Kaplans",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Sekban",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/sekban-naval-special-unit-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris", "duo"],
-			"wildcard": true,
-			"wildcardLimit": 2,
-			"cantJoin": [
+			"fireteam": [
 				{
-					"name": "Kaplan Tactical Services"
-				}, {
-					"name": "Druze Shock Team"
+					"name": "Qapu Khalqi",
+					"min" : "0",
+					"max" : "5",
+					"required": true
 				}
-			]
+			],
+			"wildcardMax": 2,
+			"wildcard": true
 		}, {
 			"name": "Azra'il",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/azra-il-1-1.svg",
 			"ava": 3,
-			"fireteam": ["duo"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Rafiq",
-					"fireteam": ["duo"]
+					"name": "Azra'il",
+					"min" : "1",
+					"max" : "3"
 				}
 			]
 		}, {
 			"name": "Janissaries",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/janissaries-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris"]
+			"fireteam": [
+				{
+					"name": "Janissaries",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Rafiq",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rafiq-remotes-1-1.svg",
 			"ava": 1,
-			"fireteam": ["duo"],
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Azra'il",
-					"fireteam": ["duo"]
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}

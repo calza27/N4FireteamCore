@@ -5,6 +5,11 @@
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/panoceania.svg",
 			"armies": [
 				{
+					"name": "pano",
+					"label": "PanOceania",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/panoceania.svg",
+					"vanilla": true
+				}, {
 					"name": "shockArmy",
 					"label": "Shock Army of Acontecimento",
 					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/shock-army-of-acontecimento.svg"
@@ -31,6 +36,11 @@
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/yu-jing.svg",
 			"armies": [
 				{
+					"name": "yujing",
+					"label": "Yu Jing",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/yu-jing.svg",
+					"vanilla": true
+				}, {
 					"name": "imperialService",
 					"label": "Imperial Service",
 					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/imperial-service.svg"
@@ -49,6 +59,11 @@
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/ariadna.svg",
 			"armies": [
 				{
+					"name": "ariadna",
+					"label": "Ariadna",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/ariadna.svg",
+					"vanilla": true
+				}, {
 					"name": "caledonia",
 					"label": "Caledonia Highlander Army",
 					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/caledonian-highlander-army.svg"
@@ -75,6 +90,11 @@
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/haqqislam.svg",
 			"armies": [
 				{
+					"name": "haqq",
+					"label": "Haqqislam",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/haqqislam.svg",
+					"vanilla": true
+				},{
 					"name": "hassassins",
 					"label": "Hassassin Bahram",
 					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/hassassin-bahram.svg"
@@ -93,6 +113,11 @@
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/nomads.svg",
 			"armies": [
 				{
+					"name": "nomads",
+					"label": "Nomads",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/nomads.svg",
+					"vanilla": true
+				},{
 					"name": "bakunin",
 					"label": "Jurisdictional Command of Bakunin",
 					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/bakunin.svg"
@@ -111,6 +136,11 @@
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/combined-army.svg",
 			"armies": [
 				{
+					"name": "ca",
+					"label": "Combined Army",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/combined-army.svg",
+					"vanilla": true
+				},{
 					"name": "morats",
 					"label": "Morat Aggression Force",
 					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/morat.svg"
@@ -129,6 +159,11 @@
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/aleph.svg",
 			"armies": [
 				{
+					"name": "aleph",
+					"label": "Aleph",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/aleph.svg",
+					"vanilla": true
+				},{
 					"name": "oss",
 					"label": "Operational Subsection of the SSS",
 					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/operations.svg"
@@ -145,7 +180,8 @@
 				{
 					"name": "tohaa",
 					"label": "Tohaa",
-					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/tohaa.svg"
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/tohaa.svg",
+					"vanilla": true
 				}
 			]
 		}, {
@@ -187,10 +223,15 @@
 				}
 			]
 		}, {
-			"name": "O12",
+			"name": "O-12",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/o-12.svg",
 			"armies": [
 				{
+					"name": "o12",
+					"label": "O-12",
+					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/o-12.svg",
+					"vanilla": true
+				},{
 					"name": "starmada",
 					"label": "Starmada",
 					"imgSrc": "https://assets.corvusbelli.net/army/img/logo/factions/starmada.svg"

@@ -1,80 +1,174 @@
 {
 	"factionName": "Japanese Secessionist Army",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Keisotsus",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Domaru",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "JSA",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Banzai",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Aragoto",
+			"types": ["haris", "duo"]
+		}
+	],
 	"units": [
 		{
+			"name": "Aragoto",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/aragoto-senkenbutai-1-1.svg",
+			"fireteam": [
+				{
+					"name": "Aragoto",
+					"min" : "1",
+					"max" : "2"
+				}
+			]
+		}, {
 			"name": "Kaizoku Yuriko Oda",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/keisotsu-kaizoku-yuriko-oda-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": "1",
+			"wildcard": true,
+			"keywords": ["Keisotsu Butai"]
 		}, {
 			"name": "Keisotsu Butai",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/keisotsu-1-1.svg",
-			"fireteam": ["core"]
+			"fireteam": [
+				{
+					"name": "Keisotsus",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Kempeitai",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kempeitai-1-1.svg",
 			"ava": 3,
-			"wildcard": true
+			"wildcardMax": "3",
+			"wildcard": true,
+			"keywords": ["Keisotsu Butai"]
+		}, {
+			"name": "Kuroshi Rider",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kuroshi-rider-1-1.svg",
+			"fireteam": [
+				{
+					"name": "Aragoto",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Daiyokai Dengekitai",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/daiy-kai-dengekitai-1-1.svg",
 			"ava": 1,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Domaru Butai",
-					"fireteam": ["core", "haris", "duo"]
+					"name": "Keisotsus",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Domaru",
+					"min" : "0",
+					"max" : "1"
 				}
 			]
 		}, {
 			"name": "Domaru Butai",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/domaru-butai-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris", "duo"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Keisotsu Butai",
-					"fireteam": ["core"],
-					"ava": 1
+					"name": "Keisotsus",
+					"min" : "0",
+					"max" : "1"
 				}, {
-					"name": "Karakuri",
-					"fireteam": ["haris"]
+					"name": "Domaru",
+					"min" : "1",
+					"max" : "5"
+				}, {
+					"name": "JSA",
+					"min" : "0",
+					"max" : "3",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Tekshi Neko Oyama",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/domaru-takeshi-neko-oyama-1-1.svg",
 			"ava": 1,
-			"fireteam": ["haris", "duo"],
-			"countsAs": ["Domaru Butai"]
+			"fireteam": [
+				{
+					"name": "Keisotsus",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Domaru",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Domaru"]
+				}, {
+					"name": "JSA",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Domaru"]
+				}
+			]
 		}, {
 			"name": "Karakuri",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/karakuri-special-project-1-1.svg",
 			"ava": 3,
-			"fireteam": ["haris"]
+			"fireteam": [
+				{
+					"name": "JSA",
+					"min" : "0",
+					"max" : "3",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Shikami",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shikami-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "JSA",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Tanko Zensenbutai",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tank-zensenbutai-1-1.svg",
 			"ava": 3,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Domaru Butai",
-					"fireteam": ["core", "haris", "duo"]
+					"name": "Domaru",
+					"min" : "0",
+					"max" : "3"
 				}, {
-					"name": "Miyamoto Mushashi",
-					"fireteam": ["haris"]
+					"name": "Banzai",
+					"min" : "1",
+					"max" : "3"
 				}
 			]
 		}, {
 			"name": "Miyamoto Mushashi",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miyamoto-mushashi-1-1.svg",
 			"ava": 1,
-			"fireteam": ["haris"]
+			"fireteam": [
+				{
+					"name": "Banzai",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}
 	]
 }

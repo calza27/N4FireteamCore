@@ -16,25 +16,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="flexContainer" id="builtFireTeam">
-				<div class="builderContainer memberBuilt" id="fireteamBuilt">
-				</div>
-				<div class="builderContainer memberBuilt" id="member1Built">
-				</div>
-				<div class="builderContainer memberBuilt" id="member2Built">
-				</div>
-				<div class="builderContainer memberBuilt" id="member3Built">
-				</div>
-				<div class="builderContainer memberBuilt" id="member4Built">
-				</div>
-				<div class="builderContainer memberBuilt" id="member5Built">
-				</div>
+			<div id="fireteamContainer">
 			</div>
-		</div>
-		<div class="buildAreaContainer">
 			<div class="flexContainer">
-				<div class="builderContainer" id="fireteamContainer">
-				</div>
 				<div class="builderContainer" id="member1Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="1">
 				</div>
 				<div class="builderContainer" id="member2Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="2">
@@ -69,19 +53,24 @@
 						if(faction.name === $('#contents')[0].faction) {
 							var elems = "";
 							var factionImg = "<div class=\"factionImg img small\" style=\"background-image: url(" + faction.imgSrc + ");\"></div>";
+							var factionLabel = "<div class=\"factionLabel label\"><b>" + faction.name + "</b></div>";
 							var factionButton = "<div class=\"factionButton button\">";
 							factionButton += factionImg;
+							factionButton += factionLabel;
 							factionButton += "</div>";
 							elems += factionButton;
 							$.each(faction.armies, function(i2, army) {
 								if(army.name === $("#contents")[0].army) {
-									var armyImg = "<div class=\"armyImg img small\" style=\"background-image: url(" + army.imgSrc + ");\"></div>";
+									if(!army.vanilla) {
+										var armyImg = "<div class=\"armyImg img small\" style=\"background-image: url(" + army.imgSrc + ");\"></div>";
+										var armyLabel = "<div class=\"armyLabel label\"><b>" + army.label + "</b></div>";
+										var armyButton = "<div class=\"armyButton button\">";
+										armyButton += armyImg;
+										armyButton += armyLabel;
+										armyButton += "</div>";
 								
-									var armyButton = "<div class=\"armyButton button\">";
-									armyButton += armyImg;
-									armyButton += "</div>";
-							
-									elems += armyButton;
+										elems += armyButton;
+									}
 									return false;
 								}
 							});
@@ -96,26 +85,35 @@
 				if(army) {
 					var factionListFile = "data/fireteams.json";
 					$.getJSON(factionListFile, function(data) {
-						var fullFtData = [];
-						$.each(armyJSON.fireteams, function(i2, fireteam) {
-							$.each(data.fireteams, function(i1, ftData) {
-								if(ftData.name == fireteam) {
-									fullFtData.push(ftData);
-								}
-							});
-						});
-						
 						var optionList = "<div class=\"sectionHeader\"><b><span class=\"hidden--xs\">Fireteam</span> Type</b></div>";
-						$.each(fullFtData, function(i1, fireteam) {
-							var fireteamImg = "<div class=\"fireteamImg img\" style=\"background-image: url(data/img/" + fireteam.imgSrc + ");\"></div>";
-							var fireteamLabel = "<div class=\"fireteamLabel label\">" + fireteam.name + "</div>";
+						$.each(armyJSON.fireteams, function(i1, fireteam) {
+							var fireTeamSection = "<div class=\"fireteamSection\">";
+							fireTeamSection += "<div class=\"fireteamLabel label\">" + fireteam.name;
+							if(fireteam.note) {
+								fireTeamSection += "<span class=\"ftTooltip\" data-text=\"" + fireteam.note + "\">i</span>";
+							}
+							fireTeamSection += "</div>";
 							
-							var fireteamButton = "<div class=\"fireteamButton button\" onclick=\"changeFireteam('" + fireteam.name + "', this);\">";
-							fireteamButton += fireteamImg;
-							fireteamButton += fireteamLabel;
-							fireteamButton += "</div>";
-						
-							optionList += fireteamButton;
+							var fullFtData = [];
+							$.each(fireteam.types, function(i2, ft) {
+								$.each(data.fireteams, function(i1, ftData) {
+									if(ftData.name == ft) {
+										fullFtData.push(ftData);
+									}
+								});
+							});
+							$.each(fullFtData, function(i2, ft) {
+								var fireteamImg = "<div class=\"fireteamImg img\" style=\"background-image: url(data/img/" + ft.imgSrc + ");\"></div>";
+								var fireteamLabel = "<div class=\"fireteamLabel label\">" + ft.name + "</div>";
+								var fireteamButton = "<div class=\"fireteamButton button\" onclick=\"changeFireteam('" + fireteam.name + "', '" + ft.name + "', this);\">";
+								fireteamButton += fireteamImg;
+								fireteamButton += fireteamLabel;
+								fireteamButton += "</div>";
+								fireTeamSection += fireteamButton;
+							});
+
+							fireTeamSection += "</div>";
+							optionList += fireTeamSection;
 						});
 						$("#fireteamContainer").html(optionList);
 					}).fail(function(){

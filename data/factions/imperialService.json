@@ -1,95 +1,187 @@
 {
 	"factionName": "Imperial Service",
-	"fireteams": ["core", "haris", "duo"],
+	"fireteams": [
+		{
+			"name": "Celestial Guard",
+			"types": ["core", "haris"]
+		}, {
+			"name": "Kuang Shi",
+			"types": ["core"],
+			"note": "The fireteam is automatically cancelled if the Celestial Guard Monitor leaves the fireteam."
+		}, {
+			"name": "Aleph's Support",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Wu Ming",
+			"types": ["core", "haris", "duo"]
+		}, {
+			"name": "Zhian (Law &amp; Order)",
+			"types": ["haris", "duo"]
+		}, {
+			"name": "Fast Attack",
+			"types": ["duo"]
+		}
+	],
 	"units": [
 		{
 			"name": "Authorized Bounty Hunters",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Zhian (Law &amp; Order)",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Bao Trooper",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/bao-troops-1-1.svg",
 			"ava": 5,
-			"fireteam": ["haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Zhian (Law &amp; Order)",
+					"min" : "0",
+					"max" : "3",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Celestial Guard",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/celestial-guard-1-1.svg",
-			"fireteam": ["core"],
-			"countsAs": ["Celestial Guard Monitor"]
-		}, {
-			"name": "Celestial Guard Monitor",
-			"ava": 1,
-			"fireteam": ["core"],
-			"display": false,
-			"cantJoin": [
+			"fireteam": [
 				{
 					"name": "Celestial Guard",
-					"fireteam": ["core"]
+					"min" : "1",
+					"max" : "5"
+				}, {
+					"name": "Kuang Shi",
+					"min" : "1",
+					"max" : "1",
+					"keywords": ["Kuang Shi"]
 				}
 			]
 		}, {
 			"name": "CSU",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/csu-corporate-security-unit-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Zhian (Law &amp; Order)",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Deva Functionaries",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/deva-functionaries-1-1.svg",
 			"ava": 3,
-			"fireteam": ["haris"]
+			"fireteam": [
+				{
+					"name": "Celestial Guard",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Aleph's Support",
+					"min" : "0",
+					"max" : "3",
+					"required": true,
+					"keywords": ["Dakini Tacbots"]
+				}
+			]
 		}, {
 			"name": "Father Lucian Sforza",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/father-lucien-sforza-1-1.svg",
 			"ava": 1,
-			"fireteam": ["duo"],
-			"countsAs": ["Authorized Bounty Hunters"]
+			"fireteam": [
+				{
+					"name": "Zhian (Law &amp; Order)",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Authorized Bounty Hunters"]
+				}
+			]
 		}, {
 			"name": "Gui Feng Xi Zhuang",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/gu-feng-xi-zhuang-1-1.svg",
 			"ava": 1,
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Celestial Guard"]
 		}, {
 			"name": "Imperial Agent, Pheasant Rank",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/imperial-agents-pheasant-rank-1-1.svg",
 			"ava": 3,
-			"fireteam": ["duo"],
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Bao Trooper",
-					"fireteam": ["haris", "duo"]
+					"name": "Aleph's Support",
+					"min" : "0",
+					"max" : "1"
+				}, {
+					"name": "Zhian (Law &amp; Order)",
+					"min" : "0",
+					"max" : "3",
+					"required": true
 				}
 			]
 		}, {
 			"name": "Kuang Shi",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kuang-shi-1-1.svg",
 			"ava": 8,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Celestial Guard Monitor",
-					"fireteam": ["core"]
+					"name": "Kuang Shi",
+					"min" : "2",
+					"max" : "4"
 				}
 			]
 		}, {
 			"name": "Miranda Ashcroft",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miranda-ashcroft-authorized-1-1.svg",
 			"ava": 1,
-			"fireteam": ["duo"],
-			"countsAs": ["Authorized Bounty Hunters"]
+			"fireteam": [
+				{
+					"name": "Zhian (Law &amp; Order)",
+					"min" : "0",
+					"max" : "1",
+					"keywords": ["Authorized Bounty Hunters"]
+				}
+			]
 		}, {
 			"name": "Motorized Bounty Hunters",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
 			"ava": 2,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Fast Attack",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
+		}, {
+			"name": "Taowu",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/taowu-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Celestial Guard",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
 		}, {
 			"name": "Zhanying",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zhanying-imperial-agents-1-1.svg",
 			"ava": 4,
-			"fireteam": ["haris"],
-			"canJoin": [
+			"fireteam": [
 				{
 					"name": "Wu Ming",
-					"fireteam": ["core", "haris", "duo"]
+					"min" : "0",
+					"max" : "4",
+					"keywords": ["Wu Ming"]
 				}
 			]
 		}, {
@@ -97,15 +189,18 @@
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/imperial-agent-adil-mehmut-special-division-1-1.svg",
 			"ava": 1,
 			"shareAVA": ["Adil Mehmut, Crane Rank Armour"],
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Celestial Guard"]
 		}, {
 			"name": "Hsien Warrior",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hsien-warriors-1-1.svg",
 			"ava": 4,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Zhanying",
-					"fireteam": ["haris"]
+					"name": "Zhian (Law &amp; Order)",
+					"min" : "0",
+					"max" : "2"
 				}
 			]
 		}, {
@@ -113,31 +208,60 @@
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/adil-mehmut-1-1.svg",
 			"ava": 1,
 			"shareAVA": ["Adil Mehmut"],
-			"wildcard": true
+			"wildcardMax": 1,
+			"wildcard": true,
+			"keywords": ["Imperial Agent, Crane Rank"]
 		}, {
 			"name": "Imperial Agent, Crane Rank",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/imperial-agents-crane-rank-1-1.svg",
 			"ava": 3,
-			"fireteam": ["haris"],
+			"fireteam": [
+				{
+					"name": "Zhian (Law &amp; Order)",
+					"min" : "0",
+					"max" : "3",
+					"required": true
+				}
+			],
+			"wildcardMax": 3,
 			"wildcard": true
 		}, {
 			"name": "Su Jian",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/su-jian-immediate-action-unit-1-1.svg",
 			"ava": 3,
-			"fireteam": ["duo"]
+			"fireteam": [
+				{
+					"name": "Fast Attack",
+					"min" : "0",
+					"max" : "2",
+					"required": true
+				}
+			]
 		}, {
 			"name": "Wu Ming",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wu-ming-assault-corps-1-1.svg",
 			"ava": 5,
-			"fireteam": ["core", "haris", "duo"]
+			"fireteam": [
+				{
+					"name": "Wu Ming",
+					"min" : "1",
+					"max" : "5"
+				}
+			]
 		}, {
 			"name": "Dakini Tacbots",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/dakini-tacbots-1-1.svg",
 			"ava": 3,
-			"canJoin": [
+			"fireteam": [
 				{
-					"name": "Deva Functionaries",
-					"fireteam": ["haris"]
+					"name": "Celestial Guard",
+					"min" : "0",
+					"max" : "2"
+				}, {
+					"name": "Aleph's Support",
+					"min" : "0",
+					"max" : "3",
+					"required": true
 				}
 			]
 		}
