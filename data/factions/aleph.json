@@ -1,0 +1,101 @@
+{
+	"factionName": "Aleph",
+	"fireteams": [
+		{
+			"name": "Aleph Fireteam",
+			"types": ["duo"]
+		}
+	],
+	"units": [
+		{
+			"name": "Acmon",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/acmon-sergeant-of-dactyls-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Aleph Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Authorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Aleph Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Dactyls",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/dactyls-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Aleph Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Miranda Ashcroft",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miranda-ashcroft-authorized-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Aleph Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Aleph Fireteam",
+					"min" : "0",
+					"max" : "2",
+					"keywords": ["Authorized Bounty Hunters"]
+				}
+			]
+		}, {
+			"name": "Shakti",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yadu-officer-shakti-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Aleph Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Yadu",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/yadu-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Aleph Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Asuras",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/asuras-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Aleph Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,178 @@
+{
+	"factionName": "Haqqislam",
+	"fireteams": [
+		{
+			"name": "Haqqislam Fireteam",
+			"types": ["duo"]
+		}
+	],
+	"units": [
+		{
+			"name": "Authorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Hassassin Lasiqs",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hassassin-lasiqs-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Miranda Ashcroft",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miranda-ashcroft-authorized-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Mukhtar",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mukhtar-active-response-unit-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Namurr",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/namurr-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Druze Shock Team",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/druze-shock-teams-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+				
+		}, {
+			"name": "Hassassin Govads",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hassassin-govads-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Kaplan Tactical Services",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kts-kaplan-tactical-services-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Al Fasid",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/al-fasid-regiment-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Asawira",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/asawira-regiment-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Maghariba Guard",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/maghariba-guard-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Shakusk",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shakush-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Rafiq",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/rafiq-remotes-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Shaytaniyah",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shaytaniyah-remotes-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Haqqislam Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}
+	]
+}

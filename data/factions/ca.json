@@ -1,0 +1,67 @@
+{
+	"factionName": "Combined Army",
+	"fireteams": [
+		{
+			"name": "Combined Army Fireteam",
+			"types": ["duo"]
+		}
+	],
+	"units": [
+		{
+			"name": "Kurgat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kurgat-reg-of-assault-engineers-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Combined Army Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Sargosh",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/sargosh-null-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Combined Army Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Sogorat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/sogarat-tempest-regiment-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Combined Army Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Suryat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/suryats-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Combined Army Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Raicho",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/raicho-armored-brigade-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Combined Army Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,133 @@
+{
+	"factionName": "PanOceania",
+	"fireteams": [
+		{
+			"name": "PanOceania Fireteam",
+			"types": ["duo"]
+		}
+	],
+	"units": [
+		{
+			"name": "Authorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "PanOceania Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "PanOceania Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Karhu",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/karhu-special-team-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "PanOceania Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Bøyg Soldiers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/boyg-soldiers-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "PanOceania Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Knight Hospitaller",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knights-hospitaller-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "PanOceania Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Knight of Justice",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knight-of-justice-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "PanOceania Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Patsy Garnett",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/patsy-garnett-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "PanOceania Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Knight Santiago",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/knights-of-santiago-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "PanOceania Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Squalos",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/squalos-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "PanOceania Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Tikbalang",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tikbalangs-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "PanOceania Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Bulleteer Armbots",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/armbots-bulleteer-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "PanOceania Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,100 @@
+{
+	"factionName": "Nomads",
+	"fireteams": [
+		{
+			"name": "Nomads Fireteam",
+			"types": ["duo"]
+		}
+	],
+	"units": [
+		{
+			"name": "Authorized Bounty Hunter",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Nomads Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Miranda Ashcroft",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miranda-ashcroft-authorized-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Nomads Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Nomads Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Cheerkillers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/tunguska-cheerkillers-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Nomads Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Kriza Boracs",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kriza-boracs-special-crisis-unit-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Nomads Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]	
+		}, {
+			"name": "Taskmaster",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/taskmasters-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Nomads Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "The Hollow Men",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-hollow-men-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Nomads Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Gecko Squad",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/gecko-squad-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Nomads Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}
+	]
+}

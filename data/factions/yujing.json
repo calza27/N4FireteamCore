@@ -1,0 +1,177 @@
+{
+	"factionName": "Yu Jing",
+	"fireteams": [
+		{
+			"name": "Yu Jing Fireteam",
+			"types": ["duo"]
+		}
+	],
+	"units": [
+		{
+			"name": "Authorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Bao Trooper",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/bao-troops-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Imperial Agent, Pheasant Rank",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/imperial-agents-pheasant-rank-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Miranda Ashcroft",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miranda-ashcroft-authorized-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Jing Qo",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jing-qo-null-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Hulang Shocktroopers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/hulang-shocktroopers-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Jujak",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/jujak-regiment-null-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Krit Kokram",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/krit-kokram-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Mowang",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/mowang-troops-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Shang Ji Invincibles",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/shang-ji-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Su Jian",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/su-jian-immediate-action-unit-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Wu Ming",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/wu-ming-assault-corps-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Zuyong Invincibles",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/zuy-ng-invincibles-1-1.svg",
+			"ava": 5,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Guija Squadrons",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/guijia-squadrons-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Yu Jing Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}
+	]
+}

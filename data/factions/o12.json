@@ -1,0 +1,67 @@
+{
+	"factionName": "O-12",
+	"fireteams": [
+		{
+			"name": "O-12 Fireteam",
+			"types": ["duo"]
+		}
+	],
+	"units": [
+		{
+			"name": "Authorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "O-12 Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Miranda Ashcroft",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miranda-ashcroft-authorized-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "O-12 Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Motorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/motorized-bounty-hunters-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "O-12 Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Bronzes",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/bronzes-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "O-12 Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Varangian Guard",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/varangian-guard-1-1.svg",
+			"ava": 4,
+			"fireteam": [
+				{
+					"name": "O-12 Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}
+	]
+}

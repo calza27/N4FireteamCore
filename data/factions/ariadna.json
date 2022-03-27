@@ -1,0 +1,122 @@
+{
+	"factionName": "Ariadna",
+	"fireteams": [
+		{
+			"name": "Ariadna Fireteam",
+			"types": ["duo"]
+		}
+	],
+	"units": [
+		{
+			"name": "Authorized Bounty Hunters",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/authorized-bounty-hunters-1-1.svg",
+			"ava": 3,
+			"fireteam": [
+				{
+					"name": "Ariadna Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Dynamo",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/dynamo-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Ariadna Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Miranda Ashcroft",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/miranda-ashcroft-authorized-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Ariadna Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "The Scots Guard",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/the-scots-guards-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Ariadna Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Ratnik",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/ratnik-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Ariadna Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Kosmosoldat",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/kosmosoldat.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Ariadna Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Mormaers",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/caledonian-mormaers-1-1.svg",
+			"ava": 2,
+			"fireteam": [
+				{
+					"name": "Ariadna Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Veteran Kazaks",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/veteran-kazaks-1-1.svg",
+			"ava": 2, 
+			"fireteam": [
+				{
+					"name": "Ariadna Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}, {
+			"name": "Cadin Firststrike Donn",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/cadin-firststrike-donn-1-1.svg",
+			"ava": 1,
+			"fireteam": [
+				{
+					"name": "Ariadna Fireteam",
+					"min" : "0",
+					"max" : "1"
+				}
+			]
+		}, {
+			"name": "Varangian Guard",
+			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/varangian-guard-1-1.svg",
+			"ava": 4,
+			"fireteam": [
+				{
+					"name": "Ariadna Fireteam",
+					"min" : "0",
+					"max" : "2"
+				}
+			]
+		}
+	]
+}
