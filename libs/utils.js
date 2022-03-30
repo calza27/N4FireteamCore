@@ -209,7 +209,7 @@ buildBonusTable = function() {
 	var bonusesTable = $('<table>');
 	bonusesTable.attr("id","ftBonusTable");
 	var headerRow = $('<tr>');
-	headerRow.append('<td></td><td>2 Members</td><td>3 Members</td><td>4 Members</td><td>5 Members</td>');
+	headerRow.append('<td></td><td><b>2 Members</b></td><td><b>3 Members</b></td><td><b>4 Members</b></td><td><b>5 Members</b></td>');
 	bonusesTable.append(headerRow);
 	var sizeRow = $('<tr id="sizeRow">');
 	sizeRow.append('<td><b>Size Bonus</b></td><td>Activate Entire Ft with 1 order</td><td>All get +1B BS Attack</td><td>All get Sixth Sense</td><td>All get +1BS</td>');
