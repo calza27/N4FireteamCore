@@ -127,7 +127,9 @@ changeFireteam = function(fireteamLabel, fireteamType, elem) {
 							ftBtn += ftImg;
 							ftBtn += ftTypeLbl;
 							ftBtn += "</div>";
+							$('#fireteamContainer').attr('data-build', 'true');
 							$('#fireteamContainer').html(ftBtn);
+							$("#fireteamContainer").append(buildBonusTable());
 							return false;
 						}
 					});
@@ -197,7 +199,10 @@ changeFireteamMember = function(selectedMember, memberNum, mandatory) {
 		unitButton += unitLabel;
 		unitButton += "</div>";
 		optionList += unitButton;
-		
+		if(unit.checkbox) {
+			var checkBox = "<input type=\"checkbox\" name=\"" + unit.checkbox.name + "\" data-run=\"" + unit.checkbox.run + "\"/><label for=\"" + unit.checkbox.name + "\">" + unit.checkbox.name + "</label>";
+			optionList += checkBox;
+		}
 		$(elem).html(optionList);
 		$(elem).show();
 		
@@ -221,7 +226,8 @@ changeFireteamMember = function(selectedMember, memberNum, mandatory) {
 		newMemberNumber = memberNum;
 		memberNum -= 1;
 	}
-
+	
+	updateFireteamBonusesChart();
 	populateAvailableUnits(newMemberNumber);
 
 };
@@ -295,6 +301,37 @@ populateAvailableUnits = function(memberNumber) {
 		
 		$(selector).html(optionList);
 		$(selector).show();
+	}
+};
+
+updateFireteamBonusesChart = function() {
+	var unitCount = 0;
+	if($("#contents")[0].member1 != null) {
+		unitCount++;
+	}
+	if($("#contents")[0].member2 != null) {
+		unitCount++;
+	}
+	if($("#contents")[0].member3 != null) {
+		unitCount++;
+	}
+	if($("#contents")[0].member4 != null) {
+		unitCount++;
+	}
+	if($("#contents")[0].member5 != null) {
+		unitCount++;
+	}
+	showHideElem($('#ftBonusTable tr#compRow'), checkCompositionBonus());
+	showHideElem($('#ftBonusTable tr:not(:nth-child(1)) td:nth-child(2)'), (unitCount >= 2));
+	showHideElem($('#ftBonusTable tr:not(:nth-child(1)) td:nth-child(3)'), (unitCount >= 3));
+	showHideElem($('#ftBonusTable tr:not(:nth-child(1)) td:nth-child(4)'), (unitCount >= 4));
+	showHideElem($('#ftBonusTable tr:not(:nth-child(1)) td:nth-child(5)'), (unitCount == 5));
+	//tricore treats the unit size as 5, but does not grant composition bonuses beyond the actual unit size
+	if($('input[type="checkbox"][name="tri-core"]').is(':checked') && unitCount >= 3) {
+		showHideElem($('#ftBonusTable tr:nth-child(2) td:nth-child(2)'), true);
+		showHideElem($('#ftBonusTable tr:nth-child(2) td:nth-child(3)'), true);
+		showHideElem($('#ftBonusTable tr:nth-child(2) td:nth-child(4)'), true);
+		showHideElem($('#ftBonusTable tr:nth-child(2) td:nth-child(5)'), true);
 	}
 };
 

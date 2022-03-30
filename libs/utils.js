@@ -204,3 +204,44 @@ getUnitKeywords = function(unitName) {
 	}
 	return keywordList;
 };
+
+buildBonusTable = function() {
+	var bonusesTable = $('<table>');
+	bonusesTable.attr("id","ftBonusTable");
+	var headerRow = $('<tr>');
+	headerRow.append('<td></td><td>2 Members</td><td>3 Members</td><td>4 Members</td><td>5 Members</td>');
+	bonusesTable.append(headerRow);
+	var sizeRow = $('<tr id="sizeRow">');
+	sizeRow.append('<td><b>Size Bonus</b></td><td>Activate Entire Ft with 1 order</td><td>All get +1B BS Attack</td><td>All get Sixth Sense</td><td>All get +1BS</td>');
+	bonusesTable.append(sizeRow);
+	var compRow = $('<tr id="compRow">');
+	compRow.append('<td><b>Comp Bonus</b></td><td></td><td>All get +3 Discover</td><td>All get +1BS</td><td>All get +1BS</td>');
+	bonusesTable.append(compRow);
+	return bonusesTable;
+};
+
+showHideElem = function(elem, check) {
+	if(check) {
+		elem.show();
+	} else {
+		elem.hide();
+	}
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

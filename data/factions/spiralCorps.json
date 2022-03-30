@@ -120,7 +120,11 @@
 			"ava": 3,
 			"wildcardMax": 3,
 			"wildcard": true,
-			"keywords": ["Brawlers"]
+			"keywords": ["Brawlers"],
+			"checkbox": {
+				"name": "tri-core",
+				"run": "updateFireteamBonusesChart()"
+			}
 		}, {
 			"name": "Brawlers",
 			"imgSrc": "https://assets.corvusbelli.net/army/img/logo/units/brawlers-mercenary-enforcers-1-1.svg",

@@ -102,6 +102,10 @@ body.dark .highlighted > .img {
 	box-shadow: 3px 3px #BBB;
 }
 
+.mandatory > .img {
+	border-color: red !important;
+}
+
 body.dark .builderContainer:not(.memberBuilt) .highlighted > .img {
 	box-shadow: 3px 3px #666;
 }

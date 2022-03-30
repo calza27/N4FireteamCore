@@ -16,7 +16,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="fireteamContainer">
+			<div id="fireteamContainer" data-build="false">
 			</div>
 			<div class="flexContainer">
 				<div class="builderContainer" id="member1Container" style="display:none; border-left: 1px solid;" data-attr-memberNum="1">
@@ -38,6 +38,9 @@
 	</div>
 	<script>
 		$(document).ready(function() {
+			$(document).on('click', 'input[type="checkbox"][data-run]', function() {
+				eval($(this).attr('data-run'));
+			});
 			var newTitle = "FIRETEAM CORE";
 			var armyJSON = $("#contents")[0].armyJSON;
 			if(armyJSON) {
@@ -115,6 +118,7 @@
 							fireTeamSection += "</div>";
 							optionList += fireTeamSection;
 						});
+
 						$("#fireteamContainer").html(optionList);
 					}).fail(function(){
 						alert("An error has occurred reading fireteam data.");

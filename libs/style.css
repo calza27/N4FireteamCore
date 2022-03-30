@@ -123,6 +123,35 @@ body.dark .ftTooltip:before {
 	display: inline-block;
 }
 
+#fireteamContainer[data-build="true"] > .fireteamButton {
+	float: left;
+}
+
+#fireteamContainer[data-build="true"] > #ftBonusTable {
+	float: right;
+}
+
+#ftBonusTable {
+	border: 1px solid black;
+	margin-right: 20px;
+}
+
+#ftBonusTable td {
+	border: 1px solid black;
+	width: 100px;
+	height: 40px;
+	padding: 3px;
+    padding-left: 5px;
+}
+
+#ftBonusTable tr:not(:nth-child(1)) td:not(:nth-child(1)) {
+	display :none;
+}
+
+#ftBonusTable tr#compRow {
+	display: none;
+}
+
 #factionContainer, #armyContainer:not(.empty) {
 	border-top: 1px solid;
 	padding-top: 30px;
