@@ -147,6 +147,38 @@ toggleDarkMode = function(elem) {
 	}
 };
 
+checkCompositionBonus = function() {
+	var keywords = [];
+	if($("#contents")[0].member1 != null) {
+		keywords = getUnitKeywords($("#contents")[0].member1.name);
+		if($("#contents")[0].member2 != null) {
+			var compArr = getUnitKeywords($("#contents")[0].member2.name);
+			keywords = keywords.filter(function(el) {
+				return compArr.includes(el);
+			});
+		}
+		if($("#contents")[0].member3 != null) {
+			var compArr = getUnitKeywords($("#contents")[0].member3.name);
+			keywords = keywords.filter(function(el) {
+				return compArr.includes(el);
+			});
+		}
+		if($("#contents")[0].member4 != null) {
+			var compArr = getUnitKeywords($("#contents")[0].member4.name);
+			keywords = keywords.filter(function(el) {
+				return compArr.includes(el);
+			});
+		}
+		if($("#contents")[0].member5 != null) {
+			var compArr = getUnitKeywords($("#contents")[0].member5.name);
+			keywords = keywords.filter(function(el) {
+				return compArr.includes(el);
+			});
+		}
+	}
+	return (keywords.length > 0);
+};
+
 getUnitKeywords = function(unitName) {
 	var keywordList = [];
 	var unit = getUnitJSON(unitName);
