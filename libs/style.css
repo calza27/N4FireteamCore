@@ -132,16 +132,19 @@ body.dark .ftTooltip:before {
 }
 
 #ftBonusTable {
-	border: 1px solid black;
+	border: 1px solid;
 	margin-right: 20px;
+	color: inherit;
+	border-color: inherit;
 }
 
 #ftBonusTable td {
-	border: 1px solid black;
+	border: 1px solid;
 	width: 100px;
 	height: 40px;
 	padding: 3px;
     padding-left: 5px;
+	border-color: inherit;
 }
 
 #ftBonusTable tr:not(:nth-child(1)) td:not(:nth-child(1)) {
