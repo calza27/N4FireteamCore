@@ -34,7 +34,8 @@
 				{
 					"name": "Triad",
 					"min" : "0",
-					"max" : "1"
+					"max" : "1",
+					"keywords": ["Kamael", "Sakiel Regiment"]
 				}
 			]
 		}, {
@@ -192,7 +193,8 @@
 				{
 					"name": "Triad",
 					"min" : "0",
-					"max" : "1"
+					"max" : "1",
+					"keywords": ["Ectros Regiment"]
 				}
 			]
 		}, {

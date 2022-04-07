@@ -176,7 +176,8 @@
 				{
 					"name": "Brawler",
 					"min" : "0",
-					"max" : "2"
+					"max" : "2",
+					"keywords": ["Brawlers"]
 				}, {
 					"name": "Anaconda",
 					"min" : "0",
