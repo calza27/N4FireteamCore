@@ -50,8 +50,7 @@
 				}
 				changeTitle(newTitle);
 			
-				var factionListFile = "data/factions.json";
-				$.getJSON(factionListFile, function(data) {
+				getFactionList().then(function(data) {
 					$.each(data.factions, function(i1, faction) {
 						if(faction.name === $('#contents')[0].faction) {
 							var elems = "";
@@ -86,8 +85,7 @@
 				var army = $("#contents")[0].army;
 				$('#fireteamContainer').html('');
 				if(army) {
-					var factionListFile = "data/fireteams.json";
-					$.getJSON(factionListFile, function(data) {
+					getFireteamsList().then(function(data) {
 						var optionList = "<div class=\"sectionHeader\"><b><span class=\"hidden--xs\">Fireteam</span> Type</b></div>";
 						$.each(armyJSON.fireteams, function(i1, fireteam) {
 							var fireTeamSection = "<div class=\"fireteamSection\">";
@@ -120,7 +118,7 @@
 						});
 
 						$("#fireteamContainer").html(optionList);
-					}).fail(function(){
+					}).catch(function(){
 						alert("An error has occurred reading fireteam data.");
 					});
 				} else {

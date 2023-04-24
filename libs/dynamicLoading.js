@@ -26,8 +26,7 @@ loadFaction = function(factionStr, elem) {
 	
 	if(factionStr) {
 		$('#armyContainer').removeClass('empty');
-		var factionListFile = "data/factions.json";
-		$.getJSON(factionListFile, function(data) {
+		getFactionList().then(function(data) {
 			var dataFound = false;
 			$.each(data.factions, function(i1, faction) {
 				if(faction.name === factionStr) {
@@ -51,7 +50,7 @@ loadFaction = function(factionStr, elem) {
 			if(!dataFound) {
 				alert("An error has occurred reading " + factionStr + " data.");
 			}
-		}).fail(function(){
+		}).catch(function(){
 			alert("An error has occurred reading " + factionStr + " data.");
 		});
 	} else {
@@ -73,11 +72,10 @@ loadArmy = function(army, elem) {
 	$("#contents")[0].member4 = null;
 	$("#contents")[0].member5 = null;
 	if(army) {
-		var armyJSONFile = "data/factions/" + army + ".json";
-		$.getJSON(armyJSONFile, function(armyJSON){
+		getArmyData(army).then(function(armyJSON) {
 			$("#contents")[0].armyJSON = armyJSON;
 			loadPage("views/builder.html", "#contents");
-		}).fail(function() {
+		}).catch(function() {
 			alert("An error has occurred reading " + army + " data.");
 		});
 	}
@@ -111,8 +109,7 @@ changeFireteam = function(fireteamLabel, fireteamType, elem) {
 				}
 			});
 			if(fireteamData) {
-				var factionListFile = "data/fireteams.json";
-				$.getJSON(factionListFile, function(data) {
+				getFireteamsList().then(function(data) {
 					$.each(data.fireteams, function(i1, ftData) {
 						if(ftData.name == fireteamType) {
 							var ftLbl = "<div class=\"fireteamLabel label\">" + fireteamLabel;
@@ -133,7 +130,7 @@ changeFireteam = function(fireteamLabel, fireteamType, elem) {
 							return false;
 						}
 					});
-				}).fail(function(){
+				}).catch(function(){
 					alert("An error has occurred building fireteam data.");
 				});
 				var requiredUnits = populateRequiredUnits();

@@ -17,22 +17,21 @@
 	</div>
 	<script>
 		$(document).ready(function() {
-			var factionListFile = "data/factions.json";
-			$.getJSON(factionListFile, function(data){
+			getFactionList().then(function(data) {
 				var optionList = "";
-				$.each(data.factions, function(i1, faction) {
+				$.each(data.factions, function (i1, faction) {
 					var factionImg = "<div class=\"factionImg img\" style=\"background-image: url(" + faction.imgSrc + ");\"></div>";
 					var factionLabel = "<span class=\"factionLabel label\"><b>" + faction.name + "</b></span>";
-					
+
 					var factionButton = "<div class=\"factionButton button\" onclick=\"loadFaction('" + faction.name + "', this);\">";
 					factionButton += factionImg;
 					factionButton += factionLabel;
 					factionButton += "</div>";
-				
+
 					optionList += factionButton;
 				});
 				$("#factionContainer").html(optionList);
-			}).fail(function(){
+			}).catch(function(){
 				alert("An error has occurred reading faction list.");
 			});
 		});
