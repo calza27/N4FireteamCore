@@ -4,6 +4,7 @@ clearPageAttrs = function() {
 	$('#contents')[0].armyJSON = null;
 	$("#contents")[0].fireteamLabel = null;
 	$("#contents")[0].fireteam = null;
+	$("#contents")[0].fireteamData = null;
 	
 	$("#contents")[0].member1 = null;
 	$("#contents")[0].member2 = null;
@@ -65,6 +66,7 @@ loadArmy = function(army, elem) {
 	$("#contents")[0].army = army;
 	$("#contents")[0].fireteamLabel = null;
 	$("#contents")[0].fireteam = null;
+	$("#contents")[0].fireteamData = null;
 	
 	$("#contents")[0].member1 = null;
 	$("#contents")[0].member2 = null;
@@ -109,6 +111,7 @@ changeFireteam = function(fireteamLabel, fireteamType, elem) {
 				}
 			});
 			if(fireteamData) {
+				$("#contents")[0].fireteamData = fireteamData;
 				getFireteamsList().then(function(data) {
 					$.each(data.fireteams, function(i1, ftData) {
 						if(ftData.name == fireteamType) {
@@ -260,7 +263,7 @@ populateAvailableUnits = function(memberNumber) {
 				}
 			});
 			if(!skipWildcard) {
-				if(unit.wildcard && canAddMore(unit.name)) {
+				if(validWildcard($("#contents")[0].fireteamData, unit) && canAddMore(unit.name)) {
 					validUnits.push(unit);
 				}
 			}
@@ -331,4 +334,3 @@ updateFireteamBonusesChart = function() {
 		showHideElem($('#ftBonusTable tr:nth-child(2) td:nth-child(5)'), true);
 	}
 };
-

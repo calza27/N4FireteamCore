@@ -110,7 +110,7 @@ canAddMore = function(unitName) {
 		}
 		if(
 			checkWildcard
-			&& unit.wildcard
+			&& validWildcard($("#contents")[0].fireteamData, unit)
 			&& unit.wildcardMax != null
 			&& unit.wildcardMax <= counter
 		) {
@@ -228,20 +228,10 @@ showHideElem = function(elem, check) {
 	}
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+validWildcard = function(fireteam, unit) {
+	if (fireteam.reinforcement) {
+		return unit.reinforcementWildcard;
+	} else {
+		return unit.wildcard;
+	}
+};
